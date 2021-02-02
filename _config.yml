@@ -8,12 +8,13 @@ subtitle: ''
 description: ''
 keywords:
 author: muggledy
+email: zgjsycfndy2015@163.com
 language: en
 timezone: 'Asia/Shanghai'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: http://celestezj.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
