@@ -17,7 +17,7 @@ theme_color:
 
 # Main menu navigation
 menu:
-  Home: /
+  #Home: /
   Articles: /archives
   Tags: /tags
   Categories: /categories
@@ -60,9 +60,13 @@ social:
 # Algolia search
 # ---------------
 algolia_search:
-  enable: false
+  enable: true # or false
   hits:
-    per_page: 10
+    per_page: 10 # the number of search results per page
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
+    hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/third-party-support.html#local-search
@@ -200,15 +204,15 @@ addThis:
   #pubid:
 
 sharejs:
-  enable: true
-  disabled_sites: google,qzone,facebook,twitter,Linkedin,diandian,tencent,weibo,douban
+  enable: false
+  disabled_sites: weibo,google,qzone,facebook,Linkedin,diandian,tencent,twitter,qq,wechat,douban
 
 # Comments System
 # ---------------
 disqus:
-  enable: false
-  #shortname:
-  #count:
+  enable: true
+  shortname: muggledy
+  count: true
 
 # laibili:
 # enable: false

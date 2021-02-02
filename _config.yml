@@ -75,6 +75,11 @@ feed:
   hub:
   content: true
 
+algolia:
+  applicationID: 'LV9LD7UBBI'
+  apiKey: 'e0bc89f7fd597bc93566ac7f9ba5a74d'
+  indexName: 'dev_celestezj'
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
