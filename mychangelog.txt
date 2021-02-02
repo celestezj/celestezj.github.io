@@ -1,12 +1,17 @@
-以下修改都是可选的，可以忽略
-1.将POST页面大标题的符号从原始的chain改为bookmark
-   修改./node_modules/hexo-theme-melody/source/css/_layout/post.styl文件：#content-inner &:before content: "\f02e"
-   参考：https://fontawesome.com/v4.7.0/icons/
+以下修改都是可选的，基本没影响，可以忽略
+1.将POST页面各级标题的前缀符号从原始的chain改为bookmark
+   修改./node_modules/hexo-theme-melody/source/css/_layout/post.styl文件：#content-inner &:before content:"\f02e"（此处空格表示层级间隔）
+   符号参考：https://fontawesome.com/v4.7.0/icons/
 
 2.稍稍放大头像和用户名
-   修改./node_modules/hexo-theme-melody/source/css/_layout/sidebar.styl文件：#sidebar .author-info &__avatar width: w = 6.5rem
-   以及：#sidebar .author-info &__name font-size: 0.9rem
+   修改./node_modules/hexo-theme-melody/source/css/_layout/sidebar.styl文件：#sidebar .author-info &__avatar width:w=6.5rem
+   以及：#sidebar .author-info &__name font-size:0.9rem
 
 3.稍稍缩小Tags页标题和Categories页标题
-   修改./node_modules/hexo-theme-melody/source/css/_layout/page.styl文件：.tag-cloud &__title font-size: 1.7rem
-   以及：.category-lists .category__title font-size: 1.7rem
+   修改./node_modules/hexo-theme-melody/source/css/_layout/page.styl文件：.tag-cloud &__title font-size:1.7rem
+   以及：.category-lists .category__title font-size:1.7rem
+
+4.删除POST中图片的边框
+   删除./node_modules/hexo-theme-melody/source/css/_layout/post.styl文件：.content,#post,#sidebar img `border: 1px solid $img-border-color`（``内是一体的）
+   同时追加（新增）：.content,#sidebar img `border: 1px solid $img-border-color`
+
