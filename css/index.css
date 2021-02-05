@@ -1245,7 +1245,7 @@ footer.is-mobile {
   top: calc(50% - 0.35rem);
   left: 0;
   color: #f47466;
-  content: "\f02e";
+  content: "\f1dd";
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 0.8rem;
   -webkit-transition: all 0.2s ease-out;
