@@ -3,18 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Muggledy's Blog
+title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: muggledy
-email: zgjsycfndy2015@163.com
+author: John Doe
 language: en
-timezone: 'Asia/Shanghai'
+timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://celestezj.github.io
+url: http://example.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -58,28 +57,6 @@ prismjs:
   line_number: true
   tab_replace: ''
 
-# Latex
-kramed:
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: true
-  smartLists: true
-  smartypants: true
-
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content: true
-
-algolia:
-  applicationID: 'LV9LD7UBBI'
-  apiKey: 'e0bc89f7fd597bc93566ac7f9ba5a74d'
-  indexName: 'dev_celestezj'
-
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -121,11 +98,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: melody
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: celestezj:celestezj/celestezj.github.io
-  branch: master
+  type: ''
