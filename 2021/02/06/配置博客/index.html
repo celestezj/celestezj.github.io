@@ -22,11 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>Hexo博客配置 - Muggledy&#39;s Blog</title>
+  <title>Hexo博客简易配置 - Muggledy&#39;s Blog</title>
   
     <meta name="keywords" content="Hexo">
   
 
+  
+    <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
   
 
   <!-- feed -->
@@ -39,7 +41,7 @@
 
   <!-- link -->
   
-    <link rel="shortcut icon" type='image/x-icon' href="https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210207091812.png">
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207091812.png">
   
 
   <!-- import link -->
@@ -105,6 +107,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 </head>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
   <body>
     
 
@@ -127,7 +137,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           
           
-            Muggledy's Blog
+            <span style="font-family:Arial,"Times New Roman",Serif;"><font color="#4285f4">M</font><font color="#ea4335">u</font><font color="#fbbc05">g</font><font color="#4285f4">g</font><font color="#34a853">l</font><font color="#ea4335">e</font><font color="#aaaaaa">dy</font><font color="#9f0099">'s</font><font color="#4ed8ff"> Blog</font></span>
           
         </a>
       
@@ -200,13 +210,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/repos/
                   
                   
                   
-                    id="friends"
+                    id="repos"
                   >
-                  <i class='fas fa-link fa-fw'></i>友链
+                  <i class='fas fa-bullhorn fa-fw'></i>网站公示
                 </a>
                 
               </li>
@@ -215,17 +225,54 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     
                       
             
+              <hr>
+            
+          
+                    
+                      
+            
+              
+                <li>
+                  <a class="menuitem flat-box">
+                    <i class='fas fa-compact-disc fa-fw music'></i>背景音乐
+                  </a>
+                  <ul class="list-v">
+                    <li>
+                      <div class="aplayer-container">
+                        
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.4'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='6609974608'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+                      </div>
+                    </li>
+                  </ul>
+                <li>
+              
+            
+          
+                    
+                      
+            
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
                 </a>
-                
-              </li>
+              <li>
             
           
                     
@@ -316,13 +363,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/repos/
                   
                   
                   
-                    id="friends"
+                    id="repos"
                   >
-                  <i class='fas fa-link fa-fw'></i>友链
+                  <i class='fas fa-bullhorn fa-fw'></i>网站公示
                 </a>
                 
               </li>
@@ -331,17 +378,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                     
                       
             
+              <hr>
+            
+          
+                    
+                      
+            
+              
+            
+          
+                    
+                      
+            
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  <i class='fas fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
                 </a>
-                
-              </li>
+              <li>
             
           
                     
@@ -365,15 +418,59 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post dock' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210202144753.png"></div>
+            <div id='cover-backstretch'></div>
           
           <div class='cover-body'>
   <div class='top'>
     
-      <img no-lazy class='logo' src='https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210206220813.jpg'/>
+      <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg'/>
     
     
     
+	  <!-- 滚动字体特效 comes from https://blog.csdn.net/qq_45428737/article/details/106299049 -->
+<div id="binft"></div>
+<script>
+    var binft = function (r, sentences_lists) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }  
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+      o = sentences_lists.map(function (r) {
+	  return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'),["山有木兮木有枝，心悦君兮君不知。","人生若只如初见，何事秋风悲画扇。","十年生死两茫茫，不思量，自难忘。","曾经沧海难为水，除却巫山不是云。","洛中何郁郁，冠带自相索。","只愿君心似我心，定不负相思意。","愿得一心人，白头不相离。","入我相思门，知我相思苦。"]);
+</script>
+	
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
@@ -394,11 +491,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>归档</p>
             </a>
           
-            <a href="/contributors/"
+            <a target="_blank" rel="noopener" href="https://muggledy.github.io/"
               
               
-              id="contributors">
-              <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4ac.svg'><p>留言</p>
+              id="https:muggledygithubio">
+              <img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg'><p>简历</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://musicforprogramming.net/"
@@ -435,15 +532,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        Hexo博客配置
+        Hexo博客简易配置
       </h1>
       <div class='new-meta-box'>
         
           
             
 <div class='new-meta-item author'>
-  <a class='author' href="/" rel="nofollow">
-    <img no-lazy src="https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210207093620.ico">
+  <a class='author' target="_blank" href="https://muggledy.github.io/" rel="nofollow noopener">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico">
     <p>muggledy</p>
   </a>
 </div>
@@ -477,13 +574,45 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="Hexo博客配置" data-path="/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/">
+      <div id="lc-pv" data-title="Hexo博客简易配置" data-path="/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
       </div>
     </a>
   </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>1.7k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>6 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+<div class="new-meta-item comments-count">
+  
+  <a href="/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/#comments">
+    <i class="fas fa-comment-dots fa-fw"></i>
+    <span class="valine-comment-count" data-xid="/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/">0</span>
+    <span class="leancloud-comments-count">&nbsp;</span>
+  </a>
+</div>
 
 
           
@@ -495,48 +624,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   
-  <h2 id="环境初始化"><a href="#环境初始化" class="headerlink" title="环境初始化"></a>环境初始化</h2><p>以<i>Windows</i>环境为例</p>
+  <div class="note quote"><p><a href=https://hexo.io/zh-cn/docs/>Hexo</a> 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href=https://daringfireball.net/projects/markdown/>Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p></div>
+<a id="more"></a>
+<h2 id="环境初始化"><a class="markdownIt-Anchor" href="#环境初始化"></a> 环境初始化</h2>
+<p>以<i>Windows</i>环境为例</p>
 <ol>
-<li><p>安装<i>git</i></p>
+<li>
+<p>安装<i>git</i></p>
 </li>
-<li><p>安装<i>nodejs</i>（通过<i>nvm</i>安装）</p>
+<li>
+<p>安装<i>nodejs</i>（通过<i>nvm</i>安装）</p>
 <ul>
-<li><p>安装<i>nvm</i></p>
+<li>
+<p>安装<i>nvm</i></p>
 <p>下载<i><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">nvm-noinstall.zip</a></i>并解压，设路径为<i>path/nvm/</i>，以管理员身份运行其中的<i>install.cmd</i>，编辑生成的<i>path/nvm/settings.txt</i>文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root: path&#x2F;nvm</span><br><span class="line">path: path&#x2F;nodejs #不存在该目录，但不用管</span><br><span class="line">arch: 64</span><br><span class="line">proxy: none</span><br><span class="line">node_mirror: http:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
 <p>此时系统环境变量会新增两项：<code>NVM_HOME</code>和<code>NVM_SYMLINK</code>，修改<code>NVM_HOME</code>值为<i>path/nvm</i>，<code>NVM_SYMLINK</code>值为<i>path/nodejs</i>，并添加到<code>PATH</code>变量中：<i>%NVM_HOME%;%NVM_SYMLINK%;</i></p>
 <p>打开<i>cmd</i>命令窗口，输入<code>nvm v</code>查看配置是否正确</p>
 </li>
-<li><p>在命令窗口中输入<code>nvm install latest</code>安装最新的<i>nodejs</i>版本（包括局部<i>npm</i>），随后通过<code>nvm use 版本号</code>选择要使用的版本（可以通过<code>nvm ls</code>查看当前安装的所有<i>nodejs</i>版本）</p>
+<li>
+<p>在命令窗口中输入<code>nvm install latest</code>安装最新的<i>nodejs</i>版本（包括局部<i>npm</i>），随后通过<code>nvm use 版本号</code>选择要使用的版本（可以通过<code>nvm ls</code>查看当前安装的所有<i>nodejs</i>版本）</p>
 </li>
-<li><p>安装全局<i>npm</i>（可选）</p>
+<li>
+<p>安装全局<i>npm</i>（可选）</p>
 <p>首先执行<code>npm config set prefix &quot;/path/nvm/npm&quot;</code>配置<i>npm</i>的全局安装路径，会生成一个<i>.npmrc</i>文件（默认在<i>C</i>盘用户文件夹下），其中的内容就是<i>path/nvm/npm</i>，然后执行<code>npm install npm -g</code>安装全局<i>npm</i>，注意这个<code>-g</code>参数。在系统中新建环境变量<code>NPM_HOME</code>，值为<i>path/nvm/npm</i>，并将<code>%NPM_HOME%</code>添加到<code>PATH</code>变量中（注意要放在<code>%NVM_SYMLINK%</code>前面），执行<code>npm -v</code>查看配置是否正确</p>
 </li>
-<li><p>安装<i>cnpm</i>（可选）</p>
+<li>
+<p>安装<i>cnpm</i>（可选）</p>
 <p>配置国内镜像以加速，执行<code>npm install -g cnpm --registry=http://r.cnpmjs.org</code>命令安装，之后就可以用<code>cnpm install 包名</code>来代替<code>npm install 包名</code>了</p>
 </li>
 </ul>
 </li>
-<li><p>安装<i>Hexo</i></p>
+<li>
+<p>安装<i>Hexo</i></p>
 <p>执行命令<code>cnpm install -g hexo-cli</code></p>
 </li>
-<li><p>建站</p>
+<li>
+<p>建站</p>
 <ul>
-<li><p>创建个人博客文件夹，设路径为<i>path/myblog/</i>，初始化博客文件夹：</p>
+<li>
+<p>创建个人博客文件夹，设路径为<i>path/myblog/</i>，初始化博客文件夹：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /path/myblog/ #之后的所有命令都要先cd进入博客根目录，不再赘述</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>初始化后得到一个<i>package.json</i>文件（描述了项目所依赖的包），然后再执行<code>cnpm install</code>安装相关依赖</p>
 </li>
-<li><p>生成静态网页，并在本地发布</p>
+<li>
+<p>生成静态网页，并在本地发布</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>最后通过地址”<i><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></i>“即可访问</p>
+<p>最后通过地址&quot;<i><a target="_blank" rel="noopener" href="http://localhost:4000">http://localhost:4000</a></i>&quot;即可访问</p>
 </li>
 </ul>
 </li>
 </ol>
-<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>选择某个现成的<a target="_blank" rel="noopener" href="https://hexo.io/themes">主题</a>，一般下载后放到博客根目录下的主题文件夹中，即<i>myblog/themes/</i>，<i>Hexo</i>将会根据主题来生成静态页面。本次选用<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody">Melody</a>主题，一步一步根据说明文档进行相关配置，另外稍有不同的是，该主题可以直接通过<code>cnpm install --save hexo-theme-melody</code>命令安装（放在<i>myblog/node_modules/</i>目录下）</p>
+<h2 id="基本配置"><a class="markdownIt-Anchor" href="#基本配置"></a> 基本配置</h2>
+<p>选择某个现成的<a target="_blank" rel="noopener" href="https://hexo.io/themes">主题</a>，一般下载后放到博客根目录下的主题文件夹中，即<i>myblog/themes/</i>，<i>Hexo</i>将会根据主题来生成静态页面。本次选用<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody">Melody</a>主题，一步一步根据说明文档进行相关配置，另外稍有不同的是，该主题可以直接通过<code>cnpm install --save hexo-theme-melody</code>命令安装（放在<i>myblog/node_modules/</i>目录下）</p>
 <ul>
-<li><p><i>LaTex</i>支持</p>
+<li>
+<p><i>LaTex</i>支持</p>
 <p>说明文档有所遗漏，再细说一下，先安装<i>Kramed</i>，同时卸载掉默认的渲染引擎<i>marked</i>：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall hexo-renderer-marked --save</span><br><span class="line">cnpm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
 <p>再修改<i>melody.yml</i>主题配置文件：</p>
@@ -545,23 +688,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()# +\-.!_&gt;])/</span>, <span class="comment">//替换：escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>, <span class="comment">//替换：em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>
 <p>注意，由于<i>node_modules</i>文件夹不会被<i>git</i>跟踪（该项位于<i>.gitignore</i>中），因此在博客迁移后需要重新配置（所以应尽量避免修改<i>node_modules</i>文件夹中的内容以减少麻烦）</p>
 </li>
-<li><p>部署到<i>GitHub Page</i></p>
+<li>
+<p>部署到<i>GitHub Page</i></p>
 <p>在<i>GitHub</i>上新建仓库，命名为：<i>用户名.github.io</i>，再修改<i>_config.yml</i>文件：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:用户名/用户名.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <p>注意，如果本地添加了多个<i>GitHub</i>账号的密钥，应根据<i>~/.ssh/config</i>文件修改上述<i>repo</i>地址为：<i>Host:用户名/用户名.github.io</i>，最后执行部署：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d //和上一条命令可以合并为：hexo g -d，如果报错：ERROR Deployer not found: git，先执行：cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>部署成功后，通过地址”<i>https://用户名.github.io</i>“即可访问博客</p>
+<p>部署成功后，通过地址&quot;<i><a target="_blank" rel="noopener" href="https://xn--eqr924avxo.github.io">https://用户名.github.io</a></i>&quot;即可访问博客</p>
 </li>
-<li><p>博客迁移和同步管理</p>
+<li>
+<p>博客迁移和同步管理</p>
 <ul>
-<li>在<i>GitHub</i>（<i>用户名.github.io</i>）上新建<i>env</i>分支（用于存放博客环境文件，即本地的<i>myblog/</i>下的主题和配置文件等，而<i>master</i>主分支自然就是存放<i>Hexo</i>生成的静态站点文件，即<i>myblog/public/</i>），此时里面的内容和主分支是一样的，将<i>env</i>分支单独克隆到本地：<code>git clone -b env git@github.com:用户名/用户名.github.io.git</code>，删除除<i>.git</i>外的所有其它文件，然后执行<code>git add -A</code>、<code>git commit -m &quot;提交说明&quot;</code>，最后推送到远程仓库：<code>git push origin env</code>，这时候，远程<i>env</i>分支被清空</li>
+<li>在<i>GitHub</i>（<i><a target="_blank" rel="noopener" href="http://xn--eqr924avxo.github.io">用户名.github.io</a></i>）上新建<i>env</i>分支（用于存放博客环境文件，即本地的<i>myblog/</i>下的主题和配置文件等，而<i>master</i>主分支自然就是存放<i>Hexo</i>生成的静态站点文件，即<i>myblog/public/</i>），此时里面的内容和主分支是一样的，将<i>env</i>分支单独克隆到本地：<code>git clone -b env git@github.com:用户名/用户名.github.io.git</code>，删除除<i>.git</i>外的所有其它文件，然后执行<code>git add -A</code>、<code>git commit -m &quot;提交说明&quot;</code>，最后推送到远程仓库：<code>git push origin env</code>，这时候，远程<i>env</i>分支被清空</li>
 <li>将上一步得到的<i>.git</i>直接拷贝到<i>myblog/</i>根目录下，此时博客文件夹变成和远程<i>env</i>分支关联的本地仓库（如果主题文件是存放于<i>myblog/themes/</i>下，还需删除主题文件夹中的<i>.git</i>和<i>.gitignore</i>文件），以后每次发布新文章或者修改博客配置，依次执行<code>git add -A</code>、<code>git commit -m &quot;提交说明&quot;</code>、<code>git push origin env</code>即可将新的环境文件推送到远程<i>env</i>分支，实现环境的同步管理，最后再执行<code>hexo g -d</code>将新的静态文件推送到远程主分支</li>
 <li>现在迁移博客到其他电脑设备是很容易的，首先环境初始化（安装<i>git</i>、<i>nodejs</i>和<i>Hexo</i>），然后克隆远程<i>env</i>至本地：<code>git clone -b env git@github.com:用户名/用户名.github.io.git</code>，再根据<i>packge.json</i>安装依赖，最后<code>hexo g</code>、<code>hexo s</code>就能在本地重新打开博客了</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li><p><i>Algolia</i>搜索</p>
+<li>
+<p><i>Algolia</i>搜索</p>
 <p>首先注册<a target="_blank" rel="noopener" href="https://www.algolia.com/"><i>Algolia</i></a>账户，新建<i>index</i>，并获取<i>Application ID</i>、<i>Search-Only API Key</i>、<i>Admin API Key</i>，然后执行<code>cnpm install --save hexo-algolia</code>，并配置<i>_config.yml</i>：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">applicationID:</span> <span class="string">&#x27;application id&#x27;</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">&#x27;search-only api Key&#x27;</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">&#x27;index name&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>再配置<i>melody.yml</i>：</p>
@@ -581,12 +725,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <blockquote>
             
               
-                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+                <p>📃博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
 
               
             
               
-                <p>本文永久链接是：<a href=http://example.com/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/>http://example.com/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</a></p>
+                <p>🔗本文永久链接是：<a href=https://celestezj.github.io/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/>https://celestezj.github.io/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</a></p>
               
             
           </blockquote>
@@ -603,10 +747,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-07T09:44:38+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-11T14:18:54+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 7, 2021</p>
+    <p>更新于：Feb 11, 2021</p>
   </a>
 </div>
 
@@ -628,7 +772,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/&title=Hexo博客配置 - Muggledy's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://celestezj.github.io/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/&title=Hexo博客简易配置 - Muggledy's Blog&summary=Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"
           
           >
           
@@ -640,7 +784,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/&title=Hexo博客配置 - Muggledy's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://celestezj.github.io/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/&title=Hexo博客简易配置 - Muggledy's Blog&summary=Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"
           
           >
           
@@ -652,7 +796,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/&title=Hexo博客配置 - Muggledy's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://celestezj.github.io/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/&title=Hexo博客简易配置 - Muggledy's Blog&summary=Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"
           
           >
           
@@ -661,6 +805,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
     
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEXklEQVR42u3aSZLjMAwEwP7/p3seMOEQUYAgOTp580KJTPlAwPXza9wyfhCABWuABQvWALsC+xOO6vz/FnBxnY8LL97/0/zTz8seYMGCBQsWLFiwYFdhjw/Axe9fXecU8urBpvO7+wMLFixYsGDBggX7DtjqRqobrs5P71ctAMY8wIIFCxYsWLBgwX4F7OnGqo3ttCDoFiZgwYIFCxYsWLBg/xbsdAO7up6pQgYsWLBgwYIFCxbsd8KWAwrhgf3uxnT1Qb8uCQMWLFiwYMGCBQv2CLY6ug3ut7+OPcCCBQsWLFiwYMGuwE6PNJiRFhLp/G7w4+P9wIIFCxYsWLBgwa7ATgUyugCnje3pB1ad307CgAULFixYsGDBgl2FTQO5U8Ddz6cKF7BgwYIFCxYsWLDvgD2FSDeaFg5psCJtgFcLluPABliwYMGCBQsWLNhbYVPIuzYyXZicQrUb9WDBggULFixYsGBXYasH96sNTAUxuoGSrR8AWLBgwYIFCxYs2F3YLcB0Q12YKdjjQgIsWLBgwYIFCxbsI7DVRvJpo/kULt7QUJCk+kMACxYsWLBgwYIF+wzsFEh6cO+C3FXY/IYDLFiwYMGCBQsW7A5stdFdLRy6C+4WItV51XWO/YMAFixYsGDBggULtgQ7HXSYKjDShnMaEDn94YAFCxYsWLBgwYJ9B2x6AD9tVMcN46FARRWuHVgBCxYsWLBgwYIFuwqbglRhu43n7oPsFiKX6wMLFixYsGDBggW7Aps2kO8OPqQH9+nASfkBgAULFixYsGDBgl2BnS4Q0tdd2PRBVYMnl/sBCxYsWLBgwYIFuwLbLQzSRvRU4KJaMKSBlON9gQULFixYsGDBgl2F7TaotwMWd68nngcWLFiwYMGCBQt2BbZ6o+4BOi0Qut9LCyGwYMGCBQsWLFiw3wHbLRSq10mDGuMN6qHvgwULFixYsGDBgt2FTRfcPVhP37d6velGPliwYMGCBQsWLNhd2G5AorrA9H7d4EW3ILi8LliwYMGCBQsWLNhHYdMF3QW61bBuN/jBggULFixYsGDBrsB2D9KngNUFpxtLgyVj6wELFixYsGDBggW7AtsNPHThq43l6vvpD+d0f+UkDFiwYMGCBQsWLNgR2LRRnT6Y7sE8DTpPzQcLFixYsGDBggX7DthuQZBCdhvnp4VE+v00uAIWLFiwYMGCBQt2B3YqMNFtYJ/O2y4Iqp+DBQsWLFiwYMGC3YG9uxA4XlB4QK8GLLoP/vI1WLBgwYIFCxYs2FXYNKBw94E+vW+67vZ6wIIFCxYsWLBgwT4CO90YrhYa3cIkfb9bKIEFCxYsWLBgwYL9Ttir908b16eN6u66u4UBWLBgwYIFCxYs2O+GjRfQhK7O21oHWLBgwYIFCxYs2GdgpwMb1ft0G+tdsGoB9FgSBixYsGDBggULFmwrqJAewKcP7tOfxwEVsGDBggULFixYsCuwxuwACxasARYsWAPsreMfZrtRhYpIwIMAAAAASUVORK5CYII=">
+          </div>
+        </div>
       
     
       
@@ -682,15 +834,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2021/02/07/hello-world/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Hello World</p>
-          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
-        </a>
-      
       
         <a class='next' href='/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/'>
           <p class='title'>多项式曲线拟合<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>原理设多项式函数$f(x)=a_0+a_1x+a_2x^2+…+a_kx^k$，有$n$个数据点$(x_0,y_0),(x_1,y_1),…,(x_{n-1},y_{n-1})$，使用最小二乘法...</p>
+          <p class='content'>最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。
+
+ 原理
+设多项式函数f(x)=a0+a1x+a2x2+.....</p>
         </a>
       
     </div>
@@ -721,6 +871,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
+<section class="widget list shadow desktop mobile">
+  
+  <header>
+    
+      <i class="fa fa-book fa-fw" aria-hidden="true"></i><span class='name'>文档导航</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/" href="/2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/"
+          
+          
+          id="20210206E9858DE7BDAEE58D9AE5AEA2"
+          >
+          <div class='name'>
+            
+            Hexo博客简易配置
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/2017/07/05/Volantis%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/" href="/2017/07/05/Volantis%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/"
+          
+          
+          id="20170705VolantisE5AE98E696B9E9858DE7BDAEE69687E6A1A3"
+          >
+          <div class='name'>
+            
+            官方Volantis主题配置文档
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
 
 
   <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
@@ -733,7 +929,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text">环境初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">基本配置</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.</span> <span class="toc-text"> 环境初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text"> 基本配置</span></a></li></ol>
     </div>
   </section>
 
@@ -744,6 +940,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+<script>
+  if(typeof jQuery == 'undefined' && typeof create_copy_buttons =='undefined'){}else{
+    create_copy_buttons(window, document);
+  };
+</script>
 
 		  
 		  <!--此文件用来存放一些不方便取值的变量-->
@@ -752,7 +953,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="Hexo博客配置";
+  pdata.postTitle="Hexo博客简易配置";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
@@ -777,25 +978,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <br><br>
     
       
-        Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1" target="_blank" class="codename">Volantis</a>
-        as theme
-      
-    
-      
-        
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
-</div>
-        
-      
-    
-      
         <div class='copyright'>
         <p>Copyright © 2021 muggledy</p>
 
         </div>
       
     
+
+    <!--comes from https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/-->
+	<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+      var now = new Date(); 
+      function createtime() { 
+        var grt= new Date("02/2/2021 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+      } 
+      setInterval("createtime()",250);
+    </script>
+	<div><a target="_blank" rel="noopener" href="https://hexo.io/themes/">theme</a> - <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1">Volantis</a></div>
+	
   </footer>
 
 
@@ -990,6 +1199,267 @@ var loadCSS = function( href, before, media, attributes ){
 
 <!-- internal -->
 
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/050.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+	  function Pjax_backstretch(){
+        
+          $('#cover-backstretch').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        
+	  }
+	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
+    </script>
+  
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>Copy Text</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>Copy Link</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>Open Link in New Tab</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>Copy Image Link</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' 
+        
+        
+        
+          onclick="document.execCommand('copy')"
+        
+        >
+        <i class='fa fa-copy fa-fw fa-fw'></i>Copy</a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default ' href=https://volantis.js.org/faqs/
+        
+        
+        
+        
+          id="https:volantisjsorgfaqs"
+        >
+        <i class='fa fa-question fa-fw'></i>Questions</a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default toggle-mode-btn' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i>Dark mode</a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
+      if(volantis.APlayerLoaded){ // APlayer加载完成？
+        // 如果有aplayer，初始化一下
+        checkAPlayer();
+      }
+      
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
 
 
 
@@ -1059,6 +1529,32 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '6609974608';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.4';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.APlayerLoaded=0 // APlayer加载完成状态
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return // APlayer加载完成？
+	  if ($("#safearea").css("display")!="block") return // 文章内容加载完成？ see: source/css/first.styl
+    clearInterval(checkAPlayer)
+	  if (!window.volantis.APlayerLoaded&&!window.MetingJSElement){ // APlayer只能加载一次
+      window.volantis.APlayerLoaded=1 // APlayer加载完成
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js") // 加载 MetingJS
+	  }
+  }, 2500) // 按照网速调节差分2.5s
+  // rightmenu see: layout/_partial/rightmenu.ejs
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
 
 
 
@@ -1249,7 +1745,7 @@ function setSearchService() {
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'https://celestezj.github.io' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1267,7 +1763,7 @@ function setSearchService() {
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'http://example.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'https://celestezj.github.io' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1289,7 +1785,7 @@ function setSearchService() {
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'http://example.com' + pv.getAttribute('data-path');
+          var url = 'https://celestezj.github.io' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
@@ -1441,6 +1937,21 @@ var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
 function bindToggleButton() {
     btn.on('click',(e) => {
       const mode = toggleCustomDarkMode();
+	  if(mode=="light"){
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).children().eq(0).attr('class','fas fa-moon fa-fw');
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).contents().last()[0].textContent='暗黑模式';
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(1).children().eq(0).attr('class','fas fa-moon fa-fw');
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(1).contents().last()[0].textContent='暗黑模式';
+		  $(".vlts-menu.fix-cursor-default.toggle-mode-btn").eq(0).children().eq(0).attr('class','fas fa-moon fa-fw');
+		  $(".vlts-menu.fix-cursor-default.toggle-mode-btn").eq(0).contents().last()[0].textContent='Dark mode';
+	  }else if(mode=="dark"){
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).children().eq(0).attr('class','fas fa-sun fa-fw');
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).contents().last()[0].textContent='白天模式';
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(1).children().eq(0).attr('class','fas fa-sun fa-fw');
+          $(".menuitem.flat-box.header.toggle-mode-btn").eq(1).contents().last()[0].textContent='白天模式';
+		  $(".vlts-menu.fix-cursor-default.toggle-mode-btn").eq(0).children().eq(0).attr('class','fas fa-sun fa-fw');
+		  $(".vlts-menu.fix-cursor-default.toggle-mode-btn").eq(0).contents().last()[0].textContent='Light mode';
+	  };
       applyCustomDarkModeSettings(mode);
     });
 }
@@ -1542,6 +2053,17 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 </script>
 
 <!-- more -->
+
+  
+  <script>$('.fa-weixin').html('<img class="qrcode lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信二维码"/>');</script>
+
+  <script>window.onload=function(){if(window.location.pathname=='/'){$(".title.flat-box")[0].click();};if(window.location.pathname=='/categories/'){$("#categories")[0].click();};if(window.location.pathname=='/tags/'){$("#tags")[0].click();};if(window.location.pathname=='/archives/'){$("#archives")[0].click();};if(window.location.pathname=='/repos/'){$("#repos")[0].click();};};</script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+
+  <script type="text/javascript" src="/js/clipboard-use.js"></script>
+
+
 
  
 	   

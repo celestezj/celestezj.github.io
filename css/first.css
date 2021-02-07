@@ -1,6 +1,63 @@
 #safearea {
   display: none;
 }
+#safearea .fa-weixin {
+  position: relative;
+}
+#safearea .fa-weixin img.qrcode {
+  position: absolute;
+  z-index: 9;
+  top: -135px;
+  right: -43px;
+  width: 7.5rem;
+  max-width: none;
+  height: 7.5rem;
+  transform: scale(0);
+  transform-origin: bottom;
+  opacity: 0;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+#safearea .fa-weixin:hover img.qrcode {
+  transform: scale(1);
+  opacity: 1;
+}
+#safearea .highlight {
+  position: relative;
+}
+#safearea .btn-copy {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #333;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  padding: 2px 6px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  opacity: 0;
+}
+#safearea .btn-copy span {
+  margin-left: 5px;
+}
+#safearea .highlight:hover .btn-copy {
+  opacity: 1;
+}
 @supports (backdrop-filter: blur(20px)) {
   .blur {
     background: rgba(255,255,255,0.9) !important;
@@ -1873,6 +1930,33 @@ ul.list-v >li>a:hover {
     color: var(--color-text);
     background: #6f6f72;
   }
+  :root:not([data-user-color-scheme]) .aplayer {
+    background: var(--color-site-bg);
+  }
+  :root:not([data-user-color-scheme]) .aplayer .aplayer-list ol li:hover {
+    background: rgba(68,215,182,0.2);
+  }
+  :root:not([data-user-color-scheme]) .aplayer .aplayer-list ol li.aplayer-list-light {
+    background: var(--color-block);
+  }
+  :root:not([data-user-color-scheme]) .aplayer-info {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([data-user-color-scheme]) .aplayer .aplayer-lrc:before {
+    background: linear-gradient(180deg, #282c34 0, rgba(255,255,255,0));
+  }
+  :root:not([data-user-color-scheme]) .aplayer .aplayer-lrc:after {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(33,33,33,0.8));
+  }
+  :root:not([data-user-color-scheme]) .aplayer-pic {
+    filter: brightness(70%);
+  }
+  :root:not([data-user-color-scheme]) .aplayer .aplayer-list ol li {
+    border-top: 1px solid var(--color-card);
+  }
+  :root:not([data-user-color-scheme]) .aplayer.aplayer-withlist .aplayer-info {
+    border-bottom: 1px solid var(--color-block);
+  }
   :root:not([data-user-color-scheme]) #valine_container button {
     background-color: var(--color-block) !important;
   }
@@ -2025,6 +2109,33 @@ ul.list-v >li>a:hover {
 [data-user-color-scheme='dark'] #archive-page .archive .all-tags ul li span {
   color: var(--color-text);
   background: #6f6f72;
+}
+[data-user-color-scheme='dark'] .aplayer {
+  background: var(--color-site-bg);
+}
+[data-user-color-scheme='dark'] .aplayer .aplayer-list ol li:hover {
+  background: rgba(68,215,182,0.2);
+}
+[data-user-color-scheme='dark'] .aplayer .aplayer-list ol li.aplayer-list-light {
+  background: var(--color-block);
+}
+[data-user-color-scheme='dark'] .aplayer-info {
+  background: var(--color-site-bg) !important;
+}
+[data-user-color-scheme='dark'] .aplayer .aplayer-lrc:before {
+  background: linear-gradient(180deg, #282c34 0, rgba(255,255,255,0));
+}
+[data-user-color-scheme='dark'] .aplayer .aplayer-lrc:after {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(33,33,33,0.8));
+}
+[data-user-color-scheme='dark'] .aplayer-pic {
+  filter: brightness(70%);
+}
+[data-user-color-scheme='dark'] .aplayer .aplayer-list ol li {
+  border-top: 1px solid var(--color-card);
+}
+[data-user-color-scheme='dark'] .aplayer.aplayer-withlist .aplayer-info {
+  border-bottom: 1px solid var(--color-block);
 }
 [data-user-color-scheme='dark'] #valine_container button {
   background-color: var(--color-block) !important;
