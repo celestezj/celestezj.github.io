@@ -9,10 +9,10 @@ info:
   theme_docs: https://volantis.js.org/ # This is theme's URL.
   theme_repo: https://github.com/volantis-x/hexo-theme-volantis
   cdn:
-    js: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/app.min.js # 注意版本!!!
+    js: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/app.min.js # 注意版本!!! 你也可以将use_cdn置为true，并将js、first、style全都置为自己所fork的主题项目中相应文件的地址，开发者比较麻烦，需要注意发布最新release，否则cdn资源可能是旧的
     css:
-      first: # /css/first.css (需自行替换CDN 首屏样式 cover navbar search )
-      style: # /css/style.css (需自行替换CDN 异步加载 Others...           )
+      first: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/css/first.css (需自行替换CDN 首屏样式 cover navbar search )
+      style: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/css/style.css (需自行替换CDN 异步加载 Others...           )
 ########################################################################
 
 ############################### Navigation Bar ############################### > start
@@ -22,7 +22,7 @@ navbar:
   logo: # choose [img] or [icon + title]
     img: 
     icon: # fas fa-blog
-    title: Muggledy's Blog
+    title: <span style="font-family:Arial,"Times New Roman",Serif;"><font color="#4285f4">M</font><font color="#ea4335">u</font><font color="#fbbc05">g</font><font color="#4285f4">g</font><font color="#34a853">l</font><font color="#ea4335">e</font><font color="#24292e">dy</font><font color="#cabc91">'s</font><font color="#4ed8ff"> Blog</font></span>
   menu:
     - name: 分类
       icon: fas fa-folder-open
@@ -33,15 +33,15 @@ navbar:
     - name: 归档
       icon: fas fa-archive
       url: archives/
-    - name: 更多
-      icon: fas fa-ellipsis-v
-      rows:
-        - name: 友链
-          icon: fas fa-link
-          url: friends/
-        - name: 关于
-          icon: fas fa-info-circle
-          url: about/
+    #- name: 更多
+    #  icon: fas fa-ellipsis-v
+    #  rows:
+    #    - name: 友链
+    #      icon: fas fa-link
+    #      url: friends/
+    #    - name: 关于
+    #      icon: fas fa-info-circle
+    #      url: about/
   search: Search...   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
@@ -54,11 +54,20 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210202144753.png
+  background: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png # 替代：https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210202144753.png
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
-  logo: https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210206220813.jpg
+  logo: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg
   title: ''
-  subtitle: ''
+  subtitle: '' # '戴阳的小窝' # 如果subtitle为空，则显示动态效果文字（colourful_subtitle，假设其存在值的话），具体定义在themes/volantis/layout/_cover/subtitle.ejs中，目前示例仅改写了同目录下的dock.ejs，但主题存在固有缺陷，如果某个句子太长将会导致logo大小发生改变
+  colourful_subtitle:
+    - 山有木兮木有枝，心悦君兮君不知。
+    - 人生若只如初见，何事秋风悲画扇。
+    - 十年生死两茫茫，不思量，自难忘。
+    - 曾经沧海难为水，除却巫山不是云。
+    - 洛中何郁郁，冠带自相索。
+    - 只愿君心似我心，定不负相思意。
+    - 愿得一心人，白头不相离。
+    - 入我相思门，知我相思苦。
   search: A Wonderful Theme for Hexo # search bar placeholder
   features:
     - name: 首页
@@ -72,7 +81,7 @@ cover:
     - name: 留言
       icon: #
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4ac.svg
-      url: /contributors/
+      url: /
     - name: 音乐
       icon: #
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f3bc.svg
@@ -134,9 +143,9 @@ article:
       # 版权声明组件 (for layout: post)
       copyright:
         enable: true
-        permalink: '本文永久链接是：'
+        permalink: '🔗本文永久链接是：'
         content:
-          - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
+          - '📃博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
           - permalink
       # ----------------
       # 打赏组件 (for layout: post)
@@ -153,7 +162,7 @@ article:
       # 默认文章作者（可在 _data/author.yaml 中增加其他作者，并在 front-matter 中设置）
       # https://volantis.js.org/advanced-settings/#多人协同
       author:
-        avatar: https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210207093620.ico #https://twemoji.maxcdn.com/v/13.0.1/72x72/1f9d1-1f3fb.png
+        avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico #https://twemoji.maxcdn.com/v/13.0.1/72x72/1f9d1-1f3fb.png
         name: muggledy
         url: / #指向个人简历
       # 文章创建日期
@@ -320,7 +329,7 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210202152223.jpg
+      avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg
       shape: rectangle # circle, rectangle
       url: /about/
       title:
@@ -331,6 +340,8 @@ sidebar:
           url: https://github.com/muggledy/
         - icon: fas fa-envelope
           url: mailto:zgjsycfndy2015@163.com
+        - icon: fab fa-telegram-plane
+          url: /
         - icon: fas fa-rss
           url: /atom.xml
     # ---------------------------------------
@@ -438,7 +449,7 @@ tag_plugins:
 ############################### Site Footer ############################### > start
 site_footer:
   # layout of footer: [aplayer, social, license, analytics, info, copyright]
-  layout: [info, analytics, copyright]
+  layout: [analytics, info, copyright]
   social:
     - icon: #fas fa-rss
       url:
@@ -662,7 +673,7 @@ plugins:
 rightmenu:
   enable: #true
   # hr: 分割线, music: 音乐控制器
-  layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, dark_mode, hr, music]
+  layout: [home, copy, help, hr, dark_mode, hr, music] # [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, dark_mode, hr, music]
   # 可选功能项
   print:
     name: 打印页面
@@ -693,6 +704,9 @@ rightmenu:
     name: Dark mode
     icon: fas fa-moon
     toggle: darkmode
+  copy:
+    name: 复制
+    icon: fa fa-copy
 ############################### Rightmenu ############################### > end
 
 

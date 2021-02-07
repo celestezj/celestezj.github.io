@@ -11,7 +11,7 @@ author: muggledy
 language: en
 timezone: ''
 
-favicon: https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210207091812.png
+favicon: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207091812.png
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
