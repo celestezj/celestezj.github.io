@@ -3,13 +3,15 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Muggledy's Blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: muggledy
 language: en
 timezone: ''
+
+favicon: https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210207091812.png
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
@@ -98,9 +100,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: volantis
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+#deploy:
+#  type: git
+#  repo: celestezj:celestezj/celestezj.github.io
+#  branch: master
+## 注：hexo-deploy插件不执行push -f操作，目前是进入.deploy_git目录手动推送生成的静态站点文件
