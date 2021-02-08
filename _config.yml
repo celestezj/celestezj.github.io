@@ -116,6 +116,10 @@ markdown_it_plus:
         name: markdown-it-mark
         enable: false
 
+import:
+  script:
+    - <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg" alt="微信二维码"/>');</script>
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 #deploy:
