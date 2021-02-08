@@ -1,3 +1,5 @@
 1.遇到一个莫名其妙的问题，hexo deploy无法推送代码至远程仓库，deploy插件似乎就没有执行最后一步push -f操作，现在我只能手动推送：cd .deploy_git，git add -A，git push -f origin master。一开始如果没有.deploy_git文件夹，先从远程仓库克隆一份，在博客根目录下执行git clone 博客仓库地址 .deploy_git
 
 2.第二个问题是volantis主题首页的箭头bug，如果height_scheme置为full，layout_scheme置为featured，首页底部会显示一个下拉的箭头，切换到归档页面，这个箭头还是会存在（我看别人的博客都没有啊），但是无法点击，纯粹就是一个bug，难不成只有我一个人遇到？目前我是height_scheme取值half，layout_scheme取值dock以避免该问题
+
+3.第三个问题是初始时刻打开博客网站时，下滑出现眉头导航栏没毛病，但是上滑却有可能不隐藏，重新刷新后变得正常

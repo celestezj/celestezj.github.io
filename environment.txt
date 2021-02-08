@@ -1,0 +1,21 @@
+hexo: 5.3.0
+hexo-cli: 4.2.0
+os: Windows_NT 10.0.18363 win32 x64
+node: 13.8.0
+v8: 7.9.317.25-node.28
+uv: 1.34.1
+zlib: 1.2.11
+brotli: 1.0.7
+ares: 1.15.0
+modules: 79
+nghttp2: 1.40.0
+napi: 5
+llhttp: 2.0.4
+openssl: 1.1.1d
+cldr: 36.0
+icu: 65.1
+tz: 2019c
+unicode: 12.1
+nvm: 1.1.7
+npm: 6.14.11
+cnpm: 6.1.1
