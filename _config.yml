@@ -17,11 +17,17 @@ favicon: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207091
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: https://celestezj.github.io
 root: /
-permalink: :year/:month/:day/:title/
+#permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# https://blog.csdn.net/qq_45428737/article/details/106299049
+permalink: post/:abbrlink.html  # post可以修改
+abbrlink:
+  alg: crc16
+  rep: hex
 
 # Directory
 source_dir: source
