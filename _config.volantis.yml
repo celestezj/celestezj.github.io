@@ -36,6 +36,10 @@ navbar:
     - name: 更多
       icon: fas fa-ellipsis-v
       rows:
+        - name: 公示
+          icon: fas fa-bullhorn
+          url: /repos/
+        #- name: hr
         - name: 暗黑模式 # 可自定义，但是要相应修改volantis/layout/_partial/scripts/darkmode.ejs
           icon: fas fa-moon # 可自定义，同上
           toggle: darkmode
@@ -118,7 +122,7 @@ article:
   body:
     # 文章顶部信息
     # 从 meta_library 中取
-    top_meta: [author, category, date, counter, wordcount] #启用评论数量需在此添加
+    top_meta: [author, category, date, counter, wordcount, valinecount] #启用评论数量需在此添加
     # ----------------
     # 文章页脚组件
     footer_widget:
