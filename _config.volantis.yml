@@ -22,7 +22,7 @@ navbar:
   logo: # choose [img] or [icon + title]
     img: 
     icon: # fas fa-blog
-    title: <span style="font-family:Arial,"Times New Roman",Serif;"><font color="#4285f4">M</font><font color="#ea4335">u</font><font color="#fbbc05">g</font><font color="#4285f4">g</font><font color="#34a853">l</font><font color="#ea4335">e</font><font color="#24292e">dy</font><font color="#cabc91">'s</font><font color="#4ed8ff"> Blog</font></span>
+    title: <span style="font-family:Arial,"Times New Roman",Serif;"><font color="#4285f4">M</font><font color="#ea4335">u</font><font color="#fbbc05">g</font><font color="#4285f4">g</font><font color="#34a853">l</font><font color="#ea4335">e</font><font color="#aaaaaa">dy</font><font color="#9f0099">'s</font><font color="#4ed8ff"> Blog</font></span>
   menu:
     - name: 分类
       icon: fas fa-folder-open
@@ -33,9 +33,12 @@ navbar:
     - name: 归档
       icon: fas fa-archive
       url: archives/
-    #- name: 更多
-    #  icon: fas fa-ellipsis-v
-    #  rows:
+    - name: 更多
+      icon: fas fa-ellipsis-v
+      rows:
+        - name: 暗黑模式 # 可自定义，但是要相应修改volantis/layout/_partial/scripts/darkmode.ejs
+          icon: fas fa-moon # 可自定义，同上
+          toggle: darkmode
     #    - name: 友链
     #      icon: fas fa-link
     #      url: friends/
@@ -434,8 +437,7 @@ sidebar:
         title: 公示
         url: /repos/
       content:
-        - '(1) 第一次打开网站首页，导航栏有时候不能正常收起，需要刷新？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
-        - '(2) 在iPad上，归档页面时间线图标显示存在错误？'
+        - '在iPad上，归档页面时间线图标显示存在错误？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
         - <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
 ############################### Sidebar ############################### > end
 

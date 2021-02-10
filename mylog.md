@@ -4,7 +4,7 @@
 
 当前主题<a href="https://github.com/celestezj/hexo-theme-volantis/releases/tag/4.3.1">版本</a>存在的三个问题（bug）：
 
-1. 主题首页的箭头bug，如果`height_scheme`置为`full`、`layout_scheme`置为`featured`，首页底部会显示一个下拉的箭头，如果切换到归档页面，这个箭头还是会存在（别人的博客没有啊，难不成只有我一个人遇到？），且无法点击，目前我是将`height_scheme`置为`half`、`layout_scheme`置为`dock`以避免该问题
+1. 主题首页的箭头bug，如果`height_scheme`置为`full`、`layout_scheme`置为`featured`，首页底部会显示一个下拉的箭头，如果切换到归档页面，这个箭头还是会存在（别人的博客没有啊，难不成只有我一个人遇到？），且无法点击，目前我是将`height_scheme`置为`half`、`layout_scheme`置为`dock`以避免该问题（就眼不见心不烦呗）
 
 2. 初始时刻打开博客网站时，下滑出现眉头导航栏，这没毛病，但是上滑却有很大概率不能隐藏（就好像导航栏卡住不动似的），必须重新刷新网页才变得正常，如下图所示（此时仅仅将`_config.yml`中的`theme`置为`volantis`，其他设置还没有做任何改动）：
 
@@ -215,6 +215,32 @@
     }
   }
   ```
+
+- 开启暗黑模式，点击后，将暗黑模式变成白天模式，很简单，只要通过jQuery修改节点文本即可：
+
+  <img src="https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210210114452.png" style="zoom:100%;" />
+
+  将jQuery代码添加到`volantis/layout/_partial/scripts/darkmode.ejs`中：
+
+  ```ejs
+  function bindToggleButton() {
+      btn.on('click',(e) => {
+        const mode = toggleCustomDarkMode();
+  	  if(mode=="light"){
+            $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).children().eq(0).attr('class','fas fa-moon fa-fw');
+            $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).contents().last()[0].textContent='暗黑模式';
+  	  }else if(mode=="dark"){
+            $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).children().eq(0).attr('class','fas fa-sun fa-fw');
+            $(".menuitem.flat-box.header.toggle-mode-btn").eq(0).contents().last()[0].textContent='白天模式';
+  	  };
+        applyCustomDarkModeSettings(mode);
+      });
+  }
+  ```
+
+- 
+
+  
 
 - 
 
