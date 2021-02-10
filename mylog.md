@@ -238,9 +238,76 @@
   }
   ```
 
-- 
+- 添加代码一键复制功能，首先安装`npm install clipboard --save`，然后在`volantis/source/css/first.styl`中添加按钮样式：
 
-  
+  ```stylus
+  .highlight{
+    //方便copy代码按钮（btn-copy）的定位
+    position: relative;
+  }
+  .btn-copy {
+      display: inline-block;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc,#eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      -webkit-transition: opacity .3s ease-in-out;
+      -o-transition: opacity .3s ease-in-out;
+      transition: opacity .3s ease-in-out;
+      padding: 2px 6px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      opacity: 0;
+  }
+  .btn-copy span {
+      margin-left: 5px;
+  }
+  .highlight:hover .btn-copy{
+    opacity: 1;
+  }
+  ```
+
+  在主题的js目录下创建文件`clipboard-use.js`用于创建复制按钮：
+
+  ```js
+  function create_copy_buttons(e, t, a) { 
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-clipboard"></i><span>copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      new ClipboardJS('.btn-copy', {
+          target: function(trigger) {
+              return trigger.nextElementSibling;
+          }
+      });
+    }
+    initCopyCode();
+  };
+  create_copy_buttons(window, document);
+  ```
+
+  在`_config.yml`中添加对上述js代码的引用：
+
+  ```yaml
+  import:
+    script:
+      - <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+      - <script type="text/javascript" src="/js/clipboard-use.js"></script>
+  ```
 
 - 
 
