@@ -36,10 +36,12 @@ navbar:
     - name: 更多
       icon: fas fa-ellipsis-v
       rows:
-        - name: 公示
+        - name: 网站公示
           icon: fas fa-bullhorn
           url: /repos/
-        #- name: hr
+        - name: hr
+        - name: 背景音乐
+          icon: fas fa-compact-disc
         - name: 暗黑模式 # 可自定义，但是要相应修改volantis/layout/_partial/scripts/darkmode.ejs
           icon: fas fa-moon # 可自定义，同上
           toggle: darkmode
@@ -597,21 +599,21 @@ plugins:
   # APlayer is only available in mainland China.
   # APlayer config: https://github.com/metowolf/MetingJS
   aplayer:
-    enable: #true
+    enable: true
     js:
       aplayer: https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js
       meting: https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js
     # Required
     server: netease   # netease, tencent, kugou, xiami, baidu
     type: playlist    # song, playlist, album, search, artist
-    id: 3175833810    # song id / playlist id / album id / search keyword
+    id: 6609974608    # song id / playlist id / album id / search keyword
     # Optional
     fixed: false      # enable fixed mode
     theme: '#1BCDFC'  # main color
     autoplay: false   # audio autoplay
-    order: list       # player play order, values: 'list', 'random'
+    order: random     # player play order, values: 'list', 'random'
     loop: all         # player loop play, values: 'all', 'one', 'none'
-    volume: 0.7       # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
+    volume: 0.4       # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
     list_max_height: 320px # list max height
     list_folded: true
   pjax:
