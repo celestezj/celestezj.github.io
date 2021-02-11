@@ -87,6 +87,10 @@ cover:
       icon: #
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
       url: /archives/
+    - name: 简历
+      icon: #
+      img: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg
+      url: https://muggledy.github.io/
     #- name: 留言
     #  icon: #
     #  img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4ac.svg
@@ -173,7 +177,7 @@ article:
       author:
         avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico #https://twemoji.maxcdn.com/v/13.0.1/72x72/1f9d1-1f3fb.png
         name: muggledy
-        url: / #指向个人简历
+        url: https://muggledy.github.io/ #指向个人简历
       # 文章创建日期
       date:
         icon: fas fa-calendar-alt
@@ -340,7 +344,7 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg
       shape: rectangle # circle, rectangle
-      url: /about/
+      url: /
       title:
       subtitle:
       jinrishici: 孤筏重洋 # Poetry Today. You can set a string, and it will be displayed when loading fails.
@@ -443,8 +447,8 @@ sidebar:
         title: 公示
         url: /repos/
       content:
-        - '在iPad上，归档页面时间线图标显示存在错误？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
-        - <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
+        - '在iPad上，归档页面时间线图标显示存在错误<img src="https://v2fy.com/asset/0i/ChineseBQB/078BeiFang_%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC_BQB/%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC00030-%E5%93%87%E7%9A%84%E4%B8%80%E5%A3%B0%E5%93%AD%E5%87%BA%E6%9D%A5.jpg" width="50px"/>？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
+        #- <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
     article-hexo-theme:
       class: list
       display: [desktop, mobile] # [desktop, mobile]
@@ -457,8 +461,6 @@ sidebar:
           url: /2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/
         - name: 官方Volantis主题配置文档
           url: /2017/07/05/Volantis%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/
-        - name: Volantis主题美化-阳光派Plus
-          url: /2020/05/23/Volantis%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/
 ############################### Sidebar ############################### > end
 
 
@@ -580,22 +582,22 @@ plugins:
 
   # Slide Background
   backstretch:
-    enable: #true
+    enable: true
     js: https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js
-    position: fixed       # cover: sticky on the cover.   fixed: Fixed as background for the site.
+    position: cover       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     shuffle: true         # shuffle playlist
-    duration: 10000       # Duration (ms)
+    duration: 20000       # Duration (ms)
     fade: 1500            # fade duration (ms) (Not more than 1500)
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
       - https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg
-      #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/004.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/005.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/012.jpg
-      #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg
@@ -605,10 +607,12 @@ plugins:
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/039.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg
-      #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/051.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/050.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg
       #- https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg
+      #- https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210211171827.jpg
+      #- https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210211172259.jpg
 
   # APlayer is only available in mainland China.
   # APlayer config: https://github.com/metowolf/MetingJS
