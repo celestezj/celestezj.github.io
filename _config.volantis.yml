@@ -117,7 +117,7 @@ article:
     # show split line or not
     line_style: solid # hidden, solid, dashed, dotted
     # show author
-    author: false # true, false
+    author: true # true, false
     # show readmore button
     readmore: auto # auto, always
   # 文章详情页面的文章卡片本体布局方案
@@ -213,8 +213,8 @@ article:
           img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png
         - id: weibo
           img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
-        - id: # qrcode # 当id为qrcode时需要安装插件  npm i hexo-helper-qrcode
-          img: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png
+        - id: qrcode # 当id为qrcode时需要安装插件  npm i hexo-helper-qrcode
+          img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png
         - id: # telegram
           img: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
 ############################### Article Layout ############################### > end
@@ -445,6 +445,20 @@ sidebar:
       content:
         - '在iPad上，归档页面时间线图标显示存在错误？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
         - <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
+    article-hexo-theme:
+      class: list
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fa fa-book
+        title: 文档导航
+        # url: /wiki/
+      rows:
+        - name: Hexo博客简易配置
+          url: /2021/02/06/%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/
+        - name: 官方Volantis主题配置文档
+          url: /2017/07/05/Volantis%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/
+        - name: Volantis主题美化-阳光派Plus
+          url: /2020/05/23/Volantis%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/
 ############################### Sidebar ############################### > end
 
 
@@ -691,8 +705,17 @@ plugins:
 
 ############################### Rightmenu ############################### > start
 # 自定义右键菜单
+# 如果开启后要在网站中禁用，F12打开控制台，输入：
+# window.document.oncontextmenu = function(){ return true;}
+# 即可恢复浏览器默认右键
+# 如果关闭后要再开启，输入：
+# window.document.oncontextmenu = function (event) {
+#     if (event.ctrlKey) return true;
+#     if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+#     return popMenu(event);
+# };
 rightmenu:
-  enable: #true
+  enable: true
   # hr: 分割线, music: 音乐控制器
   layout: [home, copy, help, hr, dark_mode, hr, music] # [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, dark_mode, hr, music]
   # 可选功能项
@@ -702,7 +725,7 @@ rightmenu:
     onclick: document.execCommand('print')
   # 自定义菜单的格式如下
   help:
-    name: 常见问题
+    name: Questions
     icon: fa fa-question
     url: https://volantis.js.org/faqs/
   examples:
@@ -726,8 +749,9 @@ rightmenu:
     icon: fas fa-moon
     toggle: darkmode
   copy:
-    name: 复制
-    icon: fa fa-copy
+    name: Copy
+    icon: fa fa-copy fa-fw
+    onclick: document.execCommand('copy')
 ############################### Rightmenu ############################### > end
 
 
