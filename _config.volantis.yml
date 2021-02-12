@@ -54,7 +54,7 @@ navbar:
   search: Search...   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
-
+use_new_tag_cloud: true # 是否使用新式标签云，原始标签云区分性较弱，不太美观
 ############################### Cover ############################### > start
 cover:
   height_scheme: half # full, half

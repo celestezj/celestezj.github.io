@@ -309,6 +309,101 @@
       - <script type="text/javascript" src="/js/clipboard-use.js"></script>
   ```
 
+  该死，后来才发现主题自带代码块复制功能，只要在配置文件中开启即可，以上代码已删除
+
+- <a href="https://cloud.tencent.com/developer/article/1597223">修改标签云样式</a>，在`volantis/layout/_widget/`下新建文件`new-tag-cloud.ejs`：
+
+  ```ejs
+  <%
+  var colorArr = ['#F9EBEA', '#F5EEF8', '#D5F5E3', '#E8F8F5', '#FEF9E7',
+      '#F8F9F9', '#82E0AA', '#D7BDE2', '#A3E4D7', '#85C1E9', '#F8C471', '#F9E79F', '#FFF'];
+  var colorCount = colorArr.length;
+  var hashCode = function (str) {
+      if (!str && str.length === 0) {
+          return 0;
+      }
+  
+      var hash = 0;
+      for (var i = 0, len = str.length; i < len; i++) {
+          hash = ((hash << 5) - hash) + str.charCodeAt(i);
+          hash |= 0;
+      }
+      return hash;
+  };
+  var i = 0;
+  var isTag = is_tag();
+  %>
+  <style>
+    /*tag-cloud*/
+    .chip .tag-length {
+      margin-left: 5px;
+      margin-right: -2px;
+      font-size: 0.5rem;
+    }
+    .chip-default .tag-length {
+      color: #02142c;
+      margin-top: 1px;
+    }
+    .chip-active .tag-length {
+      color: #fff;
+    }
+    .chip-container .tag-chips {
+      margin: 1rem auto 0.5rem;
+      max-width: 850px;
+      text-align: center;
+    }
+    /*tags边框*/
+    .chip-container .chip {
+      margin: 10px 10px;
+      padding: 19px 14px;
+      display: inline-flex;
+      line-height: 0;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
+      z-index: 0;
+    }
+    .chip-container .chip:hover {
+      color: #fff;
+      background: linear-gradient(to right, #fcdec2 0%, #ff5722 100%) !important;
+    }
+  </style>
+  <div id="tags" class="container chip-container">
+      <div class="card">
+          <div class="card-content">
+              <div class="tag-chips">
+                  <% site.tags.map(function(tag) { %>
+                  <%
+                      i++;
+                      var color = i >= colorCount ? colorArr[Math.abs(hashCode(tag.name) % colorCount)]
+                              : colorArr[i - 1];
+                  %>
+                  <a href="<%- url_for(tag.path) %>" title="<%- tag.name %>: <%- tag.length %>">
+                      <span class="chip center-align waves-effect waves-light
+                              <% if (isTag && tag.name == page.tag) { %> chip-active <% } else { %> chip-default <% } %>"
+                              data-tagname="<%- tag.name %>" style="background-color: <%- color %>;"><%- tag.name %>
+                          <span class="tag-length"><%- tag.length %></span>
+                      </span>
+                  </a>
+                  <% }); %>
+              </div>
+          </div>
+      </div>
+  </div>
+  ```
+
+  然后添加到`volantis/layout/tag.ejs`即可：
+
+  ```ejs
+  <%- partial('_widget/new-tag-cloud') %>
+  ```
+
+  为了方便，我在配置文件中新建变量`use_new_tag_cloud`，用于控制是否使用该新样式
+
+  ![](https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210212222140.png)
+
 - 无
 
 2021.2.7
