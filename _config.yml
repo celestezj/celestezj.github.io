@@ -126,8 +126,6 @@ import:
   script:
     - <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
     - <script>window.onload=function(){if(window.location.pathname=='/'){$(".title.flat-box")[0].click();};if(window.location.pathname=='/categories/'){$("#categories")[0].click();};if(window.location.pathname=='/tags/'){$("#tags")[0].click();};if(window.location.pathname=='/archives/'){$("#archives")[0].click();};if(window.location.pathname=='/repos/'){$("#repos")[0].click();};};</script>
-    - <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-    - <script type="text/javascript" src="/js/clipboard-use.js"></script>
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
