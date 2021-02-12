@@ -87,10 +87,10 @@ cover:
       icon: #
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
       url: /archives/
-    - name: 简历
+    - name: 关于
       icon: #
       img: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg
-      url: https://muggledy.github.io/
+      url: /about/
     #- name: 留言
     #  icon: #
     #  img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4ac.svg
@@ -424,7 +424,7 @@ sidebar:
           unit: '篇'
         runtime:
           enable: true
-          data: '2020/01/01'    # 填写建站日期
+          data: '2021/02/02'    # 填写建站日期
           text: '已运行时间：'
           unit: '天'
         wordcount:
@@ -455,7 +455,7 @@ sidebar:
         title: 公示
         url: /repos/
       content:
-        - '在iPad上，归档页面时间线图标显示存在错误<img src="https://v2fy.com/asset/0i/ChineseBQB/078BeiFang_%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC_BQB/%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC00030-%E5%93%87%E7%9A%84%E4%B8%80%E5%A3%B0%E5%93%AD%E5%87%BA%E6%9D%A5.jpg" width="50px"/>？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
+        - '在iPad上，归档页面时间线图标显示存在错误😭？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
         #- <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
     article-hexo-theme:
       class: list
@@ -729,10 +729,14 @@ plugins:
 rightmenu:
   enable: true
   # hr: 分割线, music: 音乐控制器
-  layout: [home, copy, help, hr, dark_mode, hr, music] # [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, dark_mode, hr, music]
+  layout: [home, about, help, hr, dark_mode, hr, music] # [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, dark_mode, hr, music]
   # 可选功能项
+  about:
+    name: About
+    icon: fa fa-info
+    url: /about/
   print:
-    name: 打印页面
+    name: Print
     icon: fa fa-print
     onclick: document.execCommand('print')
   # 自定义菜单的格式如下
@@ -757,13 +761,13 @@ rightmenu:
     icon: fa fa-code-branch
     url: https://github.com/volantis-x/hexo-theme-volantis/
   dark_mode:
-    name: Dark mode
-    icon: fas fa-moon
+    name: Dark mode #若修改此值，需同时修改主题下的darkmenu.ejs文件
+    icon: fas fa-moon #同上
     toggle: darkmode
-  copy:
-    name: Copy
-    icon: fa fa-copy fa-fw
-    onclick: document.execCommand('copy')
+  #copy:
+  #  name: Copy
+  #  icon: fa fa-copy fa-fw
+  #  onclick: document.execCommand('copy')
 ############################### Rightmenu ############################### > end
 
 
@@ -967,8 +971,8 @@ custom_css:
 analytics:
   busuanzi: #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
   leancloud: # 请使用自己的 id & key 以防止数据丢失
-    app_id: u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI
-    app_key: jfHtEKVE24j0IVCGHbvuFClp
+    app_id: 8Ihq5v1YlRsrBoOAbeQeL4tj-gzGzoHsz
+    app_key: 8IXfoRd6cod5rBwYVTd9Cfmc
     custom_api_server: # 国际版一般不需要写，除非自定义了 API Server
 ############################### Analytics ############################### > end
 

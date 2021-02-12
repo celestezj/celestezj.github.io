@@ -5,6 +5,8 @@ title: 官方Volantis主题配置文档
 tag: Hexo
 categories: 环境配置
 sidebar: [article-hexo-theme,toc]
+icons:
+  - fas fa-fire red
 pin: true
 author: Volantis
 link: https://volantis.js.org/v4/getting-started/

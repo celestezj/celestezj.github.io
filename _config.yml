@@ -123,7 +123,7 @@ markdown_it_plus:
         enable: false
 
 import:
-  script:
+  script: #注意，about页面并未设置模拟点击，因为并未显示封面，也就不会下滑拉动以控制眉头导航栏的出现和隐没。另外模拟点击会导致页面访问量成倍增长（刷新一次加1），所以我没有显示这一项
     - <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
     - <script>window.onload=function(){if(window.location.pathname=='/'){$(".title.flat-box")[0].click();};if(window.location.pathname=='/categories/'){$("#categories")[0].click();};if(window.location.pathname=='/tags/'){$("#tags")[0].click();};if(window.location.pathname=='/archives/'){$("#archives")[0].click();};if(window.location.pathname=='/repos/'){$("#repos")[0].click();};};</script>
 
