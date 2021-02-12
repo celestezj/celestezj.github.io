@@ -232,7 +232,7 @@ comments:
   # Valine
   # https://valine.js.org/
   valine:
-    # js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
+    js: https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js # https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
     path: # 全局评论地址 目前设置全局评论地址后visitor失效,这是valine的问题
     placeholder: 快来评论吧~  # 评论占位提示
     # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder emojiCDN emojiMaps] 选项
@@ -247,6 +247,14 @@ comments:
     lang: zh-cn
     highlight: true
     mathJax: false
+    #metaPlaceholder:
+    #  - nick: muggledy
+    #  - mail: zgjsycfndy2015@163.com
+    tagMeta: ["博主","小伙伴","访客"]
+    master: # md5加密后的博主邮箱（在线加密：https://md5jiami.bmcx.com/）
+      - 5f452633ebd48518f8778c240d946335
+    friends: # md5加密后的小伙伴邮箱
+      - a483c79213701a5644bec62de88f974d
   # MiniValine
   # https://github.com/MiniValine/MiniValine
   minivaline:
