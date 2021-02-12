@@ -2,17 +2,17 @@
 # use_cdn: /source/js/* 中的JS文件(JS Only)使用jsdelivr的min版本加速
 # 默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/*.min.js 的CDN压缩版本(min.js)，注意版本号对应关系！！可以通过修改以下配置项覆盖
 # 开发者注意 use_cdn 设置为 false
-use_cdn: false
+use_cdn: true
 info:
   theme_name: Volantis # This is theme's name.
   theme_version: '4.3.1' # This is theme's version.
   theme_docs: https://volantis.js.org/ # This is theme's URL.
   theme_repo: https://github.com/volantis-x/hexo-theme-volantis
   cdn:
-    js: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/app.min.js # 注意版本!!! 你也可以将use_cdn置为true，并将js、first、style全都置为自己所fork的主题项目中相应文件的地址，开发者比较麻烦，需要注意发布最新release，否则cdn资源可能是旧的
+    js: https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/js/app.min.js # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/app.min.js # 注意版本!!! 你也可以将use_cdn置为true，并将js、first、style全都置为自己所fork的主题项目中相应文件的地址，开发者比较麻烦，需要注意发布最新release，否则cdn资源可能是旧的
     css:
-      first: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/css/first.css (需自行替换CDN 首屏样式 cover navbar search )
-      style: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/css/style.css (需自行替换CDN 异步加载 Others...           )
+      first: https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/css/first.css (需自行替换CDN 首屏样式 cover navbar search )
+      style: https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/css/style.css (需自行替换CDN 异步加载 Others...           )
 ########################################################################
 
 ############################### Navigation Bar ############################### > start
@@ -582,7 +582,7 @@ plugins:
 
   # Slide Background
   backstretch:
-    enable: true
+    enable: #true
     js: https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js
     position: cover       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     shuffle: true         # shuffle playlist
