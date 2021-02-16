@@ -455,8 +455,9 @@ sidebar:
         title: 公示
         url: /repos/
       content:
-        - '在iPad上，归档页面时间线图标显示存在错误😭？' # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
+        #- <center>一些说明</center> # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
         #- <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
+        - <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210216202334.gif" height="150px"/></center>
     article-hexo-theme:
       class: list
       display: [desktop, mobile] # [desktop, mobile]
