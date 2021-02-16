@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -19,12 +17,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="/css/first.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css" as="style">
   
 
   <!-- 页面元数据 -->
   
-  <title>Category: mathematics - Muggledy&#39;s Blog</title>
+  <title>关于 - Muggledy&#39;s Blog</title>
   
 
   
@@ -47,13 +45,13 @@
 
   
     
-<link rel="stylesheet" href="/css/first.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css">
 
   
 
   
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -113,6 +111,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- To automatically render math in text elements, include the auto-render extension: -->
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/InfiniteYinux/cloud@2.44/Hexo/themeConfig/echarts.min.js"></script>
   <body>
     
 
@@ -414,9 +414,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: none;">
+        <div id="full" class='cover-wrapper docs dock' style="display: none;">
           
-            <div id='cover-backstretch'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -489,11 +489,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>归档</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://muggledy.github.io/"
+            <a href="/about/"
               
               
-              id="https:muggledygithubio">
-              <img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg'><p>简历</p>
+              id="about">
+              <img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg'><p>关于</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://musicforprogramming.net/"
@@ -519,83 +519,68 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-docs" id="docs" itemscope itemprop="blogPost">
   
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/">
-        <img class='headimg' src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202133553.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/">
-        多项式曲线拟合
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <div class="note "><p>最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。</p></div>
     
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/celestezj'><img src='https://avatars.githubusercontent.com/u/32772036?s=460&u=a3d77a11463cdd8b864616320ecc315cb0d48441&v=4'></a>
-        
-        <time>2020-02-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/mathematics/">mathematics</a>
-        
-      </div>
+  
+  <div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212182801.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212182801.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div></div>
+<div class="tag link"><a class="link-card" title="个人简历" target="_blank" rel="noopener" href="https://muggledy.github.io"><div class="left"><img src="https://cdn.jsdelivr.net/gh/muggledy/best-resume-ever/resume/id.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/muggledy/best-resume-ever/resume/id.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">个人简历</p><p class="url">https://muggledy.github.io</p></div></a></div>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-    
-  
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -668,89 +653,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img class="qrcode lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信二维码"/>');}</script>
   
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/mathematics/" href="/categories/mathematics/"
-            id="categoriesmathematics"
-            ><div class='name'>mathematics</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
-            id="categoriesE78EAFE5A283E9858DE7BDAE"
-            ><div class='name'>环境配置</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <a href='/repos/'><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公示</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p>在iPad上，归档页面时间线图标显示存在错误<img src="https://v2fy.com/asset/0i/ChineseBQB/078BeiFang_%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC_BQB/%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC00030-%E5%93%87%E7%9A%84%E4%B8%80%E5%A3%B0%E5%93%AD%E5%87%BA%E6%9D%A5.jpg" class="lazyload" data-srcset="https://v2fy.com/asset/0i/ChineseBQB/078BeiFang_%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC_BQB/%E5%8C%97%E6%96%B9%E6%A0%96%E5%A7%AC00030-%E5%93%87%E7%9A%84%E4%B8%80%E5%A3%B0%E5%93%AD%E5%87%BA%E6%9D%A5.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" width="50px"/>？</p>
-
-    
-  </div>
-</section>
-
-  
-
 
 </aside>
+
 
 
 		  
@@ -762,7 +667,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   pdata.ispage=false;
   pdata.postTitle="";
   pdata.commentPath="";
-  pdata.commentPlaceholder="";
+  pdata.commentPlaceholder="有什么想对我说的呢？";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
@@ -1006,41 +911,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 <!-- internal -->
 
-  
-  
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
-
-    <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/050.jpg"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-	  function Pjax_backstretch(){
-        
-          $('#cover-backstretch').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        
-	  }
-	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
-    </script>
-  
-
 
 
   
@@ -1072,14 +942,14 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default ' 
+      <a class='vlts-menu fix-cursor-default ' href=/about/
         
         
         
-          onclick="document.execCommand('copy')"
         
+          id="about"
         >
-        <i class='fa fa-copy fa-fw fa-fw'></i>Copy</a>
+        <i class='fa fa-info fa-fw'></i>About</a>
     </li>
   
         
@@ -1210,7 +1080,7 @@ var loadCSS = function( href, before, media, attributes ){
       if (href.length == 0) {
         // 选中文本
         if (window.getSelection().toString()) {
-          if ('' == 'true') {
+          if ('true' == 'true') {
             copyText.style.display = 'block';
             hrText.style.display = 'block';
           }
@@ -1274,7 +1144,7 @@ var loadCSS = function( href, before, media, attributes ){
   function loadIssuesJS() {
     if ($(".md").find(".issues-api").length == 0) return;
 	
-	  loadScript('/js/issues.js');
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/issues.min.js');
 	
   };
   $(function () {
@@ -1334,6 +1204,62 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+	volantis.pjax.push(pjax_initCopyCode)
+</script>
+
+
 
 
 
@@ -1358,7 +1284,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("/js/aplayer.js")
+    loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/aplayer.min.js');
   
 
 </script>
@@ -1368,7 +1294,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="/js/valine.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 
 
 <script>
@@ -1400,12 +1326,16 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+	var friends = 'a483c79213701a5644bec62de88f974d'.split(',');
+	var master = '5f452633ebd48518f8778c240d946335'.split(',');
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js","tagMeta":["博主","小伙伴","访客"],"master":["5f452633ebd48518f8778c240d946335"],"friends":["a483c79213701a5644bec62de88f974d"]}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
       emojiMaps: emojiMaps,
+      master: master,
+      friends: friends,
     }))
   }
   $(function () {
@@ -1420,7 +1350,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/js/app.min.js"></script>
 
 
 
@@ -1432,7 +1362,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('/js/search/hexo.js',setSearchService);
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/search/hexo.min.js',setSearchService);
 	
 })
 
@@ -1462,8 +1392,8 @@ function setSearchService() {
   <script defer>
 
   const LCCounter = {
-    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
-    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    app_id: '8Ihq5v1YlRsrBoOAbeQeL4tj-gzGzoHsz',
+    app_key: '8IXfoRd6cod5rBwYVTd9Cfmc',
     custom_api_server: '',
 
     // 查询存储的记录
@@ -1865,10 +1795,6 @@ document.addEventListener("pjax:success", listennSidebarTOC);
   <script>$('.fa-weixin').html('<img class="qrcode lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信二维码"/>');</script>
 
   <script>window.onload=function(){if(window.location.pathname=='/'){$(".title.flat-box")[0].click();};if(window.location.pathname=='/categories/'){$("#categories")[0].click();};if(window.location.pathname=='/tags/'){$("#tags")[0].click();};if(window.location.pathname=='/archives/'){$("#archives")[0].click();};if(window.location.pathname=='/repos/'){$("#repos")[0].click();};};</script>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-
-  <script type="text/javascript" src="/js/clipboard-use.js"></script>
 
 
 

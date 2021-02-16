@@ -17,7 +17,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="/css/first.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css" as="style">
   
 
   <!-- 页面元数据 -->
@@ -49,13 +49,13 @@
 
   
     
-<link rel="stylesheet" href="/css/first.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css">
 
   
 
   
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -115,6 +115,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- To automatically render math in text elements, include the auto-render extension: -->
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/InfiniteYinux/cloud@2.44/Hexo/themeConfig/echarts.min.js"></script>
   <body>
     
 
@@ -418,7 +420,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post dock' style="display: none;">
           
-            <div id='cover-backstretch'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -491,11 +493,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg'><p>归档</p>
             </a>
           
-            <a target="_blank" rel="noopener" href="https://muggledy.github.io/"
+            <a href="/about/"
               
               
-              id="https:muggledygithubio">
-              <img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg'><p>简历</p>
+              id="about">
+              <img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210212025502.svg'><p>关于</p>
             </a>
           
             <a target="_blank" rel="noopener" href="https://musicforprogramming.net/"
@@ -528,6 +530,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
   <div class="article-meta" id="top">
+    
+      
+
+  
+    <meting-js
+      mini='true'
+      volume='0.4'
+      loop='all'
+      order='random'
+      server='netease'
+      type='song'
+      id='551456955'>
+    </meting-js>
+  
+
+
     
     
     
@@ -747,10 +765,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-11T14:18:54+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-02-12T22:48:00+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Feb 11, 2021</p>
+    <p>更新于：Feb 12, 2021</p>
   </a>
 </div>
 
@@ -835,12 +853,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
       
-        <a class='next' href='/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/'>
-          <p class='title'>多项式曲线拟合<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。
-
- 原理
-设多项式函数f(x)=a0+a1x+a2x2+.....</p>
+        <a class='next' href='/2017/07/05/Volantis%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/'>
+          <p class='title'>官方Volantis主题配置文档<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Volantis
+A Wonderful Theme for Hexo
+Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的...</p>
         </a>
       
     </div>
@@ -939,12 +956,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 </aside>
 
-
-<script>
-  if(typeof jQuery == 'undefined' && typeof create_copy_buttons =='undefined'){}else{
-    create_copy_buttons(window, document);
-  };
-</script>
 
 		  
 		  <!--此文件用来存放一些不方便取值的变量-->
@@ -1199,41 +1210,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 <!-- internal -->
 
-  
-  
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
-
-    <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/050.jpg"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-	  function Pjax_backstretch(){
-        
-          $('#cover-backstretch').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        
-	  }
-	  loadScript("https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js",Pjax_backstretch)
-    </script>
-  
-
 
 
   
@@ -1265,14 +1241,14 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default ' 
+      <a class='vlts-menu fix-cursor-default ' href=/about/
         
         
         
-          onclick="document.execCommand('copy')"
         
+          id="about"
         >
-        <i class='fa fa-copy fa-fw fa-fw'></i>Copy</a>
+        <i class='fa fa-info fa-fw'></i>About</a>
     </li>
   
         
@@ -1403,7 +1379,7 @@ var loadCSS = function( href, before, media, attributes ){
       if (href.length == 0) {
         // 选中文本
         if (window.getSelection().toString()) {
-          if ('' == 'true') {
+          if ('true' == 'true') {
             copyText.style.display = 'block';
             hrText.style.display = 'block';
           }
@@ -1467,7 +1443,7 @@ var loadCSS = function( href, before, media, attributes ){
   function loadIssuesJS() {
     if ($(".md").find(".issues-api").length == 0) return;
 	
-	  loadScript('/js/issues.js');
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/issues.min.js');
 	
   };
   $(function () {
@@ -1527,6 +1503,62 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+	volantis.pjax.push(pjax_initCopyCode)
+</script>
+
+
 
 
 
@@ -1551,7 +1583,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("/js/aplayer.js")
+    loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/aplayer.min.js');
   
 
 </script>
@@ -1561,7 +1593,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="/js/valine.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 
 
 <script>
@@ -1593,12 +1625,16 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+	var friends = 'a483c79213701a5644bec62de88f974d'.split(',');
+	var master = '5f452633ebd48518f8778c240d946335'.split(',');
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js","tagMeta":["博主","小伙伴","访客"],"master":["5f452633ebd48518f8778c240d946335"],"friends":["a483c79213701a5644bec62de88f974d"]}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
       emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
       emojiMaps: emojiMaps,
+      master: master,
+      friends: friends,
     }))
   }
   $(function () {
@@ -1613,7 +1649,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/js/app.min.js"></script>
 
 
 
@@ -1625,7 +1661,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('/js/search/hexo.js',setSearchService);
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/search/hexo.min.js',setSearchService);
 	
 })
 
@@ -1655,8 +1691,8 @@ function setSearchService() {
   <script defer>
 
   const LCCounter = {
-    app_id: 'u9j57bwJod4EDmXWdxrwuqQT-MdYXbMMI',
-    app_key: 'jfHtEKVE24j0IVCGHbvuFClp',
+    app_id: '8Ihq5v1YlRsrBoOAbeQeL4tj-gzGzoHsz',
+    app_key: '8IXfoRd6cod5rBwYVTd9Cfmc',
     custom_api_server: '',
 
     // 查询存储的记录
@@ -2058,10 +2094,6 @@ document.addEventListener("pjax:success", listennSidebarTOC);
   <script>$('.fa-weixin').html('<img class="qrcode lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信二维码"/>');</script>
 
   <script>window.onload=function(){if(window.location.pathname=='/'){$(".title.flat-box")[0].click();};if(window.location.pathname=='/categories/'){$("#categories")[0].click();};if(window.location.pathname=='/tags/'){$("#tags")[0].click();};if(window.location.pathname=='/archives/'){$("#archives")[0].click();};if(window.location.pathname=='/repos/'){$("#repos")[0].click();};};</script>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-
-  <script type="text/javascript" src="/js/clipboard-use.js"></script>
 
 
 
