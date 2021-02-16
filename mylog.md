@@ -18,6 +18,8 @@
        - <script>window.onload =function(){$(".title.flat-box")[0].click();}</script>
    ```
 
+   [后记] 突然发现该问题又可以通过将`volantis.yml`配置文件中的`use_cdn`置为`true`“解决”，这样就不会“卡死”了，因此无需再做模拟点击
+
 3. 在iPad设备上归档页面的时间线无法图示无法正常显示
 
    <img src="https://raw.githubusercontent.com/celestezj/ImageHosting/master/img/20210209160949.png" style="zoom: 33%;" />
