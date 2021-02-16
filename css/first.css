@@ -24,6 +24,28 @@
   transform: scale(1);
   opacity: 1;
 }
+#safearea .card-comment-item {
+  margin: 10px 0 10px 0;
+  border-bottom: 1px solid #e2dada;
+  padding-bottom: 5px;
+}
+#safearea .item-header-text {
+  color: #9a9a9a;
+}
+#safearea .item-text {
+  margin-top: 5px;
+  padding: 0;
+}
+#safearea a.newcomment {
+  font-weight: bold;
+  color: #444;
+}
+#safearea a.newcomment:hover {
+  color: #36ac91 !important;
+}
+#safearea a.comments-detail:hover {
+  color: #36ac91 !important;
+}
 @supports (backdrop-filter: blur(20px)) {
   .blur {
     background: rgba(255,255,255,0.9) !important;

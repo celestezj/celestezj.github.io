@@ -17,7 +17,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css" as="style">
+  <link rel="preload" href="/css/first.css" as="style">
   
 
   <!-- 页面元数据 -->
@@ -45,13 +45,13 @@
 
   
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/first.css">
+<link rel="stylesheet" href="/css/first.css">
 
   
 
   
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/css/style.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -586,101 +586,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     </div>
 </div>
 		  
-		  <style type="text/css">
-    #tag-pie {
-        width: 100%;
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-pie" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-	<!--modified from https://blog.csdn.net/BloodyMandoo/article/details/72479268-->
-    var myChart = echarts.init(document.getElementById('tag-pie'));
-    window.addEventListener("resize", () => { myChart.resize(); });
-	
-	
-	
-    var option = {
-	    animation: false,
-		tooltip : {
-			trigger: 'item',
-			formatter: "{a} <br/>{b} : {c} ({d}%)"
-		},
-		calculable : true,
-		legend: {
-			x : 'center',
-			y : 'bottom',
-			data:["Hexo"]
-		},
-		series : [
-			{
-				type: 'pie',
-				radius: [20, 22],
-				slient:true,
-				animation:false,
-				label:{
-					normal:{show:false}
-				},
-				labelLine:{
-					normal:{show:false}
-				},
-				tooltip:{
-					show:false
-				},
-				itemStyle:{
-					normal:{
-						color:'#ccc'
-					}
-				},
-				data: [
-					{ value: 100, name: '' }
-					]
-			},
-			{
-                type: 'pie',
-                radius: [120, 122],
-                slient: true,
-                animation: false,
-                label: {
-                    normal: { show: false }
-                },
-                labelLine: {
-                    normal: { show: false }
-                },
-                tooltip: {
-                    show: false
-                },
-                itemStyle:{
-                    normal:{
-                        color:'#bbb'
-                    }
-                },
-                data: [
-                    { value: 100, name: '' }
-                ]
-            },
-			{
-				name:'文章标签极区图',
-				type:'pie',
-				radius : [30, 110],
-				
-				roseType : 'area',
-				x: '50%',               // for funnel
-				max: 100,                // for funnel
-				sort : 'ascending',     // for funnel
-				data:[{"name":"Hexo","value":2}],
-			}
-		]
-	};
-    myChart.setOption(option);
-	setTimeout(function(){myChart.resize();},200);
-</script>
+		  
           <br>
           
         </article>
@@ -805,8 +711,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div class='content'>
     
-      <p>在iPad上，归档页面时间线图标显示存在错误😭？</p>
-
+      <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210216202334.gif" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210216202334.gif" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" height="150px"/></center>
     
   </div>
 </section>
@@ -1303,7 +1208,7 @@ var loadCSS = function( href, before, media, attributes ){
   function loadIssuesJS() {
     if ($(".md").find(".issues-api").length == 0) return;
 	
-	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/issues.min.js');
+	  loadScript('/js/issues.js');
 	
   };
   $(function () {
@@ -1443,7 +1348,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/aplayer.min.js');
+    loadScript("/js/aplayer.js")
   
 
 </script>
@@ -1451,7 +1356,8 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+
   
 <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 
@@ -1487,7 +1393,7 @@ var loadCSS = function( href, before, media, attributes ){
     var valine = new Valine();
 	var friends = 'a483c79213701a5644bec62de88f974d'.split(',');
 	var master = '5f452633ebd48518f8778c240d946335'.split(',');
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js","tagMeta":["博主","小伙伴","访客"],"master":["5f452633ebd48518f8778c240d946335"],"friends":["a483c79213701a5644bec62de88f974d"]}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js","metaPlaceholder":[{"nick":"muggledy"},{"mail":"zgjsycfndy2015@163.com"}],"tagMeta":["博主","小伙伴","访客"],"master":["5f452633ebd48518f8778c240d946335"],"friends":["a483c79213701a5644bec62de88f974d"]}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1497,8 +1403,122 @@ var loadCSS = function( href, before, media, attributes ){
       friends: friends,
     }))
   }
+  
+  //最新评论
+  function newcomment() {
+ 
+    function queryLeanCloud(k) {
+      let root = this;
+      let len = arguments.length;
+      if (len == 1) {
+        let notExist = new AV.Query("Comment");
+        notExist.doesNotExist('rid');
+        let isEmpty = new AV.Query("Comment");
+        isEmpty.equalTo('rid', '');
+        let q = AV.Query.or(notExist, isEmpty);
+        if (k === '*') q.exists('url');
+        else q.equalTo('url', decodeURI(k));
+        q.addDescending('createdAt');
+        q.addDescending('insertedAt');
+        return q;
+      } else {
+        let ids = JSON.stringify(arguments[1]).replace(/(\[|\])/g, '');
+        let cql = `select * from ${root['config']['clazzName']} where rid in (${ids}) order by -createdAt,-createdAt`;
+        return AV.Query.doCloudQuery(cql)
+      }
+    }
+    var valine = new Valine({
+      el: '#valine_container_ba（因为主题已经有valine的这些参数了，这里随意填都行）',
+      app_id: 'zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz',
+      app_key: 'RYNgh2e7vNiU5DbG1hImw4A2',
+      placeholder: '',
+      serverURLs: ''
+    });
+ 
+    //判断博主，heson改为自己的昵称
+    function bozhu(e){
+        if (e == "muggledy"){
+            nick = e + '[博主]'
+            return nick;
+        } else {
+          return e
+        }
+    }
+ 
+    //判断网址
+    function wangzhi(e){
+        http = e.slice(0,4)
+        https = e.slice(0,5)
+        if (http == "http" || https == "https" ){
+             return e
+        } else if (e == "" || e == null || e == undefined){
+          return e
+        } else {
+          e = 'http://'+ e
+          return e
+        }
+    }
+	
+	function timeago(dateTimeStamp) { 
+        var minute = 1000 * 60; //把分，时，天，周，半个月，一个月用毫秒表示 
+        var hour = minute * 60; 
+        var day = hour * 24; 
+        var week = day * 7; 
+        var month = day * 30; 
+        var now = new Date().getTime(); //获取当前时间毫秒 
+        var diffValue = now - dateTimeStamp; //时间差 
+        if (diffValue < 0) { 
+            return; 
+        } 
+        var minC = diffValue / minute; //计算时间差的分，时，天，周，月 
+        var hourC = diffValue / hour; 
+        var dayC = diffValue / day; 
+        var weekC = diffValue / week; 
+        var monthC = diffValue / month; 
+        if (monthC >= 1 && monthC <= 3) { 
+            result = " " + parseInt(monthC) + " 月前" 
+        } else if (weekC >= 1 && weekC <= 3) { 
+            result = " " + parseInt(weekC) + " 周前" 
+        } else if (dayC >= 1 && dayC <= 6) { 
+            result = " " + parseInt(dayC) + " 天前" 
+        } else if (hourC >= 1 && hourC <= 23) { 
+            result = " " + parseInt(hourC) + " 小时前" 
+        } else if (minC >= 1 && minC <= 59) { 
+            result = " " + parseInt(minC) + " 分钟前" 
+        } else if (diffValue >= 0 && diffValue <= minute) { 
+            result = "刚刚" 
+        } else { 
+            var datetime = new Date(); 
+            datetime.setTime(dateTimeStamp); 
+            var Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1; 
+            var Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate(); 
+            result = Nmonth + "-" + Ndate 
+        } 
+        return result; 
+    }
+	
+    //查询评论
+    valine.Q('*').limit(7).find().then(function (comments) {
+      var hotComments = $("#hot-comments");
+      for (var i = 0; i < comments.length; i++) {
+        if (i === 0) {
+          console.log(comments[0]);
+        }
+        var nick = bozhu(comments[i]._serverData.nick);
+        var content = comments[i]._serverData.comment;
+        var newcontent = content.substring(0, 50).replace(/<[^>]+>/g,"");
+        var url = comments[i]._serverData.url;
+        var link = wangzhi(comments[i]._serverData.link);
+        var updatedAt = timeago(comments[i].updatedAt);
+        var commentId = '#' + comments[i].id;
+        hotComments.append('<div class="card-comment-item"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a>&nbsp;发表于' + updatedAt + '</div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div>');
+      }
+    });
+  }; //comes from https://www.heson10.com/posts/7207.html
+  
   $(function () {
     pjax_valine();
+	newcomment();
   });
   volantis.pjax.push(pjax_valine);
 </script>
@@ -1509,7 +1529,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.1/js/app.min.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -1521,7 +1541,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/search/hexo.min.js',setSearchService);
+		loadScript('/js/search/hexo.js',setSearchService);
 	
 })
 
@@ -1952,8 +1972,6 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
   
   <script>$('.fa-weixin').html('<img class="qrcode lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="微信二维码"/>');</script>
-
-  <script>window.onload=function(){if(window.location.pathname=='/'){$(".title.flat-box")[0].click();};if(window.location.pathname=='/categories/'){$("#categories")[0].click();};if(window.location.pathname=='/tags/'){$("#tags")[0].click();};if(window.location.pathname=='/archives/'){$("#archives")[0].click();};if(window.location.pathname=='/repos/'){$("#repos")[0].click();};};</script>
 
 
 
