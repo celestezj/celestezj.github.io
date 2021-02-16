@@ -17,7 +17,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <link rel="preload" href="/css/first.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.2/css/first.css" as="style">
   
 
   <!-- 页面元数据 -->
@@ -45,13 +45,13 @@
 
   
     
-<link rel="stylesheet" href="/css/first.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.2/css/first.css">
 
   
 
   
-  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.2/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.2/css/style.css"></noscript>
   
 
   <script id="loadcss"></script>
@@ -1065,7 +1065,7 @@ var loadCSS = function( href, before, media, attributes ){
   function loadIssuesJS() {
     if ($(".md").find(".issues-api").length == 0) return;
 	
-	  loadScript('/js/issues.js');
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/issues.min.js');
 	
   };
   $(function () {
@@ -1205,7 +1205,7 @@ var loadCSS = function( href, before, media, attributes ){
   // rightmenu see: layout/_partial/rightmenu.ejs
 
   
-    loadScript("/js/aplayer.js")
+    loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/aplayer.min.js');
   
 
 </script>
@@ -1250,7 +1250,7 @@ var loadCSS = function( href, before, media, attributes ){
     var valine = new Valine();
 	var friends = 'a483c79213701a5644bec62de88f974d'.split(',');
 	var master = '5f452633ebd48518f8778c240d946335'.split(',');
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js","metaPlaceholder":[{"nick":"muggledy"},{"mail":"zgjsycfndy2015@163.com"}],"tagMeta":["博主","小伙伴","访客"],"master":["5f452633ebd48518f8778c240d946335"],"friends":["a483c79213701a5644bec62de88f974d"]}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"zeKuaSsLBAy1lPz2ukCrQD4P-gzGzoHsz","appKey":"RYNgh2e7vNiU5DbG1hImw4A2","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false,"js":"https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js","tagMeta":["博主","小伙伴","访客"],"master":["5f452633ebd48518f8778c240d946335"],"friends":["a483c79213701a5644bec62de88f974d"]}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1354,7 +1354,7 @@ var loadCSS = function( href, before, media, attributes ){
         return result; 
     }
 	
-    //查询评论
+    //查询评论（此处设置为最多显示7条新评论）
     valine.Q('*').limit(7).find().then(function (comments) {
       var hotComments = $("#hot-comments");
       for (var i = 0; i < comments.length; i++) {
@@ -1373,11 +1373,15 @@ var loadCSS = function( href, before, media, attributes ){
     });
   }; //comes from https://www.heson10.com/posts/7207.html
   
-  $(function () {
+  //哈哈，我真是个大聪明~
+  function zhenghe(){
     pjax_valine();
 	newcomment();
+  }
+  $(function () {
+    zhenghe();
   });
-  volantis.pjax.push(pjax_valine);
+  volantis.pjax.push(zhenghe);
 </script>
 
 
@@ -1386,7 +1390,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/celestezj.github.io@v0.2/js/app.min.js"></script>
 
 
 
@@ -1398,7 +1402,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('/js/search/hexo.js',setSearchService);
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.1/source/js/search/hexo.min.js',setSearchService);
 	
 })
 
