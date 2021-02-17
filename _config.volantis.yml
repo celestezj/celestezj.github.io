@@ -352,7 +352,7 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg
       shape: rectangle # circle, rectangle
-      url: /
+      url: /album/
       title:
       subtitle:
       jinrishici: 孤筏重洋 # Poetry Today. You can set a string, and it will be displayed when loading fails.
