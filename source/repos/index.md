@@ -8,4 +8,4 @@ top_meta: false
 bottom_meta: true
 ---
 
-{% note bug red, 注意当前主题对iPad设备的支持不太好，如归档页面时间线图标显示存在错误，请在电脑端或手机端查看 %}
+{% note bug red, 注意当前主题对iPad设备的支持不太好，如归档页面时间线图标显示存在错误等，请在电脑端或手机端查看 %}

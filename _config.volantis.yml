@@ -352,7 +352,7 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       avatar: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg
       shape: rectangle # circle, rectangle
-      url: /album/
+      url: /album/ #also pjax switch fail, please right click and open in new tab
       title:
       subtitle:
       jinrishici: 孤筏重洋 # Poetry Today. You can set a string, and it will be displayed when loading fails.
@@ -774,6 +774,10 @@ rightmenu:
     name: Dark mode #若修改此值，需同时修改主题下的darkmenu.ejs文件
     icon: fas fa-moon #同上
     toggle: darkmode
+  #album:
+  #  name: Album
+  #  icon: fas fa-image fa-fw
+  #  url: /album/ #pjax switch fail?
   #copy:
   #  name: Copy
   #  icon: fa fa-copy fa-fw
