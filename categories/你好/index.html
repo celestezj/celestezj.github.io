@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -19,7 +21,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>所有标签 - Muggledy&#39;s Blog</title>
+  <title>Category: 你好 - Muggledy&#39;s Blog</title>
   
 
   
@@ -81,7 +83,7 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -372,7 +374,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper tag dock' style="display: ;">
+        <div id="full" class='cover-wrapper  dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -481,187 +483,74 @@
 <div class='l_main'>
   
     
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow">
-          <h2>所有标签</h2>
+      
+  <section class="post-list">
+    
+      
+        
           
-		    
-<style>
-  /*tag-cloud*/
-  .chip .tag-length {
-    margin-left: 5px;
-    margin-right: -2px;
-    font-size: 0.5rem;
-  }
-  .chip-default .tag-length {
-    color: #02142c;
-    margin-top: 1px;
-  }
-  .chip-active .tag-length {
-    color: #fff;
-  }
-  .chip-container .tag-chips {
-    margin: 1rem auto 0.5rem;
-    max-width: 850px;
-    text-align: center;
-  }
-  /*tags边框*/
-  .chip-container .chip {
-    margin: 10px 10px;
-    padding: 15px 14px; /*19,14*/
-    display: inline-flex;
-    line-height: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
-    z-index: 0;
-  }
-  .chip-container .chip:hover {
-    //color: #fff;
-    //background: linear-gradient(to right, #fcdec2 0%, #ff5722 100%) !important;
-	color: #02142c;
-	background: #fff092 !important;
-  }
-</style>
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">×3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/haha/" title="haha: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="haha" style="background-color: #F5EEF8;">haha
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/fit-theory/" title="fit theory: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="fit theory" style="background-color: #D5F5E3;">fit theory
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</div>
-		  
-		  
-		    <style type="text/css">
-    #tag-pie {
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-pie" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-	<!--modified from https://blog.csdn.net/BloodyMandoo/article/details/72479268-->
-    var myChart = echarts.init(document.getElementById('tag-pie'));
-    window.addEventListener("resize", () => { myChart.resize(); });
-	
-	
-	
-    var option = {
-	    animation:false,
-		tooltip : {
-			trigger: 'item',
-			formatter: "{a} <br/>{b} : {c} ({d}%)"
-		},
-		calculable : true,
-		//legend: {
-		//	x : 'center',
-		//	y : 'bottom',
-		//	data:["Hexo","haha","fit theory"]
-		//},
-		series : [
-			{
-				type: 'pie',
-				radius: [20, 22],
-				slient:true,
-				animation:false,
-				label:{
-					normal:{show:false}
-				},
-				labelLine:{
-					normal:{show:false}
-				},
-				tooltip:{
-					show:false
-				},
-				itemStyle:{
-					normal:{
-						color:'#ccc'
-					}
-				},
-				data: [
-					{ value: 100, name: '' }
-					]
-			},
-			{
-                type: 'pie',
-                radius: [120, 122],
-                slient: true,
-                animation: false,
-                label: {
-                    normal: { show: false }
-                },
-                labelLine: {
-                    normal: { show: false }
-                },
-                tooltip: {
-                    show: false
-                },
-                itemStyle:{
-                    normal:{
-                        color:'#bbb'
-                    }
-                },
-                data: [
-                    { value: 100, name: '' }
-                ]
-            },
-			{
-				name:'文章标签极区图',
-				type:'pie',
-				radius : [30, 110],
-				
-				roseType : 'area',
-				x: '50%',               // for funnel
-				max: 100,                // for funnel
-				sort : 'ascending',     // for funnel
-				data:[{"name":"Hexo","value":3},{"name":"haha","value":1},{"name":"fit theory","value":1}],
-			}
-		]
-	};
-    myChart.setOption(option);
-	setTimeout(function(){myChart.resize();},200);
-</script>
-		  
-          <br>
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/03/11/hello-world1/">
+        Hello World
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+ Q...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
           
-        </article>
+          <a class='avatar' target="_blank" rel="noopener" href='https://muggledy.github.io'><img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico'></a>
+        
+        <time>2021-03-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E4%BD%A0%E5%A5%BD/">你好</a>
+        
       </div>
+      
+        <div>
+          <a class='readmore' href='/2021/03/11/hello-world1/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+  
+
+
     
   
 </div>
@@ -776,6 +665,28 @@
   
 
   
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/fit-theory/" style="font-size: 14px; color: #999">fit theory</a> <a href="/tags/haha/" style="font-size: 14px; color: #999">haha</a>
+    </div>
+  </section>
+
+
+  
+
+  
 
   
     
@@ -839,7 +750,7 @@
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 

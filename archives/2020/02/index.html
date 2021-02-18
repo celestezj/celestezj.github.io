@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -19,7 +21,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>所有标签 - Muggledy&#39;s Blog</title>
+  <title>Archive: 2020/2 - Muggledy&#39;s Blog</title>
   
 
   
@@ -372,7 +374,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper tag dock' style="display: ;">
+        <div id="half" class='cover-wrapper  dock' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -477,193 +479,80 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+	
+		
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/">
+        <img class='headimg' src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202133553.jpg'/>
+      </a>
+    </div>
+  
   
     
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow">
-          <h2>所有标签</h2>
+    <h2 class="article-title" >
+      <a href="/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/">
+        多项式曲线拟合
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      <div class="note "><p>最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。</p></div>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
           
-		    
-<style>
-  /*tag-cloud*/
-  .chip .tag-length {
-    margin-left: 5px;
-    margin-right: -2px;
-    font-size: 0.5rem;
-  }
-  .chip-default .tag-length {
-    color: #02142c;
-    margin-top: 1px;
-  }
-  .chip-active .tag-length {
-    color: #fff;
-  }
-  .chip-container .tag-chips {
-    margin: 1rem auto 0.5rem;
-    max-width: 850px;
-    text-align: center;
-  }
-  /*tags边框*/
-  .chip-container .chip {
-    margin: 10px 10px;
-    padding: 15px 14px; /*19,14*/
-    display: inline-flex;
-    line-height: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
-    z-index: 0;
-  }
-  .chip-container .chip:hover {
-    //color: #fff;
-    //background: linear-gradient(to right, #fcdec2 0%, #ff5722 100%) !important;
-	color: #02142c;
-	background: #fff092 !important;
-  }
-</style>
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">×3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/haha/" title="haha: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="haha" style="background-color: #F5EEF8;">haha
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/fit-theory/" title="fit theory: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="fit theory" style="background-color: #D5F5E3;">fit theory
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</div>
-		  
-		  
-		    <style type="text/css">
-    #tag-pie {
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-pie" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-	<!--modified from https://blog.csdn.net/BloodyMandoo/article/details/72479268-->
-    var myChart = echarts.init(document.getElementById('tag-pie'));
-    window.addEventListener("resize", () => { myChart.resize(); });
-	
-	
-	
-    var option = {
-	    animation:false,
-		tooltip : {
-			trigger: 'item',
-			formatter: "{a} <br/>{b} : {c} ({d}%)"
-		},
-		calculable : true,
-		//legend: {
-		//	x : 'center',
-		//	y : 'bottom',
-		//	data:["Hexo","haha","fit theory"]
-		//},
-		series : [
-			{
-				type: 'pie',
-				radius: [20, 22],
-				slient:true,
-				animation:false,
-				label:{
-					normal:{show:false}
-				},
-				labelLine:{
-					normal:{show:false}
-				},
-				tooltip:{
-					show:false
-				},
-				itemStyle:{
-					normal:{
-						color:'#ccc'
-					}
-				},
-				data: [
-					{ value: 100, name: '' }
-					]
-			},
-			{
-                type: 'pie',
-                radius: [120, 122],
-                slient: true,
-                animation: false,
-                label: {
-                    normal: { show: false }
-                },
-                labelLine: {
-                    normal: { show: false }
-                },
-                tooltip: {
-                    show: false
-                },
-                itemStyle:{
-                    normal:{
-                        color:'#bbb'
-                    }
-                },
-                data: [
-                    { value: 100, name: '' }
-                ]
-            },
-			{
-				name:'文章标签极区图',
-				type:'pie',
-				radius : [30, 110],
-				
-				roseType : 'area',
-				x: '50%',               // for funnel
-				max: 100,                // for funnel
-				sort : 'ascending',     // for funnel
-				data:[{"name":"Hexo","value":3},{"name":"haha","value":1},{"name":"fit theory","value":1}],
-			}
-		]
-	};
-    myChart.setOption(option);
-	setTimeout(function(){myChart.resize();},200);
-</script>
-		  
-          <br>
-          
-        </article>
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/celestezj'><img src='https://avatars.githubusercontent.com/u/32772036?s=460&u=a3d77a11463cdd8b864616320ecc315cb0d48441&v=4'></a>
+        
+        <time>2020-02-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/mathematics/">mathematics</a>
+        
       </div>
+      
+        <div>
+          <a class='readmore' href='/2020/02/23/%E5%A4%9A%E9%A1%B9%E5%BC%8F%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+    
+  </section>
+  
     
   
+
+
+	
 </div>
 <aside class='l_side'>
   
@@ -769,6 +658,28 @@
             ><div class='name'>环境配置</div><div class='badge'>(3)</div></a></li>
         
       </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/fit-theory/" style="font-size: 14px; color: #999">fit theory</a> <a href="/tags/haha/" style="font-size: 14px; color: #999">haha</a>
     </div>
   </section>
 

@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>所有标签 - Muggledy&#39;s Blog</title>
+  <title>Hello World - Muggledy&#39;s Blog</title>
   
 
   
@@ -81,7 +81,7 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -372,7 +372,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper tag dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -477,193 +477,234 @@
       <div class='body-wrapper' id="pjax-container">
         
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow">
-          <h2>所有标签</h2>
+    
+    
+      <h1 class="title">
+        Hello World
+      </h1>
+      <div class='new-meta-box'>
+        
           
-		    
-<style>
-  /*tag-cloud*/
-  .chip .tag-length {
-    margin-left: 5px;
-    margin-right: -2px;
-    font-size: 0.5rem;
-  }
-  .chip-default .tag-length {
-    color: #02142c;
-    margin-top: 1px;
-  }
-  .chip-active .tag-length {
-    color: #fff;
-  }
-  .chip-container .tag-chips {
-    margin: 1rem auto 0.5rem;
-    max-width: 850px;
-    text-align: center;
-  }
-  /*tags边框*/
-  .chip-container .chip {
-    margin: 10px 10px;
-    padding: 15px 14px; /*19,14*/
-    display: inline-flex;
-    line-height: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
-    z-index: 0;
-  }
-  .chip-container .chip:hover {
-    //color: #fff;
-    //background: linear-gradient(to right, #fcdec2 0%, #ff5722 100%) !important;
-	color: #02142c;
-	background: #fff092 !important;
-  }
-</style>
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">×3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/haha/" title="haha: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="haha" style="background-color: #F5EEF8;">haha
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/fit-theory/" title="fit theory: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="fit theory" style="background-color: #D5F5E3;">fit theory
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</div>
-		  
-		  
-		    <style type="text/css">
-    #tag-pie {
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-pie" class="card-content"></div>
-    </div>
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://muggledy.github.io" rel="nofollow noopener">
+    <img no-lazy src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico">
+    <p>muggledy</p>
+  </a>
 </div>
 
-<script type="text/javascript">
-	<!--modified from https://blog.csdn.net/BloodyMandoo/article/details/72479268-->
-    var myChart = echarts.init(document.getElementById('tag-pie'));
-    window.addEventListener("resize", () => { myChart.resize(); });
-	
-	
-	
-    var option = {
-	    animation:false,
-		tooltip : {
-			trigger: 'item',
-			formatter: "{a} <br/>{b} : {c} ({d}%)"
-		},
-		calculable : true,
-		//legend: {
-		//	x : 'center',
-		//	y : 'bottom',
-		//	data:["Hexo","haha","fit theory"]
-		//},
-		series : [
-			{
-				type: 'pie',
-				radius: [20, 22],
-				slient:true,
-				animation:false,
-				label:{
-					normal:{show:false}
-				},
-				labelLine:{
-					normal:{show:false}
-				},
-				tooltip:{
-					show:false
-				},
-				itemStyle:{
-					normal:{
-						color:'#ccc'
-					}
-				},
-				data: [
-					{ value: 100, name: '' }
-					]
-			},
-			{
-                type: 'pie',
-                radius: [120, 122],
-                slient: true,
-                animation: false,
-                label: {
-                    normal: { show: false }
-                },
-                labelLine: {
-                    normal: { show: false }
-                },
-                tooltip: {
-                    show: false
-                },
-                itemStyle:{
-                    normal:{
-                        color:'#bbb'
-                    }
-                },
-                data: [
-                    { value: 100, name: '' }
-                ]
-            },
-			{
-				name:'文章标签极区图',
-				type:'pie',
-				radius : [30, 110],
-				
-				roseType : 'area',
-				x: '50%',               // for funnel
-				max: 100,                // for funnel
-				sort : 'ascending',     // for funnel
-				data:[{"name":"Hexo","value":3},{"name":"haha","value":1},{"name":"fit theory","value":1}],
-			}
-		]
-	};
-    myChart.setOption(option);
-	setTimeout(function(){myChart.resize();},200);
-</script>
-		  
-          <br>
           
-        </article>
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Mar 11, 2021</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Hello World" data-path="/2021/03/11/hello-world2/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>80 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>1 min</p>
+    </a>
+  </div>
+
+
+          
+        
       </div>
     
+  </div>
+
+
   
+  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>📃博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>🔗本文永久链接是：<a href=https://celestezj.github.io/2021/03/11/hello-world2/>https://celestezj.github.io/2021/03/11/hello-world2/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-11T14:12:07+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Mar 11, 2021</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://celestezj.github.io/2021/03/11/hello-world2/&title=Hello World - Muggledy's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://celestezj.github.io/2021/03/11/hello-world2/&title=Hello World - Muggledy's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9UlEQVR42u3aQZLbMAwEQP//05sHJClxAMgWvM2byzZFti5TAF4/1j/XCwEYMGDAgAGzBuZVXH9tOPz9/37f3edyfzBgwIABAwbMOpjjABT+vgqU/m/qPmDAgAEDBgyYvTCnAev0/1MHTwNg+T5gwIABAwYMmF8Lk16wuk/1RYEBAwYMGDBgwEwXlroLDBgwYMCAAQNmKmB1G2vpfo/rRIIBAwYMGDBg3gYzHag+/bl8HzBgwIABAwbMGpjuSh98VciqvpCx+4ABAwYMGDBg1sBUA1IXKP3+tJFXPT8YMGDAgAEDZh9M2lBLG1jphaoDP2PBEQwYMGDAgAGzFub0AenF0gOmL6raEIwreGDAgAEDBgyYdTDpwM7xQZoX776IdsADAwYMGDBgwHwcphqQ2oHqzUHy8n9gwIABAwYMmDUw6QBOFXLqotNBEAwYMGDAgAHzPTBpYeeuxle3EJXuAwYMGDBgwIDZC3MawLoFpvQCU8EtHhwCAwYMGDBgwDweJj1QGvyqjbR0oKka/I4nqsCAAQMGDBgwj4OZKih1C0jdRl9a0AIDBgwYMGDAfA9MdbBn6v8peHX/2yp4YMCAAQMGDJi3w3QHf6q/v2twqbsPGDBgwIABA2YvTNoYqx546nnVwlUc8MCAAQMGDBgwj4O5q8HVLTxVn9cdZAIDBgwYMGDA7INJCz8/h+uuoFg9/+W5wIABAwYMGDBrYboNripIF6w7yAQGDBgwYMCA+R6YqYA3XfB6Fdfp88CAAQMGDBgwe2C6Kx0ESgtWaWCr7g8GDBgwYMCA2QdzV2DqXrgaGNPPlw03MGDAgAEDBszjYaqBrtrg6jbQpvcBAwYMGDBgwOyHiTcaCnLdwaNqMD0OeGDAgAEDBgyYXwdzVxBsDwhVJ6rAgAEDBgwYMF8Hc/r7aiOsfeFPBTwwYMCAAQMGzNtg0obb0xp03RcABgwYMGDAgNkHU21cdQNg+QJD5wIDBgwYMGDA7IWxwIABAwYMGDDL1h9brmOslb1qeQAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2021/03/11/hello-world1/'>
+          <p class='title'>Hello World<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -671,158 +712,28 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='https://celestezj.github.io/album/' target="_blank">
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">孤筏重洋</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/muggledy/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:zgjsycfndy2015@163.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://celestezj.github.io/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-<script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');}</script>
-  
 
-  
-    
-    
-  
 
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/mathematics/" href="/categories/mathematics/"
-            id="categoriesmathematics"
-            ><div class='name'>mathematics</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BD%A0%E5%A5%BD/" href="/categories/%E4%BD%A0%E5%A5%BD/"
-            id="categoriesE4BDA0E5A5BD"
-            ><div class='name'>你好</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
-            id="categoriesE78EAFE5A283E9858DE7BDAE"
-            ><div class='name'>环境配置</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-text"> Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#create-a-new-post"><span class="toc-text"> Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#run-server"><span class="toc-text"> Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate-static-files"><span class="toc-text"> Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy-to-remote-sites"><span class="toc-text"> Deploy to remote sites</span></a></li></ol></li></ol>
     </div>
   </section>
 
 
   
 
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <a href='/notes/'><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公示</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313184311.gif" height="150px"/></center>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <div id="hot-comments"></div>
-    
-  </div>
-</section>
-
-  
-
 
 </aside>
+
 
 
         
@@ -832,14 +743,14 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Hello World";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 

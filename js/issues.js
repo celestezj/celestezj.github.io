@@ -8,7 +8,7 @@ const IssuesAPI = {
           if (status === 0) {
             status = 2;
             timer = null;
-            reject('请求超时');
+            reject("请求超时");
             if (retryTimes == 0) {
               timeout();
             }
@@ -21,7 +21,7 @@ const IssuesAPI = {
             timer = null;
             status = 1;
           }
-          if (response.ok) {
+          if(response.ok) {
             return response.json();
           }
           throw new Error('Network response was not ok.');
@@ -59,16 +59,16 @@ const IssuesAPI = {
     var groups = new Object();
     if (data.length > 0) {
       if (cfg.group != undefined) {
-        const arr = cfg.group.split(':');
+        let arr = cfg.group.split(':');
         if (arr.length > 1) {
-          const groupKey = arr[0];
+          let groupKey = arr[0];
           let groupList = arr[1];
           if (groupKey && groupList) {
             groupList = groupList.split(',');
           }
           cfg.group = groupList;
           for (i = 0; i < data.length; i++) {
-            const obj = this.parseIssueStrToJson(data[i].body);
+            let obj = this.parseIssueStrToJson(data[i].body);
             if (obj && (groupKey in obj)) {
               let tmp = obj[groupKey];
               tmp = tmp.replace(', ', ',').split(',');
@@ -88,7 +88,7 @@ const IssuesAPI = {
       } else {
         cfg.group = [''];
         for (i = 0; i < data.length; i++) {
-          const obj = this.parseIssueStrToJson(data[i].body);
+          let obj = this.parseIssueStrToJson(data[i].body);
           if (obj) {
             let arr = groups[''];
             if (arr == undefined) {
@@ -103,14 +103,14 @@ const IssuesAPI = {
     return groups;
   },
   getIssuesAPIForSites(cfg) {
-    const el = $(cfg.el)[0];
+    let el = $(cfg.el)[0];
     $(el).append('<div class="loading"><i class="fa fa-cog fa-2x fa-spin"></i><p>正在加载</p></div>');
-    this.requestIssuesAPI(cfg.api, function(data) {
+    this.requestIssuesAPI(cfg.api, function(data){
       $(el).find('.loading').remove();
-      const dt = IssuesAPI.groupIssuesData(cfg, data);
-      const groupTitles = Object.keys(dt);
+      let dt = IssuesAPI.groupIssuesData(cfg, data);
+      let groupTitles = Object.keys(dt);
       cfg.group.forEach((groupTitle, i) => {
-        const issues = dt[groupTitle];
+        let issues = dt[groupTitle];
         if (issues && issues.length > 0) {
           if (groupTitle.length > 0) {
             $(el).append('<h2>' + groupTitle + '</h2>');
@@ -120,19 +120,19 @@ const IssuesAPI = {
           $(el).append('<div class="site-card-group ' + i + '"></div>');
           // layout items
           for (j = 0; j < issues.length; j++) {
-            const issue = issues[j];
+            let issue = issues[j];
             let imgTag = '';
             if (issue.screenshot && issue.screenshot.length > 0) {
-              imgTag = '<div class="img"><img src="' + issue.screenshot + '" onerror="javascript:this.src=\'https://image.thum.io/get/width/1024/crop/768/' + issue.url + '\';"/></div>';
+              imgTag = '<div class="img"><img src="' + issue.screenshot + '" onerror="javascript:this.src=\'https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg\';"/></div>';
             } else {
               imgTag = '<div class="img"></div>';
             }
             let infoTag = '<div class="info">';
             if (issue.avatar && issue.avatar.length > 0) {
-              infoTag += '<img src="' + issue.avatar + '" onerror="javascript:this.src=\'https://image.thum.io/get/width/1024/crop/768/' + issue.url + '\';"/>';
+              infoTag += '<img src="' + issue.avatar + '" onerror="javascript:this.src=\'https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg\';"/>';
             }
             infoTag += '<span class="title">' + issue.title + '</span><span class="desc">' + issue.description + '</span></div>';
-            const cardTag = '<a class=\'site-card\' target=\'_blank\' href=\'' + issue.url + '\'>' + imgTag + infoTag + '</a>';
+            let cardTag = "<a class='site-card' target='_blank' href='" + issue.url + "'>" + imgTag + infoTag + "</a>";
             $(el).find('.site-card-group.' + i).append(cardTag);
           }
         }
@@ -143,16 +143,16 @@ const IssuesAPI = {
     });
   },
   getIssuesAPIForTimeline(cfg) {
-    const el = $(cfg.el)[0];
+    let el = $(cfg.el)[0];
     $(el).append('<div class="loading"><i class="fa fa-cog fa-2x fa-spin"></i><p>正在加载</p></div>');
-    this.requestIssuesAPI(cfg.api, function(data) {
+    this.requestIssuesAPI(cfg.api, function(data){
       $(el).find('.loading').remove();
       if (data.length > 0) {
         for (i = 0; i < data.length; i++) {
-          const a = '&nbsp;&nbsp;<a class="comments" target="_blank" href="' + data[i].html_url + '"><i class="fa fa-comment-dots fa-fw"></i>' + data[i].comments + '</a>';
-          const meta = '<div class="meta"><p></p><p>' + data[i].title + a + '</p><p></p></div>';
-          const body = '<div class="body"><p>' + data[i].body + '</p></div>';
-          const tag = '<div class="timenode">' + meta + body + '</div>';
+          let a = '&nbsp;&nbsp;<a class="comments" target="_blank" href="' + data[i].html_url + '"><i class="fa fa-comment-dots fa-fw"></i>' + data[i].comments + '</a>';
+          let meta = '<div class="meta"><p></p><p>' + data[i].title + a + '</p><p></p></div>';
+          let body = '<div class="body"><p>' + data[i].body + '</p></div>';
+          let tag = '<div class="timenode">' + meta + body + '</div>';
           $(el).append(tag);
         }
       }
@@ -162,11 +162,11 @@ const IssuesAPI = {
     });
   },
   request() {
-    const els = document.getElementsByClassName('issues-api');
+    let els = document.getElementsByClassName('issues-api');
     for (var i = 0; i < els.length; i++) {
-      const el = els[i];
-      const api = el.getAttribute('api');
-      const group = el.getAttribute('group');
+      let el = els[i];
+      let api = el.getAttribute('api');
+      let group = el.getAttribute('group');
       var cfg = new Object();
       cfg.class = el.getAttribute('class');
       cfg.el = el;
@@ -181,6 +181,6 @@ const IssuesAPI = {
   }
 };
 IssuesAPI.request();
-document.addEventListener('pjax:complete', function() {
+document.addEventListener('pjax:complete', function () {
   IssuesAPI.request();
 });
