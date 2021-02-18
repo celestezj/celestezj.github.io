@@ -458,6 +458,16 @@ sidebar:
         #- <center>一些说明</center> # - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
         #- <center><img src="https://www.v2fy.com/asset/0i/ChineseBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8BBQB/%E6%96%97%E5%9B%BE%E4%B9%8B%E7%8E%8B00024.jpg" height="150px"/></center>
         - <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210216202334.gif" height="150px"/></center>
+        #- <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+    earth_visters:
+      class: text
+      display: [desktop]
+      header:
+        icon: fa fa-globe
+        title: 访客
+      content:
+        - <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5srjkfin1j1&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+        - <script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5n592k2jo2i&amp;d=3&amp;p=1&amp;b=0&amp;w=193&amp;g=2&amp;f=arial&amp;fs=12&amp;r=0&amp;c0=362b05&amp;c1=375363&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>
     newcomment:
       class: text
       display: [desktop] # [desktop, mobile]
