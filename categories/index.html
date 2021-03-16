@@ -80,6 +80,7 @@
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.2/data/katong_font/katong-font.js"></script>
 <body>
   
 
@@ -193,6 +194,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -261,6 +278,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -385,6 +418,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -453,6 +502,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -602,83 +667,16 @@ if (IsPC()){
           <div class="all-cats">
             
               
-                <a class="" href="/categories/mathematics/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;mathematics</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
-                <a class="" href="/categories/%E4%BD%A0%E5%A5%BD/">
-                  <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;你好</span>
-                  <span class="title">
-                    (1)
-                  </span>
-                </a>
-              
                 <a class="" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
                   <span><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;环境配置</span>
                   <span class="title">
-                    (3)
+                    (2)
                   </span>
                 </a>
               
             
           </div>
 		  
-               <style type="text/css">
-    #category-radar {
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-    //window.onload=function(){
-	//setTimeout(function(){
-	var radarChart = echarts.init(document.getElementById('category-radar'));
-	window.addEventListener("resize", () => { radarChart.resize(); });
-
-    
-
-    var option = {
-        animation: false,
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"环境配置","max":4},{"name":"你好","max":4},{"name":"mathematics","max":4}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [3,1,1],
-                    name : '文章分类雷达图'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-	//}
-	//},200);
-	setTimeout(function(){radarChart.resize();},200); //https://blog.csdn.net/weixin_37817251/article/details/90046795
-</script>
-          
           <br>
           
         </article>
@@ -772,7 +770,7 @@ if (IsPC()){
 
 
     <div class='content'>
-      <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/fit-theory/" style="font-size: 14px; color: #999">fit theory</a> <a href="/tags/haha/" style="font-size: 14px; color: #999">haha</a>
+      <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a>
     </div>
   </section>
 
@@ -1095,7 +1093,7 @@ var loadCSS = function( href, before, media, attributes ){
 <script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 
     <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg", "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210317101229.jpg"];
         if ('true' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1125,6 +1123,19 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
 
 
 
@@ -2017,6 +2028,10 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         
         
         
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
         
           pjax_initCopyCode();
         
@@ -2354,5 +2369,5 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- left side bar.end -->
 
-<script type="text/javascript" src="/js/funny-title.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/funny_title/funny-title.js"></script>
 </html>

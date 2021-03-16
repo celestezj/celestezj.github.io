@@ -7176,6 +7176,68 @@ a.newcomment {
   text-shadow: 0 0 5px #9b59b6;
   animation-delay: -6s;
 }
+.dykatongwrapper {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 200px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+.dykatongcontent {
+  font-family: 'Rubik';
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  display: block;
+  word-spacing: 3rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.dykatongcontent div {
+  display: inline;
+}
+.dykatongcontent span {
+  display: inline-block;
+}
+.dykatongcontent span:hover {
+  animation: wobble 200ms;
+}
+.dykatongcontent span:nth-child(1n) {
+  color: #f18829;
+  text-shadow: #ef7b11 1px 1px, #f7bd89 -1px -1px, #f37841 -2px -2px 6px, #f49d4f -2px -2px, #f49d4f -1px -2px, #f49d4f -1px -3px, #f49d4f -2px -4px, #f49d4f -2px -5px, #f49d4f -3px -6px, #f18829 -4px -7px, rgba(0,0,5,0.4) 3px 4px 5px, rgba(0,0,5,0.2) -3px -4px 5px;
+  transform: rotate(-3deg);
+}
+.dykatongcontent span:nth-child(2n) {
+  color: #00b9ed;
+  text-shadow: #00a5d4 1px 1px, #54d9ff -1px -1px, #08f2ff -2px -2px 6px, #17ccff -2px -2px, #17ccff -1px -2px, #17ccff -1px -3px, #17ccff -2px -4px, #17ccff -2px -5px, #17ccff -3px -6px, #00b9ed -4px -7px, rgba(0,0,5,0.4) 3px 4px 5px, rgba(0,0,5,0.2) -3px -4px 5px;
+  transform: rotate(3deg) translateY(4%);
+}
+.dykatongcontent span:nth-child(3n) {
+  color: #ed5053;
+  text-shadow: #eb393c 1px 1px, #f7acae -1px -1px, #ef6780 -2px -2px 6px, #f17577 -2px -2px, #f17577 -1px -2px, #f17577 -1px -3px, #f17577 -2px -4px, #f17577 -2px -5px, #f17577 -3px -6px, #ed5053 -4px -7px, rgba(0,0,5,0.4) 3px 4px 5px, rgba(0,0,5,0.2) -3px -4px 5px;
+  transform: rotate(-3deg);
+}
+.dykatongcontent span:nth-child(4n) {
+  color: #00af4f;
+  text-shadow: #009643 1px 1px, #16ff7f -1px -1px, #00c939 -2px -2px 6px, #00d861 -2px -2px, #00d861 -1px -2px, #00d861 -1px -3px, #00d861 -2px -4px, #00d861 -2px -5px, #00d861 -3px -6px, #00af4f -4px -7px, rgba(0,0,5,0.4) 3px 4px 5px, rgba(0,0,5,0.2) -3px -4px 5px;
+  transform: rotate(-2deg);
+}
+.dykatongcontent span:nth-child(5n) {
+  color: #8e509f;
+  text-shadow: #7f478e 1px 1px, #ba8fc6 -1px -1px, #8e5cad -2px -2px 6px, #a266b2 -2px -2px, #a266b2 -1px -2px, #a266b2 -1px -3px, #a266b2 -2px -4px, #a266b2 -2px -5px, #a266b2 -3px -6px, #8e509f -4px -7px, rgba(0,0,5,0.4) 3px 4px 5px, rgba(0,0,5,0.2) -3px -4px 5px;
+  transform: rotate(3deg) translateY(-2%);
+}
+.dykatongcontent span:nth-child(6n) {
+  color: #f9de00;
+  text-shadow: #e0c700 1px 1px, #ffee60 -1px -1px, #ffbe14 -2px -2px 6px, #ffe723 -2px -2px, #ffe723 -1px -2px, #ffe723 -1px -3px, #ffe723 -2px -4px, #ffe723 -2px -5px, #ffe723 -3px -6px, #f9de00 -4px -7px, rgba(0,0,5,0.4) 3px 4px 5px, rgba(0,0,5,0.2) -3px -4px 5px;
+  transform: rotate(5deg) translateY(1%);
+}
 @-moz-keyframes stroke {
   100% {
     stroke-dashoffset: -400;
@@ -7194,5 +7256,25 @@ a.newcomment {
 @keyframes stroke {
   100% {
     stroke-dashoffset: -400;
+  }
+}
+@-moz-keyframes wobble {
+  50% {
+    transform: translate(2%, 2%);
+  }
+}
+@-webkit-keyframes wobble {
+  50% {
+    transform: translate(2%, 2%);
+  }
+}
+@-o-keyframes wobble {
+  50% {
+    transform: translate(2%, 2%);
+  }
+}
+@keyframes wobble {
+  50% {
+    transform: translate(2%, 2%);
   }
 }

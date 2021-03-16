@@ -80,6 +80,7 @@
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.2/data/katong_font/katong-font.js"></script>
 <body>
   
 
@@ -193,6 +194,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -261,6 +278,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -385,6 +418,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -453,6 +502,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -646,29 +711,11 @@ if (IsPC()){
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Hexo/" title="Hexo: 3">
+                <a href="/tags/Hexo/" title="Hexo: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">×3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/haha/" title="haha: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="haha" style="background-color: #F5EEF8;">haha
-                        <span class="tag-length">×1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/fit-theory/" title="fit theory: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="fit theory" style="background-color: #D5F5E3;">fit theory
-                        <span class="tag-length">×1</span>
+                        <span class="tag-length">×2</span>
                     </span>
                 </a>
                 
@@ -677,101 +724,6 @@ if (IsPC()){
     </div>
 </div>
 		  
-		  
-		    <style type="text/css">
-    #tag-pie {
-        height: 360px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-pie" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-	<!--modified from https://blog.csdn.net/BloodyMandoo/article/details/72479268-->
-    var myChart = echarts.init(document.getElementById('tag-pie'));
-    window.addEventListener("resize", () => { myChart.resize(); });
-	
-	
-	
-    var option = {
-	    animation:false,
-		tooltip : {
-			trigger: 'item',
-			formatter: "{a} <br/>{b} : {c} ({d}%)"
-		},
-		calculable : true,
-		//legend: {
-		//	x : 'center',
-		//	y : 'bottom',
-		//	data:["Hexo","haha","fit theory"]
-		//},
-		series : [
-			{
-				type: 'pie',
-				radius: [20, 22],
-				slient:true,
-				animation:false,
-				label:{
-					normal:{show:false}
-				},
-				labelLine:{
-					normal:{show:false}
-				},
-				tooltip:{
-					show:false
-				},
-				itemStyle:{
-					normal:{
-						color:'#ccc'
-					}
-				},
-				data: [
-					{ value: 100, name: '' }
-					]
-			},
-			{
-                type: 'pie',
-                radius: [120, 122],
-                slient: true,
-                animation: false,
-                label: {
-                    normal: { show: false }
-                },
-                labelLine: {
-                    normal: { show: false }
-                },
-                tooltip: {
-                    show: false
-                },
-                itemStyle:{
-                    normal:{
-                        color:'#bbb'
-                    }
-                },
-                data: [
-                    { value: 100, name: '' }
-                ]
-            },
-			{
-				name:'文章标签极区图',
-				type:'pie',
-				radius : [30, 110],
-				
-				roseType : 'area',
-				x: '50%',               // for funnel
-				max: 100,                // for funnel
-				sort : 'ascending',     // for funnel
-				data:[{"name":"Hexo","value":3},{"name":"haha","value":1},{"name":"fit theory","value":1}],
-			}
-		]
-	};
-    myChart.setOption(option);
-	setTimeout(function(){myChart.resize();},200);
-</script>
 		  
           <br>
           
@@ -869,19 +821,9 @@ if (IsPC()){
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/mathematics/" href="/categories/mathematics/"
-            id="categoriesmathematics"
-            ><div class='name'>mathematics</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BD%A0%E5%A5%BD/" href="/categories/%E4%BD%A0%E5%A5%BD/"
-            id="categoriesE4BDA0E5A5BD"
-            ><div class='name'>你好</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
             title="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
             id="categoriesE78EAFE5A283E9858DE7BDAE"
-            ><div class='name'>环境配置</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>环境配置</div><div class='badge'>(2)</div></a></li>
         
       </ul>
     </div>
@@ -1206,7 +1148,7 @@ var loadCSS = function( href, before, media, attributes ){
 <script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 
     <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg", "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210317101229.jpg"];
         if ('true' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1236,6 +1178,19 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
 
 
 
@@ -2128,6 +2083,10 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         
         
         
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
         
           pjax_initCopyCode();
         
@@ -2465,5 +2424,5 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- left side bar.end -->
 
-<script type="text/javascript" src="/js/funny-title.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/funny_title/funny-title.js"></script>
 </html>

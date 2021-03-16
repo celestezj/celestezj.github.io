@@ -43,6 +43,7 @@ const IssuesAPI = {
     request();
   },
   parseIssueStrToJson(str) {
+	/* 好家伙，这bug让我好找！
     let jsonStr = str.match(/```json[\s|\S]*```/);
     if (jsonStr && jsonStr.length > 0) {
       jsonStr = jsonStr[0];
@@ -53,7 +54,8 @@ const IssuesAPI = {
         return JSON.parse(jsonStr);
       }
     }
-    return undefined;
+    return undefined;*/
+	return JSON.parse(str);
   },
   groupIssuesData(cfg, data) {
     var groups = new Object();

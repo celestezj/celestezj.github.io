@@ -80,6 +80,7 @@
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.2/data/katong_font/katong-font.js"></script>
 <body>
   
 
@@ -191,6 +192,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -259,6 +276,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -383,6 +416,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -451,6 +500,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -917,7 +982,7 @@ var loadCSS = function( href, before, media, attributes ){
 <script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 
     <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg", "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210317101229.jpg"];
         if ('true' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -947,6 +1012,19 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
 
 
 
@@ -1839,6 +1917,10 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         
         
         
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
         
           pjax_initCopyCode();
         
@@ -2176,5 +2258,5 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- left side bar.end -->
 
-<script type="text/javascript" src="/js/funny-title.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/funny_title/funny-title.js"></script>
 </html>

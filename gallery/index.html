@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -21,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2021/3 - Muggledy&#39;s Blog</title>
+  <title>Muggledy&#39;s Blog</title>
   
 
   
@@ -82,18 +80,17 @@
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.2/data/katong_font/katong-font.js"></script>
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -195,6 +192,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -263,6 +276,22 @@
                       
             
               <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
             
           
                     
@@ -387,6 +416,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🔗</span><span>&nbsp;友链</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/notes/
                   
                   
@@ -461,6 +506,22 @@
                       
             
               <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/gallery/
+                  
+                  
+                  
+                    id="gallery"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">📷</span><span>&nbsp;相册</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href=/games/
                   
                   
@@ -492,7 +553,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper docs dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -594,356 +655,243 @@ if (IsPC()){
       <div class='body-wrapper' id="pjax-container">
         
 
-<div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-      
+<div class='l_main no_sidebar'>
+  <article class="article post white-box reveal md shadow article-type-docs" id="docs" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/11/hello-world2/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
- Q...
-      
     
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://muggledy.github.io'><img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico'></a>
-        
-        <time>2021-03-11</time>
-        
-      </div>
+  <!-- 卡通字体（CSS+JS）：要调节卡通字体的大小，设置dykatongcontent的font-size属性，要调节占地大小，调节dykatongwrapper的width（默认充满父容器100%）和height属性，且默认情况下dykatongwrapper是靠左的，可以通过margin来使其居（父容器之）中，你可以在任意页面使用该卡通字体，只要按照本示例规范地使用dykatongwrapper和dykatongcontent类并调用相应的渲染函数（一个页面只需要在底部调用一次）即可 -->
+<div class="dykatongwrapper" style="text-align:center;width:60%;height:90px;margin:0 auto;">
+  <div class="dykatongcontent" style="font-size:2.5rem">图像册</div>
+</div>
+<script>dykatongrender();</script>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+.flowerp{
+	font-family: 'Indie Flower', cursive;
+}
+</style>
+<p class="flowerp" style="text-align:center">暂时先随便找些图片占个位置~</p>
+<!-- 图片翻转特效（纯CSS）：调节卡片大小很方便，除了修改dyalbumcard中的图片尺寸，还有字体大小以及line-height属性也要相应调整，具体见下面的span和p标签样式（原值分别为：320px，320px，span:20px&1px，p:16px&15px），由于此特效我只打算在相册页面使用，所以直接将全部CSS代码都放在此处了（注：本站所使用的特效全都来自“站长素材”） -->
+<style type="text/css">
+.dyalbumsection *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dyalbumsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+.dyalbumsection .dyalbumcard{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.dyalbumsection .dyalbumcard .dyalbumbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+.dyalbumsection .dyalbumcard:hover .dyalbumbox{
+    transform: rotateY(180deg);
+}
+.dyalbumsection .dyalbumcard .dyalbumbox .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.dyalbumsection .dyalbumcard .dyalbumbox .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dyalbumsection .dyalbumcard .dyalbumbox .contentBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+.dyalbumsection .dyalbumcard .dyalbumbox .contentBx div{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg,#fe0061,#ffeb3b);
+    transform: translateZ(100px);
+}
+.dyalbumsection .dyalbumcard .dyalbumbox .contentBx div span{
+    color: #fff;
+    font-size: 4px;
+    letter-spacing: 1px;
+}
+.dyalbumsection .dyalbumcard .dyalbumbox .contentBx div p{
+    color: #fff;
+    font-size: 4px;
+	line-height: 5px;
+}
+</style>
+<section class="dyalbumsection">
+	<div class="dyalbumcard">
+		<div class="dyalbumbox">
+			<div class="imgBx">
+				<img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318112621.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318112621.png" srcset="data:image/png;base64,666" alt="">
+			</div>
+			<div class="contentBx">
+				<div>
+					<span>Title</span>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dyalbumcard">
+		<div class="dyalbumbox">
+			<div class="imgBx">
+				<img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318111545.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318111545.jpg" srcset="data:image/png;base64,666" alt="">
+			</div>
+			<div class="contentBx">
+				<div>
+					<span>Title</span>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dyalbumcard">
+		<div class="dyalbumbox">
+			<div class="imgBx">
+				<img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318112617.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318112617.jpg" srcset="data:image/png;base64,666" alt="">
+			</div>
+			<div class="contentBx">
+				<div>
+					<span>Title</span>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dyalbumcard">
+		<div class="dyalbumbox">
+			<div class="imgBx">
+				<img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318111432.jfif" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318111432.jfif" srcset="data:image/png;base64,666" alt="">
+			</div>
+			<div class="contentBx">
+				<div>
+					<span>Title</span>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dyalbumcard">
+		<div class="dyalbumbox">
+			<div class="imgBx">
+				<img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318121345.gif" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318121345.gif" srcset="data:image/png;base64,666" alt="">
+			</div>
+			<div class="contentBx">
+				<div>
+					<span>Title</span>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dyalbumcard">
+		<div class="dyalbumbox">
+			<div class="imgBx">
+				<img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318111406.webp" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210318111406.webp" srcset="data:image/png;base64,666" alt="">
+			</div>
+			<div class="contentBx">
+				<div>
+					<span>Title</span>
+					<p>Description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<p class="flowerp" style="text-align:center">暂时先随便找些图片占个位置~</p>
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/03/11/hello-world2/'>
-            Read More
-          </a>
-        </div>
+      
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/11/hello-world1/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
- Q...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://muggledy.github.io'><img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico'></a>
-        
-        <time>2021-03-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BD%A0%E5%A5%BD/">你好</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/11/hello-world1/'>
-            Read More
-          </a>
-        </div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
     </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/03/11/hello-world0/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
- Q...
-      
-    
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://muggledy.github.io'><img src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210207093620.ico'></a>
-        
-        <time>2021-03-11</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/03/11/hello-world0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
   
 
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
-  
-    
-    
-
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='https://celestezj.github.io/album/' target="_blank">
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202152223.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">孤筏重洋</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/muggledy/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:zgjsycfndy2015@163.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg"
-              class="social fab fa-weixin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://celestezj.github.io/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-<script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');}</script>
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/mathematics/" href="/categories/mathematics/"
-            id="categoriesmathematics"
-            ><div class='name'>mathematics</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BD%A0%E5%A5%BD/" href="/categories/%E4%BD%A0%E5%A5%BD/"
-            id="categoriesE4BDA0E5A5BD"
-            ><div class='name'>你好</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
-            id="categoriesE78EAFE5A283E9858DE7BDAE"
-            ><div class='name'>环境配置</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Hexo/" style="font-size: 24px; color: #555">Hexo</a> <a href="/tags/fit-theory/" style="font-size: 14px; color: #999">fit theory</a> <a href="/tags/haha/" style="font-size: 14px; color: #999">haha</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <a href='/notes/'><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i><span class='name'>公示</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313184311.gif" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313184311.gif" srcset="data:image/png;base64,666" height="150px"/></center>
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-
-<section class="widget text shadow desktop">
-  
-  <header>
-    
-      <i class="far fa-comments fa-fw" aria-hidden="true"></i><span class='name'>最新评论</span>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <div id="hot-comments"></div>
-    
-  </div>
-</section>
-
-  
-
 
 </aside>
+
 
 
         
@@ -960,7 +908,7 @@ if (IsPC()){
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 
@@ -1212,7 +1160,7 @@ var loadCSS = function( href, before, media, attributes ){
 <script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
 
     <script type="text/javascript">
-        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202144753.png", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg", "https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg", "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210317101229.jpg"];
         if ('true' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1242,6 +1190,19 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+      loadScript('/js/issues.js');
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
 
 
 
@@ -2134,6 +2095,10 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         
         
         
+          if (typeof IssuesAPI == "undefined") {
+            loadIssuesJS();
+          }
+        
         
           pjax_initCopyCode();
         
@@ -2471,5 +2436,5 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 
 <!-- left side bar.end -->
 
-<script type="text/javascript" src="/js/funny-title.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/funny_title/funny-title.js"></script>
 </html>
