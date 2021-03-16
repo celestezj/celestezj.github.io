@@ -19,7 +19,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>网站公示 - Muggledy&#39;s Blog</title>
+  <title>Muggledy&#39;s Blog</title>
   
 
   
@@ -78,10 +78,11 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/InfiniteYinux/cloud@2.44/Hexo/themeConfig/echarts.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -214,6 +215,64 @@
                     id="about"
                   >
                   <span style="display:flex"><span class="dyiconnavbar">🤖</span><span>&nbsp;关于</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://github.com/celestezj/celestezj.github.io/tree/env_volantis_4.1.2
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:githubcomcelestezjcelestezjgithubiotreeenv_volantis_412"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🌸</span><span>&nbsp;本站源码</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/games/
+                  
+                  
+                  
+                    id="games"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🕹️</span><span>&nbsp;小游戏</span></span>
                 </a>
                 
               </li>
@@ -360,6 +419,64 @@
             
           
             
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://github.com/celestezj/celestezj.github.io/tree/env_volantis_4.1.2
+                  
+                  
+                    target="_blank"
+                  
+                  
+                    id="https:githubcomcelestezjcelestezjgithubiotreeenv_volantis_412"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🌸</span><span>&nbsp;本站源码</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <hr>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/games/
+                  
+                  
+                  
+                    id="games"
+                  >
+                  <span style="display:flex"><span class="dyiconnavbar">🕹️</span><span>&nbsp;小游戏</span></span>
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
           </ul>
         </li>
 			</ul>
@@ -372,61 +489,19 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper docs dock' style="display: ;">
+        <div id="full" class='cover-wrapper docs dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
           <div class='cover-body'>
   <div class='top'>
     
-      <img no-lazy class='logo' src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg'/>
     
-    
-    
-	  <!-- 滚动字体特效 comes from https://blog.csdn.net/qq_45428737/article/details/106299049 -->
-<div id="binft"></div>
-<script>
-    var binft = function (r, sentences_lists) {
-      function t() {
-        return b[Math.floor(Math.random() * b.length)]
-      }  
-      function e() {
-        return String.fromCharCode(94 * Math.random() + 33)
-      }
-      function n(r) {
-        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-          var l = document.createElement("span");
-          l.textContent = e(), l.style.color = t(), n.appendChild(l)
-        }
-        return n
-      }
-      function i() {
-        var t = o[c.skillI];
-        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-      }
-      var l = "",
-      o = sentences_lists.map(function (r) {
-	  return r + ""
-      }),
-      a = 2,
-      g = 1,
-      s = 5,
-      d = 75,
-      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-      c = {
-        text: "",
-        prefixP: -s,
-        skillI: 0,
-        skillP: 0,
-        direction: "forward",
-        delay: a,
-        step: g
-      };
-      i()
-      };
-      binft(document.getElementById('binft'),["山有木兮木有枝，心悦君兮君不知。","人生若只如初见，何事秋风悲画扇。","十年生死两茫茫，不思量，自难忘。","曾经沧海难为水，除却巫山不是云。","洛中何郁郁，冠带自相索。","只愿君心似我心，定不负相思意。","愿得一心人，白头不相离。","入我相思门，知我相思苦。"]);
-</script>
 	
+	  <div class="dylogobox">Muggledy's Blog</div>
+	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	
+    
   </div>
   <div class='bottom'>
     <div class='menu navigation'>
@@ -467,6 +542,35 @@
   </div>
 </div>
 
+
+<script>
+function dyrandomlogofont(){
+var dybox = document.querySelector('.dylogobox').textContent,
+    dyrs = document.querySelector('.dylogorender'),
+    dyf = [
+      'arial','verdana','monospace',
+      'consolas','impact','helveltica'
+    ],
+    dyc = [
+      '1ABC9C','3498DB','34495E','E67E22',
+      'E74C3C','2ECC71','E74C3C','95A5A6','D35400'
+    ];
+var dyout = '';
+for (var i = 0; i < dybox.length; i++) {
+  // Random array fonts
+  var dyr = dyf[Math.floor(Math.random() * dyf.length)],
+      // Random array colors
+      dysh = dyc[Math.floor(Math.random() * dyc.length)],
+      dyst = 'color:#'+dysh+
+      ';font-family: '+dyr+
+      ';text-shadow:0px 1px 0px #'+dysh+',0px 2px 0px #'+dysh+',0px 3px 0px #'+dysh+',0px 4px 0px #'+dysh+', 0px 5px 0px  #'+dysh+',0px 6px 0px #'+dysh+', 0px 7px 0px #'+dysh+',0px 8px 7px #'+dysh;
+  dyout += '<span style="'+dyst+'">'+dybox[i]+'</span>';
+}  
+dyrs.innerHTML = dyout;
+}
+dyrandomlogofont();
+</script>
+
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
         </div>
     
@@ -487,18 +591,30 @@
     
     
     
-      <h1 class="title">
-        网站公示
-      </h1>
-      <div class='new-meta-box'>
-        
-      </div>
-    
   </div>
 
 
   
-  <p>欢迎光临</p>
+  <div id="dysvgBox">
+	<svg width="100%" height="100">
+		<text text-anchor="middle" x="50%" y="50%" class="text text-1">
+			欢迎光临
+		</text>
+		<text text-anchor="middle" x="50%" y="50%" class="text text-2">
+			欢迎光临
+		</text>
+		<text text-anchor="middle" x="50%" y="50%" class="text text-3">
+			欢迎光临
+		</text>
+		<text text-anchor="middle" x="50%" y="50%" class="text text-4">
+			欢迎光临
+		</text>
+	</svg>
+</div>
+<div style="text-align:center;">
+<!-- <span style="float:right;">一行居右</span><span style="float:left;">一行居左</span>一行居中 -->
+<span style="float:right;">2021年3月16日</span>
+</div>
 
   
   
@@ -518,10 +634,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-14T21:32:27+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-16T14:34:35+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 14, 2021</p>
+    <p>更新于：Mar 16, 2021</p>
   </a>
 </div>
 
@@ -540,7 +656,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://celestezj.github.io/notes/index.html&title=网站公示 - Muggledy's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://celestezj.github.io/notes/index.html&title= - Muggledy's Blog&summary="
           
           >
           
@@ -552,7 +668,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://celestezj.github.io/notes/index.html&title=网站公示 - Muggledy's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://celestezj.github.io/notes/index.html&title= - Muggledy's Blog&summary="
           
           >
           
@@ -783,7 +899,7 @@
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 
@@ -1369,7 +1485,7 @@ var loadCSS = function( href, before, media, attributes ){
 
 
   
-<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/app/app.js"></script>
+<script src="/js/app.js"></script>
 
 
 
