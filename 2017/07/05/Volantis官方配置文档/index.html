@@ -86,6 +86,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
 <body>
   
 
@@ -507,6 +508,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
 	
 	  <div class="dylogobox">Muggledy's Blog</div>
 	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	  <img no-lazy class='logo' id="dylogo" src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg' style='display:none'/>
 	
     
   </div>
@@ -575,7 +577,16 @@ for (var i = 0; i < dybox.length; i++) {
 }  
 dyrs.innerHTML = dyout;
 }
-dyrandomlogofont();
+if (IsPC()){
+	dyrandomlogofont();
+} else {
+	var dylogo = document.getElementById("dylogo");
+	var dylogobox = document.getElementsByClassName("dylogobox")[0];
+	var dylogorender = document.getElementsByClassName("dylogorender")[0];
+	dylogobox.style.display="none";
+	dylogorender.style.display="none";
+	dylogo.style.display="";
+}
 </script>
 
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
@@ -685,7 +696,7 @@ dyrandomlogofont();
   <span class='p center logo large'>Volantis</span>
 <span class='p center small'>A Wonderful Theme for Hexo</span>
 <p><a target="_blank" rel="noopener" href="https://volantis.js.org/">Volantis</a> 是一个功能丰富、高度模块化的 Hexo 博客主题。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的博客，也可以仿照官网搭建一个多人协作的、包含文档模块的大体量综合型博客。</p>
-<div class="tag link"><a class="link-card" title="示例博客" target="_blank" rel="noopener" href="https://volantis.js.org/examples/"><div class="left"><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png"/></div><div class="right"><p class="text">示例博客</p><p class="url">https://volantis.js.org/examples/</p></div></a></div>
+<div class="tag link"><a class="link-card" title="示例博客" target="_blank" rel="noopener" href="https://volantis.js.org/examples/"><div class="left"><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">示例博客</p><p class="url">https://volantis.js.org/examples/</p></div></a></div>
 <p>所有的 Volantis 用户都可以按照格式自行创建 <a target="_blank" rel="noopener" href="https://github.com/volantis-x/examples/issues/">Issue</a> 来将自己的博客添加到官网的示例博客页面中。</p>
 <a id="more"></a>
   
@@ -706,12 +717,12 @@ dyrandomlogofont();
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2020\05\23\Volantis主题美化\" title="Volantis主题美化-阳光派Plus" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217121829.jpg" /><span class="title">Volantis主题美化-阳光派Plus</span><span class="excerpt">具体效果请移步我的博客👉阳光派Plus
+      <div class="vlts-rps"><a class="item" href="\2020\05\23\Volantis主题美化\" title="Volantis主题美化-阳光派Plus" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217121829.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217121829.jpg" srcset="data:image/png;base64,666" /><span class="title">Volantis主题美化-阳光派Plus</span><span class="excerpt">具体效果请移步我的博客👉阳光派Plus
 更：
 1.添加暗黑模式
 2.添加鼠标右键功能
 3.添加页面预加载功能
-7.20 ...</span></a><a class="item" href="\2021\02\06\配置博客\" title="Hexo博客简易配置" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg" /><span class="title">Hexo博客简易配置</span><span class="excerpt">Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用...</span></a></div></section></div>
+7.20 ...</span></a><a class="item" href="\2021\02\06\配置博客\" title="Hexo博客简易配置" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217120300.jpg" srcset="data:image/png;base64,666" /><span class="title">Hexo博客简易配置</span><span class="excerpt">Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用...</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -773,7 +784,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -789,7 +800,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -797,7 +808,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFJElEQVR42u3bQY7cOBAEwPn/p+27gYZYWUm5MQje7G1RZFCXdHJ//hj/ZfwgAA/eAA/eAA/eKMD/hOP0+U+/+/fvHxf84fnTeZ6ef3qu5gUePHjw4MGDBw8efBF+u5Dpc9vnn+ZLwVrr/bhu8ODBgwcPHjx48OAvwKcLSp+fBpvT+bYHf/r34/2CBw8ePHjw4MGDB/8F8OnGTwPQLej0gwAPHjx48ODBgwcP/jfAT+fZBqz04tTpAbfWBx48ePDgwYMHDx78m/C3LyZtN55eYErX+bU3ycCDBw8ePHjw4MGDD0ZajPyWP8de4MGDBw8ePHjw4MEX4LfjKVBNi4s0QLX/+zZofXwfePDgwYMHDx48ePAF+GmB0Aa5dTDb9bYvdIEHDx48ePDgwYMH34RPg8Y2+EwPZPu7J5BbHxB48ODBgwcPHjx48Dfg3woi28A2DTbpfqbBaTw/ePDgwYMHDx48ePAX4NMgdKv4eJpnewHrdD3T939cP3jw4MGDBw8ePHjwBfjTjU3hpsGjHaja+2t9kODBgwcPHjx48ODBN+DTF20LjzSwtOadBsDWhSjw4MGDBw8ePHjw4JsB6rR4uFV4tILR6X6m+94WI+DBgwcPHjx48ODBN+HTf+BvXWxKLwo9/X5baLQCInjw4MGDBw8ePHjwN+FbhUG6odaBp4XGtGBJgxV48ODBgwcPHjx48A347QZa4LcOrDVvq8gBDx48ePDgwYMHD74B3y4WpsErfd9poEuD3/Sgjx3AgwcPHjx48ODBg38Bfgo2DSLTAziFTQPa9iLT4wcAHjx48ODBgwcPHvzF/8H4JxxT4DTYTNfRPrg4SIIHDx48ePDgwYMHX4A/fWG7YJgGm7TAiIPOcP/HHwJ48ODBgwcPHjx48EX4NBhNN7S9QLRdz/S9rfeBBw8ePHjw4MGDB9+ETy8gtYLG9kCngWh64am1f/DgwYMHDx48ePDgm/Bp4EgBp5BpgZIeUOsiFXjw4MGDBw8ePHjwb8BvLxKdAqYHfrreW+9pBTrw4MGDBw8ePHjw4Jvw0wtFadBJi5M06LSD1PpgwIMHDx48ePDgwYMvwG8nmm5gW0RsC5y0eJkGS/DgwYMHDx48ePDgb8JvLyhtC5JtgEoPahv0pl7gwYMHDx48ePDgwb8B3y4q2oVJ+wC3B3Y8H3jw4MGDBw8ePHjwRfjtxZ528Jquq1XUnBYf6XvBgwcPHjx48ODBg2/C3y4EjouCcL7twW4P8Hi94MGDBw8ePHjw4MFfgE8nTIFbB9X6IG4HP/DgwYMHDx48ePDgm/DbwHC6oG3BkV5QeitAPb4HPHjw4MGDBw8ePPgCfBqEpoHidkDbwrSKn8fABx48ePDgwYMHDx58ET4NPFO44wU+bCwtUtICKC0+PhYh4MGDBw8ePHjw4MEv4G8FhdtB7PYHkhYqj+8FDx48ePDgwYMHD74Avx3bIPLWgU7nufUcePDgwYMHDx48ePAN+G1QmRYB26JhWoD87+fBgwcPHjx48ODBg78Jn4JNC5PTDWwLjm1xce334MGDBw8ePHjw4MFfgE8DU3oAbcj0otIUNg1Y4MGDBw8ePHjw4MF/A/wUvB1wtsFvGvjW7wUPHjx48ODBgwcP/gvh0+B1K9hs198KkuDBgwcPHjx48ODB34SfBoL276cFRjpaxcj4wwIPHjx48ODBgwcPvgjfDiTToNQuIrbFxa2iBDx48ODBgwcPHjz4Brzx7gAPHrwBHrwBHryxGH8BBmWpe3Y0AGQAAAAASUVORK5CYII=">
           </div>
@@ -953,7 +964,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -964,7 +975,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -975,7 +986,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -986,7 +997,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1214,6 +1225,33 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
@@ -1500,7 +1538,7 @@ var loadCSS = function( href, before, media, attributes ){
         var commentId = '#' + comments[i].id;
         var mail = getAvater(comments[i]._serverData.mail);
 		var dyonerror = 'οnerrοr="' + "this.οnerrοr='';this.src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210315095508.jpg'" + '"'
-        hotComments.append('<div class="card-comment-item"><img '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
+        hotComments.append('<div class="card-comment-item"><img no-lazy '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
       }
     });
   }; //comes from https://www.heson10.com/posts/7207.html
@@ -1968,7 +2006,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 <!-- more -->
 
   
-  <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
+  <script>$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
 
 
 

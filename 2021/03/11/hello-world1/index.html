@@ -81,6 +81,7 @@
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
 <body>
   
 
@@ -502,6 +503,7 @@
 	
 	  <div class="dylogobox">Muggledy's Blog</div>
 	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	  <img no-lazy class='logo' id="dylogo" src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg' style='display:none'/>
 	
     
   </div>
@@ -570,7 +572,16 @@ for (var i = 0; i < dybox.length; i++) {
 }  
 dyrs.innerHTML = dyout;
 }
-dyrandomlogofont();
+if (IsPC()){
+	dyrandomlogofont();
+} else {
+	var dylogo = document.getElementById("dylogo");
+	var dylogobox = document.getElementsByClassName("dylogobox")[0];
+	var dylogorender = document.getElementsByClassName("dylogorender")[0];
+	dylogobox.style.display="none";
+	dylogorender.style.display="none";
+	dylogo.style.display="";
+}
 </script>
 
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
@@ -750,7 +761,7 @@ dyrandomlogofont();
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -762,7 +773,7 @@ dyrandomlogofont();
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -770,7 +781,7 @@ dyrandomlogofont();
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADCElEQVR42u3aQY7jMAwEwPz/07P3xS6sbsmGOSndJhPZYuXSIPX5sf65PgjAgAEDBgyYMTCfcv1v/9+fXx6k3Hf1vLoeMGDAgAEDBsw4mPTFVzBX+9LCVp+zXQ8YMGDAgAEDZixMerA08K0WeipYxvWAAQMGDBgwYL4GpgU5/X8wYMCAAQMGDJi7At5TAREMGDBgwIAB870w6YDq1CCuDZSvnUSCAQMGDBgwYB6DSVcasJ7+u64HDBgwYMCAATMG5vQ6DZsGze3zgwEDBgwYMGDGwKxe2GkLbgdvbWMsbaDFHTwwYMCAAQMGzDiY1UC3PNjaHLSlQfDqfWDAgAEDBgyYuTBtYGsbT2mB6TnaHwAMGDBgwIABMwdmd7C2GuDSwNe+f/W9t10cAgMGDBgwYMA8BrNbQBoE20CXBr32YhEYMGDAgAEDZh5M2+A5NQBrG11X31uFBgMGDBgwYMDMhWkbPOmFoTRYtgG0BQQDBgwYMGDAzIVZfsBhoDaQ7QbBeOAGBgwYMGDAgHkNTPrC9gLyT7nSC0ptAw0MGDBgwIABMx/mVOBLPz9V4G7jCgwYMGDAgAEzB6YduKVB8PhgrHz+5T4wYMCAAQMGzBiYU4OvtvAWpA2YcfIFAwYMGDBgwLwWJg12bSNpt5GVBs70hwMDBgwYMGDAzIc5fQFot+A2CNYNMDBgwIABAwbMOJh20HUXzG5javVcl40qMGDAgAEDBswYmHbgdmrQdtf+euAGBgwYMGDAgHk9THqwNsClATANnO1AEAwYMGDAgAEzD2Z3tcFst9GUNtbigRsYMGDAgAED5vUwn3KtDsR2B3urge5UAAUDBgwYMGDAzINpA9XqQVcBd2G2vw8GDBgwYMCAGQtzegCXNpZWG2CnBm3LN6rAgAEDBgwYML8WJg1ku/vSgd8yPBgwYMCAAQPma2DaxlIKk/4w9fPBgAEDBgwYMGNh0oHbUw2q9HxpowsMGDBgwIABMxemHWDdFdB2LwKlgzcwYMCAAQMGzDwYCwwYMGDAgAEzbP0Bqaxe96744RoAAAAASUVORK5CYII=">
           </div>
@@ -896,7 +907,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -907,7 +918,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -918,7 +929,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -929,7 +940,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1157,6 +1168,33 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
@@ -1443,7 +1481,7 @@ var loadCSS = function( href, before, media, attributes ){
         var commentId = '#' + comments[i].id;
         var mail = getAvater(comments[i]._serverData.mail);
 		var dyonerror = 'οnerrοr="' + "this.οnerrοr='';this.src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210315095508.jpg'" + '"'
-        hotComments.append('<div class="card-comment-item"><img '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
+        hotComments.append('<div class="card-comment-item"><img no-lazy '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
       }
     });
   }; //comes from https://www.heson10.com/posts/7207.html
@@ -1911,7 +1949,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 <!-- more -->
 
   
-  <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
+  <script>$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
 
 
 

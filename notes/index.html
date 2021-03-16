@@ -79,6 +79,7 @@
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
 <body>
   
 
@@ -500,6 +501,7 @@
 	
 	  <div class="dylogobox">Muggledy's Blog</div>
 	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	  <img no-lazy class='logo' id="dylogo" src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg' style='display:none'/>
 	
     
   </div>
@@ -568,7 +570,16 @@ for (var i = 0; i < dybox.length; i++) {
 }  
 dyrs.innerHTML = dyout;
 }
-dyrandomlogofont();
+if (IsPC()){
+	dyrandomlogofont();
+} else {
+	var dylogo = document.getElementById("dylogo");
+	var dylogobox = document.getElementsByClassName("dylogobox")[0];
+	var dylogorender = document.getElementsByClassName("dylogorender")[0];
+	dylogobox.style.display="none";
+	dylogorender.style.display="none";
+	dylogo.style.display="";
+}
 </script>
 
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
@@ -613,7 +624,7 @@ dyrandomlogofont();
 </div>
 <div style="text-align:center;">
 <!-- <span style="float:right;">一行居右</span><span style="float:left;">一行居左</span>一行居中 -->
-<span style="float:right;">2021年3月16日</span>
+<span style="float:right;">2021年3月16日 建站完毕🎉</span>
 </div>
 
   
@@ -634,7 +645,7 @@ dyrandomlogofont();
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-16T14:34:35+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-16T18:59:42+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Mar 16, 2021</p>
@@ -660,7 +671,7 @@ dyrandomlogofont();
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -672,7 +683,7 @@ dyrandomlogofont();
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -680,7 +691,7 @@ dyrandomlogofont();
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+UlEQVR42u3aQW7DMAwEQP//0+0HakRL0kHYjG4FakUaXRYkrx/rz3UhAAMGDBgwYNbAXMV1u3H4Xfp7U/vd7g8GDBgwYMCAWQdzHIAOD5RCnZ7j9GGq9wEDBgwYMGDA7IVJL5AGudNA1n2I8n3AgAEDBgwYMF8LUz14Wvg63Q8MGDBgwIABA6Z6seoF0oAIBgwYMGDAgAHz1AWrjbenHgoMGDBgwIAB839g0pVCvfvv8n3AgAEDBgwYMGtguistME0VpJ5aYMCAAQMGDJg9MNWAVC1onQbFLmz1/GDAgAEDBgyYPTDVIPXyB5oNsi5k2ggEAwYMGDBgwOyFmRoAOg1U1cGharA8flAwYMCAAQMGzBqY9ODdBlh60CpQtXAFBgwYMGDAgNkDc1oYehosDX7dglmcfMGAAQMGDBgwHwdTHrBJC0DN30kfrlyIAwMGDBgwYMCsgZlqWFUHgNJzTAXP2/8DAwYMGDBgwKyB6TbAnvpuahApLViBAQMGDBgwYPbAnAaq6kB0t5BUBSsX3MCAAQMGDBgw62CmGmlpwJu+cPcBwYABAwYMGDB7YdKG11ThqBr8rsN1fC4wYMCAAQMGzBqYqQA3DZQGx3Q/MGDAgAEDBsx+mGqBpzow1C2EdRuBLx8SDBgwYMCAAbMG5rRAlK5ywBpq3KXnBAMGDBgwYMDsh3lXgyv9vgvUruCBAQMGDBgwYNbApI22qSBXDW5pY+92HzBgwIABAwbMepi0cXXc0Ar3qQa3KhQYMGDAgAEDZg9Md03BpgWsaiHr5d9gwIABAwYMmDUwV3FNDQ6lwTANlmmQBAMGDBgwYMDsg5kKdO9u5FX3iRtuYMCAAQMGDJiPh6kWlqqDOmlD7vEgCQYMGDBgwID5WpjTwaBqQ21qQOi44QYGDBgwYMCA+VqYtKCUDgSlDbWXARMMGDBgwIABsxYmbbh1C1RV2McafWDAgAEDBgyYdTDdxlUXbCrgpd+DAQMGDBgwYPbCWGDAgAEDBgyYZesXVahiu8qg+ZkAAAAASUVORK5CYII=">
           </div>
@@ -792,7 +803,7 @@ dyrandomlogofont();
     
   </div>
 </section>
-<script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');}</script>
+<script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');}</script>
   
 
   
@@ -922,7 +933,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -933,7 +944,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -944,7 +955,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -955,7 +966,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1183,6 +1194,33 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
@@ -1469,7 +1507,7 @@ var loadCSS = function( href, before, media, attributes ){
         var commentId = '#' + comments[i].id;
         var mail = getAvater(comments[i]._serverData.mail);
 		var dyonerror = 'οnerrοr="' + "this.οnerrοr='';this.src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210315095508.jpg'" + '"'
-        hotComments.append('<div class="card-comment-item"><img '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
+        hotComments.append('<div class="card-comment-item"><img no-lazy '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
       }
     });
   }; //comes from https://www.heson10.com/posts/7207.html
@@ -1937,7 +1975,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 <!-- more -->
 
   
-  <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
+  <script>$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
 
 
 

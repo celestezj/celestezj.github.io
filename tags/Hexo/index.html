@@ -81,6 +81,7 @@
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
 <body>
   
 
@@ -502,6 +503,7 @@
 	
 	  <div class="dylogobox">Muggledy's Blog</div>
 	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	  <img no-lazy class='logo' id="dylogo" src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg' style='display:none'/>
 	
     
   </div>
@@ -570,7 +572,16 @@ for (var i = 0; i < dybox.length; i++) {
 }  
 dyrs.innerHTML = dyout;
 }
-dyrandomlogofont();
+if (IsPC()){
+	dyrandomlogofont();
+} else {
+	var dylogo = document.getElementById("dylogo");
+	var dylogobox = document.getElementsByClassName("dylogobox")[0];
+	var dylogorender = document.getElementsByClassName("dylogorender")[0];
+	dylogobox.style.display="none";
+	dylogorender.style.display="none";
+	dylogo.style.display="";
+}
 </script>
 
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
@@ -747,7 +758,7 @@ dyrandomlogofont();
       <span class='p center logo large'>Volantis</span>
 <span class='p center small'>A Wonderful Theme for Hexo</span>
 <p><a target="_blank" rel="noopener" href="https://volantis.js.org/">Volantis</a> 是一个功能丰富、高度模块化的 Hexo 博客主题。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的博客，也可以仿照官网搭建一个多人协作的、包含文档模块的大体量综合型博客。</p>
-<div class="tag link"><a class="link-card" title="示例博客" target="_blank" rel="noopener" href="https://volantis.js.org/examples/"><div class="left"><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png"/></div><div class="right"><p class="text">示例博客</p><p class="url">https://volantis.js.org/examples/</p></div></a></div>
+<div class="tag link"><a class="link-card" title="示例博客" target="_blank" rel="noopener" href="https://volantis.js.org/examples/"><div class="left"><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png" srcset="data:image/png;base64,666"/></div><div class="right"><p class="text">示例博客</p><p class="url">https://volantis.js.org/examples/</p></div></a></div>
 <p>所有的 Volantis 用户都可以按照格式自行创建 <a target="_blank" rel="noopener" href="https://github.com/volantis-x/examples/issues/">Issue</a> 来将自己的博客添加到官网的示例博客页面中。</p>
     
   </div>
@@ -857,7 +868,7 @@ dyrandomlogofont();
     
   </div>
 </section>
-<script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');}</script>
+<script>if(typeof jQuery == 'undefined'){}else{$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');}</script>
   
 
   
@@ -938,7 +949,7 @@ dyrandomlogofont();
 
   <div class='content'>
     
-      <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313184311.gif" height="150px"/></center>
+      <center><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313184311.gif" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313184311.gif" srcset="data:image/png;base64,666" height="150px"/></center>
     
   </div>
 </section>
@@ -1008,7 +1019,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1019,7 +1030,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1030,7 +1041,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1041,7 +1052,7 @@ dyrandomlogofont();
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1269,6 +1280,33 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
@@ -1555,7 +1593,7 @@ var loadCSS = function( href, before, media, attributes ){
         var commentId = '#' + comments[i].id;
         var mail = getAvater(comments[i]._serverData.mail);
 		var dyonerror = 'οnerrοr="' + "this.οnerrοr='';this.src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210315095508.jpg'" + '"'
-        hotComments.append('<div class="card-comment-item"><img '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
+        hotComments.append('<div class="card-comment-item"><img no-lazy '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
       }
     });
   }; //comes from https://www.heson10.com/posts/7207.html
@@ -2023,7 +2061,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 <!-- more -->
 
   
-  <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
+  <script>$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
 
 
 

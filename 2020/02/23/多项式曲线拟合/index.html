@@ -83,6 +83,7 @@
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
 <body>
   
 
@@ -504,6 +505,7 @@
 	
 	  <div class="dylogobox">Muggledy's Blog</div>
 	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	  <img no-lazy class='logo' id="dylogo" src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg' style='display:none'/>
 	
     
   </div>
@@ -572,7 +574,16 @@ for (var i = 0; i < dybox.length; i++) {
 }  
 dyrs.innerHTML = dyout;
 }
-dyrandomlogofont();
+if (IsPC()){
+	dyrandomlogofont();
+} else {
+	var dylogo = document.getElementById("dylogo");
+	var dylogobox = document.getElementsByClassName("dylogobox")[0];
+	var dylogorender = document.getElementsByClassName("dylogorender")[0];
+	dylogobox.style.display="none";
+	dylogorender.style.display="none";
+	dylogo.style.display="";
+}
 </script>
 
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
@@ -702,9 +713,9 @@ dyrandomlogofont();
 <p>所以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false">(</mo><msup><mi>X</mi><mi>T</mi></msup><mi>X</mi><msup><mo stretchy="false">)</mo><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mi>X</mi><mi>T</mi></msup><mi>Y</mi></mrow><annotation encoding="application/x-tex">A=(X^TX)^{-1}X^TY</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0913309999999998em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span></span></span></span></p>
 <h2 id="实验"><a class="markdownIt-Anchor" href="#实验"></a> 实验</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fit_poly</span>(<span class="params">x,y,k=<span class="number">2</span></span>):</span></span><br><span class="line">    n=<span class="built_in">len</span>(x)</span><br><span class="line">    <span class="keyword">if</span> n!=<span class="built_in">len</span>(y):</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&quot;x&#x27;s length must be equal to y&#x27;s length!&quot;</span>)</span><br><span class="line">    X=np.zeros((n,k+<span class="number">1</span>))</span><br><span class="line">    X[:,<span class="number">0</span>]=<span class="number">1</span></span><br><span class="line">    X[:,<span class="number">1</span>]=np.array(x)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,k+<span class="number">1</span>):</span><br><span class="line">        X[:,i]=np.power(x,i)</span><br><span class="line">    Y=np.array(y)[:,<span class="literal">None</span>]</span><br><span class="line">    A=(linalg.inv(X.T.dot(X))).dot(X.T).dot(Y).flatten()</span><br><span class="line">    expr=<span class="string">&#x27;y=&#x27;</span>+<span class="string">&#x27;+&#x27;</span>.join([<span class="string">&#x27;*&#x27;</span>.join([<span class="string">&#x27;(&#x27;</span>+<span class="built_in">str</span>(A[i])+<span class="string">&#x27;)&#x27;</span>]+[<span class="string">&#x27;x&#x27;</span> <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i)]) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(k+<span class="number">1</span>)])</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">poly</span>(<span class="params">x</span>):</span></span><br><span class="line">        x=np.array(x)</span><br><span class="line">        d=&#123;<span class="string">&#x27;x&#x27;</span>:x&#125;</span><br><span class="line">        exec(expr,<span class="built_in">globals</span>(),d)</span><br><span class="line">        <span class="keyword">return</span> d.get(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> poly,A</span><br></pre></td></tr></table></figure>
-<!--<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202104045.PNG" style="width:600px;"/></div></div>-->
+<!--<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202104045.PNG" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202104045.PNG" srcset="data:image/png;base64,666" style="width:600px;"/></div></div>-->
 <div class="gallery ">
-              <p><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202104045.PNG" alt="" /></p>
+              <p><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202104045.PNG" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210202104045.PNG" srcset="data:image/png;base64,666" alt="" /></p>
             </div>
 <div class="note download"><p><a href=https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/scripts/fit_poly.py>下载完整代码</a></p></div>
 
@@ -798,7 +809,7 @@ dyrandomlogofont();
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -810,7 +821,7 @@ dyrandomlogofont();
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -818,7 +829,7 @@ dyrandomlogofont();
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFKUlEQVR42u3ay24jMQwEQP//T+/eF3BGbLacZFG62ZgHVZpLg3z9sb5lvRCAB2+BB2+BB28V4F/h+vf+d897W8DwOafPe6ozfW7NCzx48ODBgwcPHjz4IvxxAChfvz3IU8BpfdP/j/cHHjx48ODBgwcPHvwF+GlgmkKmAWgaYKYwp3VvvcCDBw8ePHjw4MGD/wnwp42H7f3buk6v39YPHjx48ODBgwcPHvxvhG8Fsu2AVeu54MGDBw8ePHjw4MH/BvjxgM6lBsTpc9OGTVr/2gs8ePDgwYMHDx48+CJ8O1D8779jL/DgwYMHDx48ePDgC/Db9dRw2D73NEBtA9Ep3NoLPHjw4MGDBw8ePPgC/HZj2wJbgSVtsKTPPd1/3IECDx48ePDgwYMHD/4L+CnEUyFpsJpuoNWoSPeZDlKBBw8ePHjw4MGDB9+EP914eyPTxskp9Lahcm3/4MGDBw8ePHjw4MEX4U838t2DRW3o7Qcz/nDAgwcPHjx48ODBgy/AtwJJOuAzBZkGve1AUroeAxR48ODBgwcPHjx48Av4ay8Ig1P6/taBTIPdOGiBBw8ePHjw4MGDB1+AnwaeNIhsB5mmAez09za4TfcDHjx48ODBgwcPHnwT/hR6CjktfFrH9vrWB3NcF3jw4MGDBw8ePHjwBfgUPA1AaWBpfRDTA0obPODBgwcPHjx48ODBfxK+VVgKmgaiNMC1PrzjDwY8ePDgwYMHDx48+AJ8GjSmaxtIxoNDYeMlfc/x/+DBgwcPHjx48ODBF+CnhZ9enwaZeEPLg28HueNGCHjw4MGDBw8ePHjwAXwrMKUNhLSRcauu9v7BgwcPHjx48ODBg/9O+DQ43Q4q0+DUClZxMAQPHjx48ODBgwcP/iL8afCZBpA0uG0Hm6YHNX3/cWMEPHjw4MGDBw8ePPgi/HSwaLuxFPo06GzvmwaoeKAJPHjw4MGDBw8ePPgAfjvIsw4UQ4D2oFH7/Y/7Ag8ePHjw4MGDBw++AJ8GkBbctvGS/t7ud1o3ePDgwYMHDx48ePA34NMBp3bDohV8bsFNB7nAgwcPHjx48ODBg78Bnw4ibQ8ibcBsB4taoOkHAB48ePDgwYMHDx58E/7pBWnA2TYotg2Y06A0DUQfmyQDDx48ePDgwYMHD/4L+FsFTxsOr3ClDYz2YNVjfeDBgwcPHjx48ODBF+DTQtOBnvbAU1r37cbKYyMEPHjw4MGDBw8ePPgCfLsxkd6/DT7bILZ9Lnjw4MGDBw8ePHjwn4A/bQjEL1reNwVoBa1pwAMPHjx48ODBgwcP/pPwtwZ6UqDW7zXQrWAFHjx48ODBgwcPHnwBfhswthuJB4MuNy62DZzj5AoePHjw4MGDBw8e/AJ+O+CTNiq2gaj9vtMDrHegwIMHDx48ePDgwYMvztVsGx6t+9MA1mrUtAIgePDgwYMHDx48ePAN+O1KC0kPKG1EbD+E6f7fXg8ePHjw4MGDBw8efAF+G1Sm0J8aPEo/hHSg67ihAh48ePDgwYMHDx58EX4amFoDQClsC2K737EfePDgwYMHDx48ePAX4FOYFvQ22J0GoVvvf/zwwIMHDx48ePDgwYP/AfDb+6aBKA1UtUbGMlCBBw8ePHjw4MGDB/+T4KcNkG2QSQ8+bcBMB6LeXg8ePHjw4MGDBw8e/AX4NEBsg9f0ILcNjm2gmgY78ODBgwcPHjx48OBvwLcHd6bPb8G34er1gQcPHjx48ODBgwdfgLc+u8CDB2+BB2+BB28t1l90vrEDjXi4zwAAAABJRU5ErkJggg==">
           </div>
@@ -1008,7 +1019,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1019,7 +1030,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1030,7 +1041,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1041,7 +1052,7 @@ Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益�
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1269,6 +1280,33 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
@@ -1555,7 +1593,7 @@ var loadCSS = function( href, before, media, attributes ){
         var commentId = '#' + comments[i].id;
         var mail = getAvater(comments[i]._serverData.mail);
 		var dyonerror = 'οnerrοr="' + "this.οnerrοr='';this.src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210315095508.jpg'" + '"'
-        hotComments.append('<div class="card-comment-item"><img '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
+        hotComments.append('<div class="card-comment-item"><img no-lazy '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
       }
     });
   }; //comes from https://www.heson10.com/posts/7207.html
@@ -2023,7 +2061,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 <!-- more -->
 
   
-  <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
+  <script>$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
 
 
 

@@ -83,6 +83,7 @@
 
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/md5/md5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/scroll_font/scroll-font.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/is_pc/is-pc.js"></script>
 <body>
   
 
@@ -504,6 +505,7 @@
 	
 	  <div class="dylogobox">Muggledy's Blog</div>
 	  <div class="dylogorender" onClick="dyrandomlogofont()"></div>
+	  <img no-lazy class='logo' id="dylogo" src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v0.1/img/20210206220813.jpg' style='display:none'/>
 	
     
   </div>
@@ -572,7 +574,16 @@ for (var i = 0; i < dybox.length; i++) {
 }  
 dyrs.innerHTML = dyout;
 }
-dyrandomlogofont();
+if (IsPC()){
+	dyrandomlogofont();
+} else {
+	var dylogo = document.getElementById("dylogo");
+	var dylogobox = document.getElementsByClassName("dylogobox")[0];
+	var dylogorender = document.getElementsByClassName("dylogorender")[0];
+	dylogobox.style.display="none";
+	dylogorender.style.display="none";
+	dylogo.style.display="";
+}
 </script>
 
           <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
@@ -797,12 +808,12 @@ dyrandomlogofont();
       <i class="fas fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2020\05\23\Volantis主题美化\" title="Volantis主题美化-阳光派Plus" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217121829.jpg" /><span class="title">Volantis主题美化-阳光派Plus</span><span class="excerpt">具体效果请移步我的博客👉阳光派Plus
+      <div class="vlts-rps"><a class="item" href="\2020\05\23\Volantis主题美化\" title="Volantis主题美化-阳光派Plus" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217121829.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210217121829.jpg" srcset="data:image/png;base64,666" /><span class="title">Volantis主题美化-阳光派Plus</span><span class="excerpt">具体效果请移步我的博客👉阳光派Plus
 更：
 1.添加暗黑模式
 2.添加鼠标右键功能
 3.添加页面预加载功能
-7.20 ...</span></a><a class="item" href="\2017\07\05\Volantis官方配置文档\" title="官方Volantis主题配置文档" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg" /><span class="title">官方Volantis主题配置文档</span><span class="excerpt">Volantis
+7.20 ...</span></a><a class="item" href="\2017\07\05\Volantis官方配置文档\" title="官方Volantis主题配置文档" rel="bookmark "><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg" srcset="data:image/png;base64,666" /><span class="title">官方Volantis主题配置文档</span><span class="excerpt">Volantis
 A Wonderful Theme for Hexo
 Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></section></div>
       
@@ -862,7 +873,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -874,7 +885,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -882,7 +893,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEXklEQVR42u3aSZLjMAwEwP7/p3seMOEQUYAgOTp580KJTPlAwPXza9wyfhCABWuABQvWALsC+xOO6vz/FnBxnY8LL97/0/zTz8seYMGCBQsWLFiwYFdhjw/Axe9fXecU8urBpvO7+wMLFixYsGDBggX7DtjqRqobrs5P71ctAMY8wIIFCxYsWLBgwX4F7OnGqo3ttCDoFiZgwYIFCxYsWLBg/xbsdAO7up6pQgYsWLBgwYIFCxbsd8KWAwrhgf3uxnT1Qb8uCQMWLFiwYMGCBQv2CLY6ug3ut7+OPcCCBQsWLFiwYMGuwE6PNJiRFhLp/G7w4+P9wIIFCxYsWLBgwa7ATgUyugCnje3pB1ad307CgAULFixYsGDBgl2FTQO5U8Ddz6cKF7BgwYIFCxYsWLDvgD2FSDeaFg5psCJtgFcLluPABliwYMGCBQsWLNhbYVPIuzYyXZicQrUb9WDBggULFixYsGBXYasH96sNTAUxuoGSrR8AWLBgwYIFCxYs2F3YLcB0Q12YKdjjQgIsWLBgwYIFCxbsI7DVRvJpo/kULt7QUJCk+kMACxYsWLBgwYIF+wzsFEh6cO+C3FXY/IYDLFiwYMGCBQsW7A5stdFdLRy6C+4WItV51XWO/YMAFixYsGDBggULtgQ7HXSYKjDShnMaEDn94YAFCxYsWLBgwYJ9B2x6AD9tVMcN46FARRWuHVgBCxYsWLBgwYIFuwqbglRhu43n7oPsFiKX6wMLFixYsGDBggW7Aps2kO8OPqQH9+nASfkBgAULFixYsGDBgl2BnS4Q0tdd2PRBVYMnl/sBCxYsWLBgwYIFuwLbLQzSRvRU4KJaMKSBlON9gQULFixYsGDBgl2F7TaotwMWd68nngcWLFiwYMGCBQt2BbZ6o+4BOi0Qut9LCyGwYMGCBQsWLFiw3wHbLRSq10mDGuMN6qHvgwULFixYsGDBgt2FTRfcPVhP37d6velGPliwYMGCBQsWLNhd2G5AorrA9H7d4EW3ILi8LliwYMGCBQsWLNhHYdMF3QW61bBuN/jBggULFixYsGDBrsB2D9KngNUFpxtLgyVj6wELFixYsGDBggW7AtsNPHThq43l6vvpD+d0f+UkDFiwYMGCBQsWLNgR2LRRnT6Y7sE8DTpPzQcLFixYsGDBggX7DthuQZBCdhvnp4VE+v00uAIWLFiwYMGCBQt2B3YqMNFtYJ/O2y4Iqp+DBQsWLFiwYMGC3YG9uxA4XlB4QK8GLLoP/vI1WLBgwYIFCxYs2FXYNKBw94E+vW+67vZ6wIIFCxYsWLBgwT4CO90YrhYa3cIkfb9bKIEFCxYsWLBgwYL9Ttir908b16eN6u66u4UBWLBgwYIFCxYs2O+GjRfQhK7O21oHWLBgwYIFCxYs2GdgpwMb1ft0G+tdsGoB9FgSBixYsGDBggULFmwrqJAewKcP7tOfxwEVsGDBggULFixYsCuwxuwACxasARYsWAPsreMfZrtRhYpIwIMAAAAASUVORK5CYII=">
           </div>
@@ -1063,7 +1074,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312213956.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1074,7 +1085,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214251.png" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1085,7 +1096,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210313132419.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1096,7 +1107,7 @@ Volantis 是一个功能丰富、高度模块化的 H...</span></a></div></secti
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
                 
-                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg"/>
+                  <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210312214428.svg" srcset="data:image/png;base64,666"/>
                 
               </a>
             
@@ -1324,6 +1335,33 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
 
 
 
@@ -1610,7 +1648,7 @@ var loadCSS = function( href, before, media, attributes ){
         var commentId = '#' + comments[i].id;
         var mail = getAvater(comments[i]._serverData.mail);
 		var dyonerror = 'οnerrοr="' + "this.οnerrοr='';this.src='https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210315095508.jpg'" + '"'
-        hotComments.append('<div class="card-comment-item"><img '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
+        hotComments.append('<div class="card-comment-item"><img no-lazy '+ dyonerror +' style="width: 40px;height:40px" class="circle mx1 listavatar" src="' + mail + '"><div class="message_c"><div class="item-header-text"><a href="'+ link +'" target="_blank" rel="nofollow noopener noreferrer" class="newcomment" >' + nick + '</a><span class="comment_date">' + updatedAt + '</span></div><div class="item-text"><a href="' + url + commentId +'"  rel="nofollow" style="color:#717171" class="comments-detail" >' + newcontent + '</a></div></div></div>');
       }
     });
   }; //comes from https://www.heson10.com/posts/7207.html
@@ -2078,7 +2116,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
 <!-- more -->
 
   
-  <script>$('.fa-weixin').html('<img class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
+  <script>$('.fa-weixin').html('<img no-lazy class="qrcode" src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210209044239.jpg" alt="微信二维码"/>');</script>
 
 
 
