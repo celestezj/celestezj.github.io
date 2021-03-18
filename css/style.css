@@ -7030,7 +7030,7 @@ ul.list-v >li>a:hover {
 .DarkMode .highlight pre .comment {
   color: rgba(255,255,255,0.741);
 }
-.DarkMode .cover-wrapper#half {
+.DarkMode .cover-wrapper {
   box-shadow: 0px 10px 13px #182026;
   -webkit-box-shadow: 0px 10px 13px #182026;
   -moz-box-shadow: 0px 10px 13px #182026;
