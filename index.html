@@ -420,26 +420,28 @@
             background: #e1dddd;
             cursor:pointer;
         }
-        .container.print{ /*打印样式，以print类名为标识，此时宽度设为100%并去除边框，其他不能通过直接覆盖css样式的请在print_page()中修改*/
-            border: none;
-            width: 100%;
-        }
-        .container.print .progress .progress-bar {
-            /*display: none;*/
-        }
-        .container.print .progress .progress-bar-inner { /*这里写得有点“蠢”，不过没办法，进度条背景色打印不出来，只好用粗边框代替，效果还行hhh*/
-            border-bottom: 10px solid #81d8cf;
-            height: 0;
-            /*background-color: red;*/
-        }
-        .container.print #avatar {
-            width: 120px;
-        }
-        .container.print .ul .body{ /*（打印）替换后的timeline样式修改*/
-            margin-top: -10px;
-        }
-        .container.print #web_resume {
-            display: inline;
+        @media print{ /*不加试试，先打印后F12调整屏幕宽度，发现@media only screen样式不能立即起作用，I don't know WHY?*/
+            .container.print{ /*打印样式，以print类名为标识，此时宽度设为100%并去除边框，其他不能通过直接覆盖css样式的请在print_page()中修改*/
+                border: none;
+                width: 100%;
+            }
+            .container.print .progress .progress-bar {
+                /*display: none;*/
+            }
+            .container.print .progress .progress-bar-inner { /*这里写得有点“蠢”，不过没办法，进度条背景色打印不出来，只好用粗边框代替，效果还行hhh*/
+                border-bottom: 10px solid #81d8cf;
+                height: 0;
+                /*background-color: red;*/
+            }
+            .container.print #avatar {
+                width: 120px;
+            }
+            .container.print .ul .body{ /*（打印）替换后的timeline样式修改*/
+                margin-top: -10px;
+            }
+            .container.print #web_resume {
+                display: inline;
+            }
         }
     </style>
     <style media="print">
