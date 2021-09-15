@@ -381,6 +381,12 @@
             text-align: center;
             margin-bottom: 10px;
         }
+        #web_resume {
+            display: none;
+        }
+        #web_resume a{
+            text-decoration: underline;
+        }
         
         #menu, #menu * { /*右键菜单*/
             margin:0px;
@@ -431,6 +437,9 @@
         }
         .container.print .ul .body{ /*（打印）替换后的timeline样式修改*/
             margin-top: -10px;
+        }
+        .container.print #web_resume {
+            display: inline;
         }
     </style>
     <style media="print">
@@ -533,7 +542,7 @@
         </div>
         
         <div class="bottom_content">
-            <i class="fa fa-copyright" aria-hidden="true"></i> 2021.9.14 By Muggledy
+            <i class="fa fa-copyright" aria-hidden="true"></i> 2021.9.14 By Muggledy <span id="web_resume"><a href="https://celestezj.github.io">电子版</a></span>
         </div>
         
     </div>
