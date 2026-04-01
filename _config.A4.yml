@@ -4,35 +4,49 @@
 # 3. 执行命令：hexo new page index 生成首页；执行命令：hexo new page list 生成列表页面；
 # 4. 执行命令：hexo clean && hexo g && hexo s 直接查看页面效果
 menu:
-  # 首页: /  #需要hexo new page index,在index/index.md填写的内容将会展现在首页上
-  # 文章: /list/ # 需要hexo new page list
+  首页: /  #需要hexo new page index,在index/index.md填写的内容将会展现在首页上
+  文章: /list/ # 需要hexo new page list
   # 添加其他页面格式举例：
-  # 关于: /about/ # 需要hexo new page about
-  # 标签: /tags/ #需要hexo new page tags
-  # 分类: /categories/ # 需要hexo new page categories
+  关于: /about/ # 需要hexo new page about
+  标签: /tags/ #需要hexo new page tags
+  分类: /categories/ # 需要hexo new page categories
   # ...
 
 # 首页你想要展示的menu链接，注意当你修改了menu中的别名，这里要随着更改，不然你会疑惑怎么首页没有修改后的别名
 showInMenu:  # menu 中的哪些页面显示在首页中（“首页”必定显示）
-  # - 文章  # 将在首页显示 文章 链接
-  # - 关于
-  # - 标签
-  # - 分类
+  - 文章  # 将在首页显示 文章 链接
+  - 关于
+  - 标签
+  - 分类
 
 index:  # 首页相关配置
   header:  # 首页的页眉 以及 404页面，当你没开启一言，将会每次刷新页面随机展示下面的语句
-    #- "我忘明月很久，明月始终望我"
-    #- "人山人海，人来人往"
-    #- "看过大海的人不会忘记海的广阔"
+    - "我忘明月很久，明月始终望我"
+    - "人山人海，人来人往"
+    - "不贪世间大风景，守住自己的小安稳"
+    - "人生就像巧克力，你不能从外表就能知道它是不是夹心的"
+    - "洛阳亲友如相问，就说我在解bug！"
+    - "昨日红梅香来袭，今日清晨不见伊。且留残香飘入梦，莫怪春风送雪急"
+    - "天知地知春去秋来，风起云起君生吾息"
+    - "回首向来萧瑟处，归去，也无风雨也无晴"
+    - "寒江孤影，江湖故人，相逢何必曾相识"
+    - "儿童节快乐"
+    - "善良的程序员啊，你掉的是这个金bug，还是这个银bug，还是这个解不出来的bug呢？"
+    - "注意生活作息，切勿熬夜~"
+    - "苍白色的朦胧迷失在小路远方的尽头，颓圮残喘的断桥隔断殷勤的寄托"
+    - "我期待的不是雪，而是有你的冬天"
+    - "世事一场大梦，人生几度秋凉"
+    - "林间蝶舞韵蹁跹，​晓露沾花映笑颜。​珍影常萦心梦里，​情丝万缕寄诗笺"
+    - "风随便吹，我随便活"
     # ...
-  hitokoto: false # 一言：调用网络语句展示的接口
-  footer: Email:123456789@gmail.com # 除了可以填写任何文字外，可以自动邮箱链接化，但需按照这个格式填写：Email:xxx@gmail.com
+  hitokoto: true # 一言：调用网络语句展示的接口
+  footer: Email:ali17320msy@gmail.com # 除了可以填写任何文字外，可以自动邮箱链接化，但需按照这个格式填写：Email:xxx@gmail.com
   titlePosition: left # center | left  # 首页标题的位置
   width: small  # small | middle | big # 首页的宽度
   list: false # 开启后会在首页展示文章列表
 
 footerLink: # 底部的链接自定义
-  info: © 1949-2024 China  # info这个单词不能修改，不想使用可为空
+  info: © 2026-2026 China  # info这个单词不能修改，不想使用可为空
   # 添加链接格式 举例
   # 友链: /friends/ # 需要hexo new page friends
   # 联系: /contact/ # 需要hexo new page contact
@@ -46,7 +60,7 @@ post:
   titlePosition: center # left ｜ center 文章标题的位置
 
 # 相对于source目录下的头像url
-favicon: /img/favicon.webp # 默认方形头像
+favicon: /img/favicon.png # 默认方形头像
 isRoundedAvatar: false # 是否圆形头像
 isAvatarRotating: false # 圆形头像是否开启悬浮旋转
 displayTitleInTab: false # 是否在浏览器标签页显示文章标题
@@ -147,7 +161,7 @@ comment:
   # Waline
   # See: https://waline.js.org/guide/get-started.html
   waline:
-    serverUrl:  # Waline server url(vercel) example: https://example.example.com
+    serverUrl: #https://a4waline.muggledy.top/ # Waline server url(vercel) example: https://example.example.com
     lang: zh-CN # Waline language, default: zh-CN. See: https://waline.js.org/guide/client/i18n.html
     placeholder: 留下你的评论吧。 # 评论框背景信息
 
