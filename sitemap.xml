@@ -11,9 +11,18 @@
   </url>
   
   <url>
+    <loc>https://blog.muggledy.top/copyright.html</loc>
+    
+    <lastmod>2026-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.muggledy.top/index/index.html</loc>
     
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -64,6 +73,20 @@
   </url>
 
   
+  <url>
+    <loc>https://blog.muggledy.top/tags/hexo/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>

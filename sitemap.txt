@@ -1,7 +1,10 @@
 https://blog.muggledy.top/posts/d8667786/
+https://blog.muggledy.top/copyright.html
 https://blog.muggledy.top/index/index.html
 https://blog.muggledy.top/categories/index.html
 https://blog.muggledy.top/tags/index.html
 https://blog.muggledy.top/about/index.html
 https://blog.muggledy.top/list/index.html
 https://blog.muggledy.top/
+https://blog.muggledy.top/tags/hexo/
+https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/
