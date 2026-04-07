@@ -2,9 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.muggledy.top/index/index.html</loc>
+    
+    <lastmod>2026-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/about/index.html</loc>
+    
+    <lastmod>2026-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/shuoshuo/index.html</loc>
+    
+    <lastmod>2026-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/shuoshuo/20260406/index.html</loc>
+    
+    <lastmod>2026-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.muggledy.top/posts/d8667786/</loc>
     
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,15 +48,6 @@
   
   <url>
     <loc>https://blog.muggledy.top/copyright.html</loc>
-    
-    <lastmod>2026-04-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.muggledy.top/index/index.html</loc>
     
     <lastmod>2026-04-06</lastmod>
     
@@ -47,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/about/index.html</loc>
-    
-    <lastmod>2026-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.muggledy.top/list/index.html</loc>
     
     <lastmod>2026-04-01</lastmod>
@@ -67,7 +85,7 @@
 
   <url>
     <loc>https://blog.muggledy.top/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,7 +93,7 @@
   
   <url>
     <loc>https://blog.muggledy.top/tags/hexo/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -84,7 +102,7 @@
   
   <url>
     <loc>https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
