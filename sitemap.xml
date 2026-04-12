@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.muggledy.top/posts/52cb0fa0/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/copyright.html</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.muggledy.top/index/index.html</loc>
     
     <lastmod>2026-04-07</lastmod>
@@ -47,15 +65,6 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/copyright.html</loc>
-    
-    <lastmod>2026-04-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.muggledy.top/categories/index.html</loc>
     
     <lastmod>2026-04-01</lastmod>
@@ -85,7 +94,7 @@
 
   <url>
     <loc>https://blog.muggledy.top/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,7 +102,14 @@
   
   <url>
     <loc>https://blog.muggledy.top/tags/hexo/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/tags/ESP32/</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -102,7 +118,7 @@
   
   <url>
     <loc>https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
