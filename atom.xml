@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>muggledy</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://blog.muggledy.top/icon.png</icon>
+  <id>https://blog.muggledy.top/</id>
+  <link href="https://blog.muggledy.top/" rel="alternate"/>
+  <link href="https://blog.muggledy.top/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, muggledy</rights>
+  <title>谁给我只猫</title>
+  <updated>2026-04-15T11:48:31.112Z</updated>
+  <entry>
+    <author>
+      <name>muggledy</name>
+    </author>
+    <category term="软件" scheme="https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="ESP32" scheme="https://blog.muggledy.top/tags/ESP32/"/>
+    <id>https://blog.muggledy.top/posts/52cb0fa0/</id>
+    <link href="https://blog.muggledy.top/posts/52cb0fa0/"/>
+    <published>2026-04-12T12:59:00.000Z</published>
+    <summary>记录基于 ESP32 搭建智能小车的开发过程，实现 WebSocket 远程控制、舵机云台、HC-SR04 超声波避障等功能。</summary>
+    <title>ESP32小车</title>
+    <updated>2026-04-15T11:48:31.112Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>muggledy</name>
+    </author>
+    <category term="软件" scheme="https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="Hexo" scheme="https://blog.muggledy.top/tags/Hexo/"/>
+    <id>https://blog.muggledy.top/posts/d8667786/</id>
+    <link href="https://blog.muggledy.top/posts/d8667786/"/>
+    <published>2026-04-02T02:30:00.000Z</published>
+    <summary>本文全面测试 Hexo 下各类 Markdown 语法与主题拓展标签用法，包含多级标题、文字样式、引用、代码块、图片、列表、表格、公式、折叠块、时间轴等丰富示例。</summary>
+    <title>Markdown格式测试</title>
+    <updated>2026-04-15T11:49:51.964Z</updated>
+  </entry>
+</feed>
