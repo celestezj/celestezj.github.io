@@ -74,6 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
   
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  for (let h of headers) {
+    const level = h.tagName;
+    const mark = document.createElement('span');
+    mark.textContent = ' ' + level;
+    mark.style = 'color:#ddd; font-size:0.6em; font-weight:normal;';
+    h.appendChild(mark);
+  }
+});
+</script>
+
+<script>
 document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(el => {
   const level = el.tagName.toLowerCase();
   const text = {
@@ -85,19 +98,6 @@ document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(el => {
     h6: '六级标题 H6'
   }[level];
   el.setAttribute('title', text);
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  for (let h of headers) {
-    const level = h.tagName;
-    const mark = document.createElement('span');
-    mark.textContent = ' ' + level;
-    mark.style = 'color:#ddd; font-size:0.6em; font-weight:normal;';
-    h.appendChild(mark);
-  }
 });
 </script>
 </body>
