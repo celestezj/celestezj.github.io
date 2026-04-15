@@ -10,7 +10,7 @@
   <link href="https://blog.muggledy.top/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, muggledy</rights>
   <title>谁给我只猫</title>
-  <updated>2026-04-15T11:48:31.112Z</updated>
+  <updated>2026-04-15T14:22:58.241Z</updated>
   <entry>
     <author>
       <name>muggledy</name>
@@ -22,7 +22,7 @@
     <published>2026-04-12T12:59:00.000Z</published>
     <summary>记录基于 ESP32 搭建智能小车的开发过程，实现 WebSocket 远程控制、舵机云台、HC-SR04 超声波避障等功能。</summary>
     <title>ESP32小车</title>
-    <updated>2026-04-15T11:48:31.112Z</updated>
+    <updated>2026-04-15T14:22:58.241Z</updated>
   </entry>
   <entry>
     <author>
