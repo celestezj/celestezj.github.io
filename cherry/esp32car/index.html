@@ -460,7 +460,10 @@
                 return;
             }
 
-            const wsUrl = `ws://${ip}:${WS_PORT}`;
+            // ✅ 自动判断：HTTPS 用 wss，HTTP/本地 用 ws
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${ip}:${WS_PORT}`;
+            
             log(`正在连接到 ${wsUrl}...`);
 
             try {

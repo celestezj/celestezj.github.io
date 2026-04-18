@@ -511,33 +511,65 @@
         // WebSocket 连接
         function connect() {
             const ip = wsAddress.value.trim();
-            if (!ip) { log('请输入ESP32 IP', 'error'); return; }
-            const wsUrl = `ws://${ip}:${WS_PORT}`;
-            log(`正在连接: ${wsUrl}`);
+            if (!ip) {
+                log('请输入 ESP32 的 IP 地址', 'error');
+                return;
+            }
+
+            // ✅ 自动判断：HTTPS 用 wss，HTTP/本地 用 ws
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${ip}:${WS_PORT}`;
             
-            ws = new WebSocket(wsUrl);
-            ws.onopen = () => {
-                isConnected = true;
-                updateStatus(true);
-                connectBtn.textContent = '断开';
-                log('连接成功', 'recv');
-                sendCmd('status');
-            };
-            ws.onmessage = (e) => {
-                log(e.data, 'recv');
-                const match = e.data.match(/ok: speed changed to (\d+)/);
-                if (match) {
-                    const s = parseInt(match[1]);
-                    speedSlider.value = s;
-                    speedValue.textContent = s;
-                }
-            };
-            ws.onclose = () => {
-                isConnected = false;
-                updateStatus(false);
-                connectBtn.textContent = '连接';
-            };
-            ws.onerror = (err) => log('连接失败', 'error');
+            log(`正在连接到 ${wsUrl}...`);
+
+            try {
+                ws = new WebSocket(wsUrl);
+
+                ws.onopen = function() {
+                    isConnected = true;
+                    updateStatus(true);
+                    log('WebSocket 连接成功', 'recv');
+                    connectBtn.textContent = '断开连接';
+
+                    // 发送测试消息
+                    sendCmd('status');
+                };
+
+                ws.onmessage = function(event) {
+                    log(event.data, 'recv');
+                    // 处理 chgspeed 响应，同步滑轨数值
+                    const response = event.data;
+                    console.log(response);
+                    if (response && response.includes('ok: speed changed to')) {
+                        // 尝试从响应中提取速度值
+                        // 匹配 "ok: speed changed to XXX"
+                        const match = response.match(/ok: speed changed to (\d+)/);
+                        if (match) {
+                            const newSpeed = parseInt(match[1], 10);
+                            if (newSpeed >= 0 && newSpeed <= 255) {
+                                // 更新滑轨和显示值
+                                speedSlider.value = newSpeed;       // 全局变量
+                                speedValue.textContent = newSpeed;  // 全局变量
+                                // log(`滑轨已同步到速度: ${newSpeed}`, 'info');
+                            }
+                        }
+                    }
+                };
+
+                ws.onclose = function() {
+                    isConnected = false;
+                    updateStatus(false);
+                    log('WebSocket 连接已断开');
+                    connectBtn.textContent = '连接小车';
+                    ws = null;
+                };
+
+                ws.onerror = function(error) {
+                    log('WebSocket 错误: ' + (error.message || '连接失败'), 'error');
+                };
+            } catch (e) {
+                log('创建 WebSocket 失败: ' + e.message, 'error');
+            }
         }
 
         function disconnect() { if (ws) ws.close(); }
