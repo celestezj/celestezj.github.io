@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://blog.muggledy.top/cherry/esp32car/index.html</loc>
+    
+    <lastmod>2026-04-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.muggledy.top/shuoshuo/20260406/index.html</loc>
     
     <lastmod>2026-04-16</lastmod>
@@ -95,15 +104,6 @@
     <loc>https://blog.muggledy.top/list/index.html</loc>
     
     <lastmod>2026-04-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.muggledy.top/cherry/esp32car/index.html</loc>
-    
-    <lastmod>2026-03-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

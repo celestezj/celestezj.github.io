@@ -1,104 +1,355 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"><meta name="description" content=""><meta name="hexo-theme-A4" content="v2.0.1"><link rel="alternate icon" type="image/webp" href="/img/favicon.png"><title>谁给我只猫</title><link rel="stylesheet" href="/css/highlight/style1.css"><link rel="stylesheet" href="/css/a11y-dark.min.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/fonts.css"><link rel="stylesheet" href="/css/ui.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/waline.css"><link rel="stylesheet" href="/css/returnToTop.css"><link rel="stylesheet" href="/css/unicons.css"><link rel="stylesheet" href="/css/returnToLastPage.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://unpkg.com/@chinese-fonts/lxgwwenkai@3.0.0/dist/LXGWWenKai-Regular/result.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css"><meta name="generator" content="Hexo 7.3.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="谁给我只猫" type="application/atom+xml">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css">
+    <h1>🚗 ESP32 小车控制</h1>
 
-<style>
-/* ------------ 核心修复：外层套一层 wrapper，让按钮永远固定 ------------ */
-.highlight-container {
-  position: relative !important;
-}
-.code-copy-btn {
-  position: absolute !important;
-  top: 6px !important;
-  right: 10px !important;
-  padding: 1px 6px;
-  font-size: 11px;
-  color: #555;
-  background: #f7f7f7;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  cursor: pointer;
-  z-index: 99;
-  user-select: none;
-}
-.code-copy-btn:hover {
-  background: #eee;
-}
-</style>
-  </head><body><script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.80/darkreader.min.js"></script><script>const drOptions={brightness:100,contrast:95,sepia:10,darkSchemeTextColor:"#e0e0e0",darkSchemeBackgroundColor:"#1e1e1e",scrollbarStyle:"native"};DarkReader.setFetchMethod(window.fetch);const savedTheme=localStorage.getItem("theme"),systemDark=window.matchMedia("(prefers-color-scheme: dark)").matches;("dark"===savedTheme||!savedTheme&&systemDark)&&DarkReader.enable(drOptions),window.addEventListener("DOMContentLoaded",()=>{const e=document.createElement("button");e.innerText="🌓",e.style.cssText="\n                    position: fixed; \n                    bottom: 40px; \n                    left: 42px; \n                    z-index: 9999;\n                    width: 44px; \n                    height: 44px; \n                    border-radius: 50%; \n                    border: 1px solid #ccc;\n                    background: #f7f5ed; \n                    color: #000;\n                    font-size: 22px; \n                    cursor: pointer;\n                    box-shadow: 0 4px 10px rgba(0,0,0,0.1); \n                    transition: transform 0.2s, background-color 0.3s;\n                ",DarkReader.isEnabled()&&(e.style.backgroundColor="#1e1e1e",e.style.color="#fff"),e.onmouseover=()=>e.style.transform="scale(1.1)",e.onmouseout=()=>e.style.transform="scale(1)",document.body.appendChild(e),e.addEventListener("click",()=>{DarkReader.isEnabled()?(DarkReader.disable(),localStorage.setItem("theme","light"),e.style.backgroundColor="#f7f5ed",e.style.color="#000"):(DarkReader.enable(drOptions),localStorage.setItem("theme","dark"),e.style.backgroundColor="#1e1e1e",e.style.color="#fff")})})</script><div class="paper"><div class="shadow-drop-2-bottom paper-main"><div class="header"><div class="header-container"><style>.header-img{width:56px;height:auto;object-fit:cover;transition:transform .3s ease-in-out;border-radius:0}</style><img no-lazy alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.png"><div class="header-content"><a class="logo" href="/">谁给我只猫</a> <span class="description"></span></div></div><ul class="nav"><li><a href="/">首页</a></li><li><a href="/list/">文章</a></li><li><a href="/about/">关于</a></li><li><a href="/tags/">标签</a></li><li><a href="/categories/">分类</a></li><li><a href="/shuoshuo/">说说</a></li></ul></div><div class="post-main"><div class="post-md"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css"><h1>🚗 ESP32 小车控制</h1><div class="status-bar"><div class="status-dot" id="statusDot"></div><span class="status-text" id="statusText">未连接</span></div><div class="config-panel"><div class="input-group"><input type="text" id="wsAddress" placeholder="输入ESP32 IP，如 192.168.1.100"> <button id="connectBtn" onclick="toggleConnection()">连接</button></div></div><div class="command-panel"><div class="speed-control"><div class="speed-label"><span>速度控制</span> <span class="speed-value" id="speedValue">127</span></div><input type="range" id="speedSlider" min="0" max="255" value="127"></div><div class="panel-title">自定义指令</div><div class="cmd-input-group"><input type="text" id="cmdInput" placeholder="输入指令，如: forward, backward, stop, status..." onkeypress='"Enter"===event.key&&sendCustomCmd()'> <button class="cmd-btn" onclick="sendCustomCmd()">发送</button></div></div><div class="control-panel"><div class="control-btn empty"></div><button class="control-btn" id="btnForward" onmousedown='sendCmd("forward")' onmouseup='sendCmd("stop")' ontouchstart='sendCmd("forward"),event.preventDefault()' ontouchend='sendCmd("stop"),event.preventDefault()' oncontextmenu="return!1">▲</button><div class="control-btn empty"></div><button class="control-btn" id="btnLeft" onmousedown='sendCmd("left")' onmouseup='sendCmd("stop")' ontouchstart='sendCmd("left"),event.preventDefault()' ontouchend='sendCmd("stop"),event.preventDefault()' oncontextmenu="return!1">◀</button> <button class="control-btn stop-btn" id="btnStop" onclick='sendCmd("stop")' oncontextmenu="return!1">⏹</button> <button class="control-btn" id="btnRight" onmousedown='sendCmd("right")' onmouseup='sendCmd("stop")' ontouchstart='sendCmd("right"),event.preventDefault()' ontouchend='sendCmd("stop"),event.preventDefault()' oncontextmenu="return!1">▶</button><div class="control-btn empty"></div><button class="control-btn" id="btnBackward" onmousedown='sendCmd("backward")' onmouseup='sendCmd("stop")' ontouchstart='sendCmd("backward"),event.preventDefault()' ontouchend='sendCmd("stop"),event.preventDefault()' oncontextmenu="return!1">▼</button><div class="control-btn empty"></div></div><div class="log-panel" id="logPanel"><div class="log-entry"><span class="log-time">[系统]</span> 等待连接...</div></div><script>const WS_PORT=81,MAX_LOG_ENTRIES=50;let ws=null,isConnected=!1,reconnectTimer=null,currentCommand=null;const statusDot=document.getElementById("statusDot"),statusText=document.getElementById("statusText"),wsAddress=document.getElementById("wsAddress"),connectBtn=document.getElementById("connectBtn"),logPanel=document.getElementById("logPanel"),speedSlider=document.getElementById("speedSlider"),speedValue=document.getElementById("speedValue");function log(e,t="info"){const n=(new Date).toLocaleTimeString("zh-CN",{hour12:!1}),s=document.createElement("div");s.className="log-entry";let o="",d="";switch(t){case"send":o="log-send",d="发送";break;case"recv":o="log-recv",d="接收";break;case"error":o="log-error",d="错误";break;default:d="信息"}for(s.innerHTML=`<span class="log-time">[${n}]</span> <span class="${o}">${d}</span>: ${e}`,logPanel.appendChild(s),logPanel.scrollTop=logPanel.scrollHeight;logPanel.children.length>50;)logPanel.removeChild(logPanel.firstChild)}function connect(){const e=wsAddress.value.trim();if(!e)return void log("请输入 ESP32 的 IP 地址","error");const t=`ws://${e}:81`;log(`正在连接到 ${t}...`);try{ws=new WebSocket(t),ws.onopen=function(){isConnected=!0,updateStatus(!0),log("WebSocket 连接成功","recv"),connectBtn.textContent="断开",sendCmd("status")},ws.onmessage=function(e){log(e.data,"recv");const t=e.data;if(console.log(t),t&&t.includes("ok: speed changed to")){const e=t.match(/ok: speed changed to (\d+)/);if(e){const t=parseInt(e[1],10);t>=0&&t<=255&&(speedSlider.value=t,speedValue.textContent=t)}}},ws.onclose=function(){isConnected=!1,updateStatus(!1),log("WebSocket 连接已断开"),connectBtn.textContent="连接",ws=null},ws.onerror=function(e){log("WebSocket 错误: "+(e.message||"连接失败"),"error")}}catch(e){log("创建 WebSocket 失败: "+e.message,"error")}}function disconnect(){ws&&ws.close()}function toggleConnection(){isConnected?disconnect():connect()}function updateStatus(e){e?(statusDot.classList.add("connected"),statusText.textContent="已连接"):(statusDot.classList.remove("connected"),statusText.textContent="未连接")}function sendCmd(e){isConnected&&ws?(currentCommand=e,ws.send(e),log(e,"send")):log("未连接到小车，无法发送指令: "+e,"error")}function onSpeedChange(e){const t=parseInt(e);if(speedValue.textContent=t,isConnected&&ws){const e="chgspeed:"+t;ws.send(e),log(e,"send")}else log(`速度已设置为 ${t} (未连接，将在连接后生效)`,"info")}function sendCustomCmd(){const e=document.getElementById("cmdInput"),t=e.value.trim();t?isConnected&&ws?(ws.send(t),log(t,"send"),e.value=""):log("未连接到小车，无法发送指令","error"):log("请输入指令","error")}document.addEventListener("keydown",(function(e){if("INPUT"!==e.target.tagName&&isConnected&&!e.repeat)switch(e.key){case"ArrowUp":case"w":case"W":sendCmd("forward"),document.getElementById("btnForward").style.transform="scale(0.95)";break;case"ArrowDown":case"s":case"S":sendCmd("backward"),document.getElementById("btnBackward").style.transform="scale(0.95)";break;case"ArrowLeft":case"a":case"A":sendCmd("left"),document.getElementById("btnLeft").style.transform="scale(0.95)";break;case"ArrowRight":case"d":case"D":sendCmd("right"),document.getElementById("btnRight").style.transform="scale(0.95)";break;case" ":sendCmd("stop"),document.getElementById("btnStop").style.transform="scale(0.95)"}})),document.addEventListener("keyup",(function(e){if("INPUT"!==e.target.tagName){switch(e.key){case"ArrowUp":case"w":case"W":case"ArrowDown":case"s":case"S":case"ArrowLeft":case"a":case"A":case"ArrowRight":case"d":case"D":sendCmd("stop")}document.getElementById("btnForward").style.transform="",document.getElementById("btnBackward").style.transform="",document.getElementById("btnLeft").style.transform="",document.getElementById("btnRight").style.transform="",document.getElementById("btnStop").style.transform=""}})),window.addEventListener("load",(function(){log("页面加载完成，请输入ESP32的IP地址并连接");const e=localStorage.getItem("esp32_ip");e&&(wsAddress.value=e),speedSlider.value=127,speedValue.textContent=127})),wsAddress.addEventListener("change",(function(){localStorage.setItem("esp32_ip",wsAddress.value)})),speedSlider.addEventListener("input",()=>{speedValue.textContent=speedSlider.value}),speedSlider.addEventListener("change",()=>{onSpeedChange(speedSlider.value)})</script></div><div class="post-meta"><i></i></div><br><div class="post-footer-pre-next"></div><div class="comments-container"><div id="comment-anchor"></div><div class="comment-area-title"></div><div id="waline"></div><script type="module">import{init}from"https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs";function loadWaline(){init({el:"#waline",serverURL:"https://a4waline.muggledy.top/",lang:"zh-CN",dark:'body[class~="dark-mode"]',requiredMeta:["nick","mail"],search:!1,reaction:!1,pageview:!1,comment:!1,locale:{placeholder:"留下你的评论吧。",sofa:""}})}window.addEventListener("DOMContentLoaded",loadWaline)</script></div></div><div class="footer"><span>© 2026-2026 China</span></div><div class="footer-last"><span>🌊看过大海的人不会忘记海的广阔🌊</span> <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="/js/highlight.min.js"></script><script src="/js/highlightjs-line-numbers.js"></script><script src="/js/randomHeaderContent.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="/js/returnToTop.js"></script><script src="/js/returnToLastPage.js"></script><script>const tabsFn={clickFnOfTabs:function(){document.querySelectorAll(".paper .tab > button").forEach((function(t){t.addEventListener("click",(function(t){const e=this,n=e.parentNode;if(!n.classList.contains("active")){const t=n.parentNode.nextElementSibling,c=Array.from(n.parentNode.children).filter(t=>t.classList.contains("active"));c.length>0&&c[0].classList.remove("active"),n.classList.add("active");const a=e.getAttribute("data-href").replace("#","");Array.from(t.children).forEach(t=>{t.id===a?t.classList.add("active"):t.classList.remove("active")})}}))}))}};document.addEventListener("DOMContentLoaded",(function(){tabsFn.clickFnOfTabs()}))</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="progress-wrap shadow-drop-2-bottom"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div><div class="return-to-last-progress-wrap shadow-drop-2-bottom"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div></div>
-        <style>
-            [bg-lazy] {
-                background-image: none !important;
-                background-color: #eee !important;
+    <div class="status-bar">
+        <div class="status-dot" id="statusDot"></div>
+        <span class="status-text" id="statusText">未连接</span>
+    </div>
+
+    <div class="config-panel">
+        <div class="input-group">
+            <input type="text" id="wsAddress" placeholder="输入ESP32 IP，如 192.168.1.100" value="">
+            <button id="connectBtn" onclick="toggleConnection()">连接</button>
+        </div>
+    </div>
+
+    <!-- 指令输入和速度控制面板 -->
+    <div class="command-panel">
+        <!-- 速度滑轨 -->
+        <div class="speed-control">
+            <div class="speed-label">
+                <span>速度控制</span>
+                <span class="speed-value" id="speedValue">127</span>
+            </div>
+            <input type="range" id="speedSlider" min="0" max="255" value="127">
+        </div>
+
+        <!-- 指令输入 -->
+        <div class="panel-title">自定义指令</div>
+        <div class="cmd-input-group">
+            <input type="text" id="cmdInput" placeholder="输入指令，如: forward, backward, stop, status..." onkeypress="if(event.key==='Enter')sendCustomCmd()">
+            <button class="cmd-btn" onclick="sendCustomCmd()">发送</button>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <div class="control-btn empty"></div>
+        <button class="control-btn" id="btnForward" onmousedown="sendCmd('forward')" onmouseup="sendCmd('stop')" ontouchstart="sendCmd('forward'); event.preventDefault();" ontouchend="sendCmd('stop'); event.preventDefault();" oncontextmenu="return false;">▲</button>
+        <div class="control-btn empty"></div>
+
+        <button class="control-btn" id="btnLeft" onmousedown="sendCmd('left')" onmouseup="sendCmd('stop')" ontouchstart="sendCmd('left'); event.preventDefault();" ontouchend="sendCmd('stop'); event.preventDefault();" oncontextmenu="return false;">◀</button>
+        <button class="control-btn stop-btn" id="btnStop" onclick="sendCmd('stop')" oncontextmenu="return false;">⏹</button>
+        <button class="control-btn" id="btnRight" onmousedown="sendCmd('right')" onmouseup="sendCmd('stop')" ontouchstart="sendCmd('right'); event.preventDefault();" ontouchend="sendCmd('stop'); event.preventDefault();" oncontextmenu="return false;">▶</button>
+
+        <div class="control-btn empty"></div>
+        <button class="control-btn" id="btnBackward" onmousedown="sendCmd('backward')" onmouseup="sendCmd('stop')" ontouchstart="sendCmd('backward'); event.preventDefault();" ontouchend="sendCmd('stop'); event.preventDefault();" oncontextmenu="return false;">▼</button>
+        <div class="control-btn empty"></div>
+    </div>
+
+    <div class="log-panel" id="logPanel">
+        <div class="log-entry"><span class="log-time">[系统]</span> 等待连接...</div>
+    </div>
+
+    <script>
+        // ==================== 配置 ====================
+        const WS_PORT = 81;  // WebSocket 端口
+        const MAX_LOG_ENTRIES = 50;  // 日志最大条目数
+
+        // ==================== 全局变量 ====================
+        let ws = null;
+        let isConnected = false;
+        let reconnectTimer = null;
+        let currentCommand = null;  // 当前正在执行的命令
+
+        // ==================== DOM 元素 ====================
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+        const wsAddress = document.getElementById('wsAddress');
+        const connectBtn = document.getElementById('connectBtn');
+        const logPanel = document.getElementById('logPanel');
+        const speedSlider = document.getElementById('speedSlider');
+        const speedValue = document.getElementById('speedValue');
+
+        // ==================== 日志函数 ====================
+        function log(message, type = 'info') {
+            const time = new Date().toLocaleTimeString('zh-CN', { hour12: false });
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+
+            let typeClass = '';
+            let prefix = '';
+
+            switch (type) {
+                case 'send':
+                    typeClass = 'log-send';
+                    prefix = '发送';
+                    break;
+                case 'recv':
+                    typeClass = 'log-recv';
+                    prefix = '接收';
+                    break;
+                case 'error':
+                    typeClass = 'log-error';
+                    prefix = '错误';
+                    break;
+                default:
+                    prefix = '信息';
             }
-        </style>
-        <script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 2,
-                processImages: null,
-                errorImg: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABTCAMAAAAlZ5C/AAAAY1BMVEX///8AAABVVVUcHBxKSkrFxcWrq6u6urrBwcE+Pj74+Pj7+/va2trk5OTs7Oxra2uMjIzy8vLU1NSysrJ9fX1jY2PMzMwNDQ2ioqKSkpJbW1syMjImJiZ0dHSGhoZDQ0OamppKzZHjAAAEYklEQVRYhbWZaaNrMBCGRYtSa2lrq/r/v/LKTEI2JYf7fjon9BGT2SKOQ/XIr29yRF1WRo5RqXsIzFWa2PEp6Ekfw7zPYhMyavAWL1zdI7ogJDYapbqbl2O3PHCIpzLaAPsgelICk1TmCJ6y4kZWqijoJY/101B4AtsJKDyQx+hSXM+A306Ar678UXhUXycbDsn/gL/Wg+UwfGYT0pwNj8RAf+nXD8FHMEhagMt9T4aH3NiQMIpz4fS3KfzVGe1yFP7G+U7+SLxz4T1HFpSi+/oheMWYEaQ6/fohOCb+L9Zb/2S4MyxubvDEo+E/07+m7GUDL5/6q986YNfGR1vAs2l40IeTl6cWYWt48YUpPlY4Rnk74THr7Tob+LAPHsxekauERM8pTBAG2/BcSK1KILpGD6fKyB54xLrSLNAN4xOyUoZY27YBT/vZIDAZqeZczbbiF7bgHruJtsMRLKvgeQW7qPZnfEIb8Jrd81ieJDRMJUcovfJY+5OarPsJ/zAPTMX/x/nWdp5gphkGFD2UCFvgEUYOaedr9140TEEWtc4uzfCE9dhi0L9Ew6BVPMwv7q6em8PFpVw0CIYBH704UQhwc9tlhvOlVAovGgZABfdDSl8JJTMcg5f0qXo5ng2DVoEFeO6aNoez4HUNmwBIBjSDP8GR9BvuD7+pPlXuv/S8c1lcwLx56dAwd221qQpf3MN+R+WVFri5wKBhvixVyhk+rYiqVvL0GW7oLVGwJSvRcvoFTR/Btgze/1ij0Gi4pGODfZv7pd8859uWbgzh31/7uWSGC2/Hu/UmnsMpqVkGGyX4xj6UB8FlCUtWrVR/Z/0BX/cLMfc4kljWWbIhxvPTUPSwuWkW+GZTlCjGTOS3l4TvFOyHY4FbfAVsa/y+4vCmMt0Ph0I2fzZo1udNBWvtWsCnNinkiQeMItWL2L+J7gYOcNsPn8Jx/osWqLcIq9RAoQ7Q2cCXp6gGxwURc1rMgsIeTl/6LQ4wRxWn3qLh7OF0baUkx+JeTGovtJw1XN9vMbiUD/Fp1nAanPLXH9ZySFXsA69nDa9VP+Q1UuoHfMhY1vBBCyDMa7009oI4soZnWuTHSlbjY509vCVqS1gYsi+N4gsute3MlX7zqnoizrzH1bhZwCu9RmSaszgPMEig++hvjUSrXIP+9gH41B2LaBV4W4qXnymLFJdBoFhqwHK07N02xIiQt1Y3dVwhM3a+AeW6sN/12opG6SRpJJlXod6gciXLG8t2qYVHo+iEWdlPsl1wlgohZiTHo7EuBSh8JpxdKnqU/qa4w1J7uj9nDu7zt+/9njSvScHVdcVdErzb+Cc228Csh0ZEvfvy14MKPKDRdiFckFH0b4N7JWxhNOGG7MgpiPEDCCiGiD92UIHO26qmiTAiw4MnQ2wr/xFtk7K9Rnj49IbHdTcEjyRNYi/nH0YMZ3TWipftjKi3aSX+oNJwiJqfcaCFCuSj1LA+D02Vek0Wvsm7a/NS3RH+A5bZLeB+udlUAAAAAElFTkSuQmCC",
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(n=>{n.imageLazyLoadSetting.processImages=t;var a=n.imageLazyLoadSetting.isSPA,o=n.imageLazyLoadSetting.preloadRatio||1,d=r();function r(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=r());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,r=d[i];e=function(){d=d.filter(function(t){return r!==t}),n.imageLazyLoadSetting.onImageLoaded&&n.imageLazyLoadSetting.onImageLoaded(r)},(t=r).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),n.imageLazyLoadSetting.errorImg?t.src=n.imageLazyLoadSetting.errorImg:t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),n.addEventListener("resize",e),n.addEventListener("orientationchange",e)})(this);</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('figure.highlight').forEach(fig => {
-    // 关键：给代码块外面套一层容器，专门用来固定按钮
-    const wrapper = document.createElement('div');
-    wrapper.className = 'highlight-container';
-    fig.parentNode.insertBefore(wrapper, fig);
-    wrapper.appendChild(fig);
 
-    // 创建按钮
-    const btn = document.createElement('button');
-    btn.className = 'code-copy-btn';
-    btn.textContent = 'copy';
-    wrapper.appendChild(btn);
+            entry.innerHTML = `<span class="log-time">[${time}]</span> <span class="${typeClass}">${prefix}</span>: ${message}`;
+            logPanel.appendChild(entry);
+            logPanel.scrollTop = logPanel.scrollHeight;
 
-    // 复制逻辑
-    btn.addEventListener('click', async () => {
-      const codeEl = fig.querySelector('td.code pre');
-      const text = codeEl.innerHTML
-        .replace(/<br>/g, '\n')
-        .replace(/<[^>]+>/g, '')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&amp;/g, '&')
-        .trim();
-      await navigator.clipboard.writeText(text);
-      btn.textContent = 'copied';
-      setTimeout(() => btn.textContent = 'copy', 1500);
-    });
-  });
-});
-</script>
-  
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  for (let h of headers) {
-    const level = h.tagName;
-    const mark = document.createElement('span');
-    mark.textContent = ' ' + level;
-    mark.style = 'color:#ddd; font-size:0.6em; font-weight:normal;';
-    h.appendChild(mark);
-  }
-});
-</script>
+            // 限制日志条目数
+            while (logPanel.children.length > MAX_LOG_ENTRIES) {
+                logPanel.removeChild(logPanel.firstChild);
+            }
+        }
 
-<script>
-document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(el => {
-  const level = el.tagName.toLowerCase();
-  const text = {
-    h1: '一级标题 H1',
-    h2: '二级标题 H2',
-    h3: '三级标题 H3',
-    h4: '四级标题 H4',
-    h5: '五级标题 H5',
-    h6: '六级标题 H6'
-  }[level];
-  el.setAttribute('title', text);
-});
-</script>
-</body>
-</html><script src="/js/emojiHandler.js"></script><script>document.addEventListener("DOMContentLoaded",()=>{wrapEmojis(".paper")})</script>
+        // ==================== WebSocket 连接 ====================
+        function connect() {
+            const ip = wsAddress.value.trim();
+            if (!ip) {
+                log('请输入 ESP32 的 IP 地址', 'error');
+                return;
+            }
+
+            const wsUrl = `ws://${ip}:${WS_PORT}`;
+            log(`正在连接到 ${wsUrl}...`);
+
+            try {
+                ws = new WebSocket(wsUrl);
+
+                ws.onopen = function() {
+                    isConnected = true;
+                    updateStatus(true);
+                    log('WebSocket 连接成功', 'recv');
+                    connectBtn.textContent = '断开';
+
+                    // 发送测试消息
+                    sendCmd('status');
+                };
+
+                ws.onmessage = function(event) {
+                    log(event.data, 'recv');
+                    // 处理 chgspeed 响应，同步滑轨数值
+                    const response = event.data;
+                    console.log(response);
+                    if (response && response.includes('ok: speed changed to')) {
+                        // 尝试从响应中提取速度值
+                        // 匹配 "ok: speed changed to XXX"
+                        const match = response.match(/ok: speed changed to (\d+)/);
+                        if (match) {
+                            const newSpeed = parseInt(match[1], 10);
+                            if (newSpeed >= 0 && newSpeed <= 255) {
+                                // 更新滑轨和显示值
+                                speedSlider.value = newSpeed;       // 全局变量
+                                speedValue.textContent = newSpeed;  // 全局变量
+                                // log(`滑轨已同步到速度: ${newSpeed}`, 'info');
+                            }
+                        }
+                    }
+                };
+
+                ws.onclose = function() {
+                    isConnected = false;
+                    updateStatus(false);
+                    log('WebSocket 连接已断开');
+                    connectBtn.textContent = '连接';
+                    ws = null;
+                };
+
+                ws.onerror = function(error) {
+                    log('WebSocket 错误: ' + (error.message || '连接失败'), 'error');
+                };
+            } catch (e) {
+                log('创建 WebSocket 失败: ' + e.message, 'error');
+            }
+        }
+
+        function disconnect() {
+            if (ws) {
+                ws.close();
+            }
+        }
+
+        function toggleConnection() {
+            if (isConnected) {
+                disconnect();
+            } else {
+                connect();
+            }
+        }
+
+        // ==================== UI 更新 ====================
+        function updateStatus(connected) {
+            if (connected) {
+                statusDot.classList.add('connected');
+                statusText.textContent = '已连接';
+            } else {
+                statusDot.classList.remove('connected');
+                statusText.textContent = '未连接';
+            }
+        }
+
+        // ==================== 指令发送 ====================
+        function sendCmd(cmd) {
+            if (!isConnected || !ws) {
+                log('未连接到小车，无法发送指令: ' + cmd, 'error');
+                return;
+            }
+
+            // 记录当前命令
+            currentCommand = cmd;
+
+            ws.send(cmd);
+            log(cmd, 'send');
+        }
+
+        // ==================== 键盘控制 ====================
+        document.addEventListener('keydown', function(e) {
+            if (e.target.tagName === 'INPUT') return;
+            if (!isConnected) return;
+
+            // 防止重复触发（按住不放）
+            if (e.repeat) return;
+
+            switch(e.key) {
+                case 'ArrowUp':
+                case 'w':
+                case 'W':
+                    sendCmd('forward');
+                    document.getElementById('btnForward').style.transform = 'scale(0.95)';
+                    break;
+                case 'ArrowDown':
+                case 's':
+                case 'S':
+                    sendCmd('backward');
+                    document.getElementById('btnBackward').style.transform = 'scale(0.95)';
+                    break;
+                case 'ArrowLeft':
+                case 'a':
+                case 'A':
+                    sendCmd('left');
+                    document.getElementById('btnLeft').style.transform = 'scale(0.95)';
+                    break;
+                case 'ArrowRight':
+                case 'd':
+                case 'D':
+                    sendCmd('right');
+                    document.getElementById('btnRight').style.transform = 'scale(0.95)';
+                    break;
+                case ' ':
+                    sendCmd('stop');
+                    document.getElementById('btnStop').style.transform = 'scale(0.95)';
+                    break;
+            }
+        });
+
+        document.addEventListener('keyup', function(e) {
+            if (e.target.tagName === 'INPUT') return;
+            // 松开按键时发送停止指令
+            switch(e.key) {
+                case 'ArrowUp':
+                case 'w':
+                case 'W':
+                case 'ArrowDown':
+                case 's':
+                case 'S':
+                case 'ArrowLeft':
+                case 'a':
+                case 'A':
+                case 'ArrowRight':
+                case 'd':
+                case 'D':
+                    sendCmd('stop');
+                    break;
+                case ' ':
+                    // 空格键不需要重复发送停止
+                    break;
+            }
+
+            // 恢复按钮样式
+            document.getElementById('btnForward').style.transform = '';
+            document.getElementById('btnBackward').style.transform = '';
+            document.getElementById('btnLeft').style.transform = '';
+            document.getElementById('btnRight').style.transform = '';
+            document.getElementById('btnStop').style.transform = '';
+        });
+
+        // 页面加载完成后的初始化
+        window.addEventListener('load', function() {
+            log('页面加载完成，请输入ESP32的IP地址并连接');
+
+            // 尝试从本地存储读取上次使用的IP
+            const savedIp = localStorage.getItem('esp32_ip');
+            if (savedIp) {
+                wsAddress.value = savedIp;
+            }
+
+            // 读取保存的速度值
+            /*const savedSpeed = localStorage.getItem('esp32_speed');
+            if (savedSpeed) {
+                speedSlider.value = savedSpeed;
+                speedValue.textContent = savedSpeed;
+            } else */{
+                speedSlider.value = 127;
+                speedValue.textContent = 127;
+            }
+        });
+
+        // 保存IP到本地存储
+        wsAddress.addEventListener('change', function() {
+            localStorage.setItem('esp32_ip', wsAddress.value);
+        });
+
+        // ==================== 速度滑轨控制 ====================
+        function onSpeedChange(value) {
+            const speed = parseInt(value);
+            speedValue.textContent = speed;
+
+            // 保存速度到本地存储
+            // localStorage.setItem('esp32_speed', speed);
+
+            // 如果已连接，发送速度变更指令
+            if (isConnected && ws) {
+                const cmd = `chgspeed:${speed}`;
+                ws.send(cmd);
+                log(cmd, 'send');
+            } else {
+                log(`速度已设置为 ${speed} (未连接，将在连接后生效)`, 'info');
+            }
+        }
+        // 滑动时实时更新数字
+        speedSlider.addEventListener('input', () => {
+            speedValue.textContent = speedSlider.value;
+        });
+        // 松开时发送指令
+        speedSlider.addEventListener('change', () => {
+            onSpeedChange(speedSlider.value);
+        });
+
+        // ==================== 自定义指令输入 ====================
+        function sendCustomCmd() {
+            const cmdInput = document.getElementById('cmdInput');
+            const cmd = cmdInput.value.trim();
+
+            if (!cmd) {
+                log('请输入指令', 'error');
+                return;
+            }
+
+            if (!isConnected || !ws) {
+                log('未连接到小车，无法发送指令', 'error');
+                return;
+            }
+
+            // 发送指令
+            ws.send(cmd);
+            log(cmd, 'send');
+
+            // 清空输入框
+            cmdInput.value = '';
+        }
+    </script>
+
