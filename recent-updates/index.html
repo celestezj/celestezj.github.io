@@ -1,6 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"><meta name="description" content="最近更新列表"><meta name="hexo-theme-A4" content="v2.0.1"><link rel="alternate icon" type="image/webp" href="/img/favicon.png"><title>最近更新列表 | 谁给我只猫</title><link rel="stylesheet" href="/css/highlight/style1.css"><link rel="stylesheet" href="/css/a11y-dark.min.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/fonts.css"><link rel="stylesheet" href="/css/ui.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/returnToTop.css"><link rel="stylesheet" href="/css/unicons.css"><link rel="stylesheet" href="/css/returnToLastPage.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://unpkg.com/@chinese-fonts/lxgwwenkai@3.0.0/dist/LXGWWenKai-Regular/result.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css"><meta name="generator" content="Hexo 7.3.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="谁给我只猫" type="application/atom+xml">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"><meta name="description" content="最近更新列表"><meta name="hexo-theme-A4" content="v2.0.1"><link rel="alternate icon" type="image/webp" href="/img/favicon.png"><title>最近更新列表 | 谁给我只猫</title><link rel="stylesheet" href="/css/highlight/style1.css"><link rel="stylesheet" href="/css/a11y-dark.min.css"><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/markdown.css"><link rel="stylesheet" href="/css/fonts.css"><link rel="stylesheet" href="/css/ui.css"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/returnToTop.css"><link rel="stylesheet" href="/css/unicons.css"><link rel="stylesheet" href="/css/returnToLastPage.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://unpkg.com/@chinese-fonts/lxgwwenkai@3.0.0/dist/LXGWWenKai-Regular/result.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css"><meta name="generator" content="Hexo 7.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="谁给我只猫" type="application/atom+xml">
 
 <style>
 /* ------------ 核心修复：外层套一层 wrapper，让按钮永远固定 ------------ */
@@ -74,19 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
   
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  for (let h of headers) {
-    const level = h.tagName;
-    const mark = document.createElement('span');
-    mark.textContent = ' ' + level;
-    mark.style = 'color:#ddd; font-size:0.6em; font-weight:normal;';
-    h.appendChild(mark);
-  }
-});
-</script>
-
-<script>
 document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(el => {
   const level = el.tagName.toLowerCase();
   const text = {
@@ -98,6 +83,19 @@ document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(el => {
     h6: '六级标题 H6'
   }[level];
   el.setAttribute('title', text);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  for (let h of headers) {
+    const level = h.tagName;
+    const mark = document.createElement('span');
+    mark.textContent = ' ' + level;
+    mark.style = 'color:#ddd; font-size:0.6em; font-weight:normal;';
+    h.appendChild(mark);
+  }
 });
 </script>
 </body>
