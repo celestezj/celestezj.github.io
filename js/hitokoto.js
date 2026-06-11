@@ -1,1 +1,1 @@
-fetch("https://v1.hitokoto.cn/?c=k").then(function(t){return t.json()}).then(function(t){document.getElementById("quote").innerText=t.hitokoto}).catch(function(t){console.error(t)});
+let isLoading=!1;function getHitokoto(){if(!isLoading){let e=document.getElementById("quote");e&&(isLoading=!0,e.innerText="",fetch("https://v1.hitokoto.cn/?c=k&_t="+Date.now()).then(t=>t.json()).then(t=>{e&&(e.innerText=t.hitokoto)}).catch(t=>{e&&(e.innerText="一言加载失败")}).finally(()=>{isLoading=!1}))}}document.addEventListener("DOMContentLoaded",getHitokoto);
