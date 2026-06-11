@@ -2,25 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.muggledy.top/shuoshuo/index.html</loc>
-    
-    <lastmod>2026-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.muggledy.top/tags/index.html</loc>
-    
-    <lastmod>2026-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.muggledy.top/shuoshuo/20260406_01/index.html</loc>
+    <loc>https://blog.muggledy.top/copyright.html</loc>
     
     <lastmod>2026-06-11</lastmod>
     
@@ -47,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/copyright.html</loc>
-    
-    <lastmod>2026-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.muggledy.top/index/index.html</loc>
     
     <lastmod>2026-06-11</lastmod>
@@ -66,6 +39,33 @@
   
   <url>
     <loc>https://blog.muggledy.top/list/index.html</loc>
+    
+    <lastmod>2026-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/tags/index.html</loc>
+    
+    <lastmod>2026-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/shuoshuo/index.html</loc>
+    
+    <lastmod>2026-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/shuoshuo/20260406_01/index.html</loc>
     
     <lastmod>2026-06-11</lastmod>
     
