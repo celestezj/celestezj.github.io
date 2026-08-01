@@ -10,12 +10,27 @@
   <link href="https://blog.muggledy.top/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, muggledy</rights>
   <title>谁给我只猫</title>
-  <updated>2026-04-12T12:59:00.000Z</updated>
+  <updated>2026-08-01T12:26:16.000Z</updated>
   <entry>
     <author>
       <name>muggledy</name>
     </author>
-    <category term="软件" scheme="https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="编程" scheme="https://blog.muggledy.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="YOLO" scheme="https://blog.muggledy.top/tags/YOLO/"/>
+    <category term="OpenCV" scheme="https://blog.muggledy.top/tags/OpenCV/"/>
+    <category term="目标检测" scheme="https://blog.muggledy.top/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    <id>https://blog.muggledy.top/posts/c684fa62/</id>
+    <link href="https://blog.muggledy.top/posts/c684fa62/"/>
+    <published>2026-08-01T12:26:16.000Z</published>
+    <summary>记录顶楼走廊行人检测系统的搭建过程：神眸摄像头画面经雷电模拟器窗口截图，用 ZeroMQ 推流到 GPU 服务器，YOLOv8 实时检测行人并做事件分段录像。</summary>
+    <title>走廊行人检测：YOLOv8 + ZeroMQ 实时推流实战</title>
+    <updated>2026-08-01T12:26:16.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>muggledy</name>
+    </author>
+    <category term="编程" scheme="https://blog.muggledy.top/categories/%E7%BC%96%E7%A8%8B/"/>
     <category term="ESP32" scheme="https://blog.muggledy.top/tags/ESP32/"/>
     <id>https://blog.muggledy.top/posts/52cb0fa0/</id>
     <link href="https://blog.muggledy.top/posts/52cb0fa0/"/>
@@ -28,7 +43,7 @@
     <author>
       <name>muggledy</name>
     </author>
-    <category term="软件" scheme="https://blog.muggledy.top/categories/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="博客" scheme="https://blog.muggledy.top/categories/%E5%8D%9A%E5%AE%A2/"/>
     <category term="Hexo" scheme="https://blog.muggledy.top/tags/Hexo/"/>
     <id>https://blog.muggledy.top/posts/d8667786/</id>
     <link href="https://blog.muggledy.top/posts/d8667786/"/>

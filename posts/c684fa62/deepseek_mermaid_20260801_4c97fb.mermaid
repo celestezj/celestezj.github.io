@@ -1,0 +1,111 @@
+flowchart LR
+
+%% =========================
+%% 电脑A 截图发送端
+%% =========================
+
+subgraph PC_A["🖥️ 电脑 A：截图客户端（无 GPU）"]
+direction TB
+
+APP["📱 雷电模拟器 监控 APP 实时视频画面"]
+
+WIN["① 窗口定位 pyautogui.getAllWindows() 关键词匹配: 雷电模拟器 输出: 窗口坐标(x,y)"]
+
+MSS["② mss 高性能区域截图 Windows GDI Capture 裁剪有效区域 输出数据: BGRA 图像 (width×height×4)"]
+
+BGR["③ OpenCV颜色转换 cv2.cvtColor() BGRA → BGR 输出: OpenCV 原始帧"]
+
+LIMIT["⏱️ FPS精准限流 TARGET_FPS=20 FRAME_INTERVAL=50ms now-last_time判断 避免sleep累计漂移"]
+
+JPEG["④ JPG压缩编码 cv2.imencode('.jpg') 参数: JPG_QUALITY=70 输出: JPG binary bytes"]
+
+PUSH["⑤ ZMQ PUSH发送 push_sock.send() 参数: SNDHWM=2 发送缓存最多2帧 NOBLOCK: 缓存满 → zmq.Again 直接丢当前帧 保持最新画面"]
+
+APP --> WIN
+WIN --> MSS
+MSS --> BGR
+BGR --> LIMIT
+LIMIT --> JPEG
+JPEG --> PUSH
+end
+
+%% =========================
+%% 网络
+%% =========================
+
+NET["🌐 局域网 TCP ZMQ PUSH → PULL 传输: JPG 字节流 目标: 低延迟 防止帧堆积"]
+
+PUSH --> NET
+
+%% =========================
+%% 电脑B服务器
+%% =========================
+
+subgraph PC_B["🖥️ 电脑 B：GPU YOLO 推理服务器"]
+direction TB
+
+subgraph MAIN["🟦 MainThread 主线程"]
+direction TB
+
+PULL["① ZMQ PULL接收 pull_sock.recv() bind: tcp://0.0.0.0:5555 参数: LISTEN_PORT=5555 RCVTIMEO=10ms RCVHWM=2 LINGER=0 超时: zmq.Again 继续循环"]
+
+DECODE["② JPG解码 cv2.imdecode() 输入: JPG bytes 输出: BGR 原图"]
+
+INQ["③ 投递推理任务 input_q.put_nowait(frame) Queue: maxsize=3 数据: BGR 原图"]
+
+OUTQ["⑤ 获取推理结果 output_q.get_nowait() 数据: (frame, N×6 boxes数组)"]
+
+DRAW["⑥ 主线程绘制检测框 遍历 boxes 格式: [x1,y1,x2,y2, confidence,class_id] cv2.rectangle() 输出: 标框图像"]
+
+SHOW["⑦ OpenCV显示窗口 cv2.imshow() cv2.waitKey() Q键退出"]
+
+PULL --> DECODE
+DECODE --> INQ
+OUTQ --> DRAW
+DRAW --> SHOW
+end
+
+subgraph INFER["🟪 InferSubProcess 推理子进程"]
+direction TB
+
+GETQ["④ 推理进程读取 input_q.get(timeout=0.05) 获得: BGR frame"]
+
+YOLO["YOLO GPU推理 model(frame, conf=0.15, iou=0.3) GPU执行"]
+
+BOX["检测结果 boxes.data.cpu().numpy() 输出: N×6 ndarray 格式: [x1,y1,x2,y2, confidence,class_id]"]
+
+PUTQ["写回结果队列 output_q.put() 返回: (frame,boxes)"]
+
+GETQ --> YOLO
+YOLO --> BOX
+BOX --> PUTQ
+end
+
+INQ --> GETQ
+PUTQ --> OUTQ
+end
+
+NET --> PULL
+
+%% =========================
+%% 退出控制
+%% =========================
+
+EXIT["🛑 安全退出机制 SIGINT Ctrl+C exit_event.set() terminate() 杀死推理进程 cv2.destroyAllWindows() os._exit() 彻底释放"]
+
+SHOW --> EXIT
+EXIT --> INFER
+
+%% =========================
+%% 风格
+%% =========================
+
+classDef client fill:#e3f2fd,stroke:#1565c0,color:#000
+classDef server fill:#e8f5e9,stroke:#2e7d32,color:#000
+classDef queue fill:#fff3e0,stroke:#ef6c00,color:#000
+classDef gpu fill:#f3e5f5,stroke:#6a1b9a,color:#000
+
+class PUSH,JPEG,MSS,BGR,LIMIT,APP,WIN client
+class PULL,DECODE,DRAW,SHOW server
+class INQ,OUTQ queue
+class YOLO,BOX,GETQ,PUTQ gpu
