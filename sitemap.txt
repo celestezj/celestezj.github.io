@@ -1,6 +1,6 @@
+https://blog.muggledy.top/shuoshuo/20260816_01/index.html
 https://blog.muggledy.top/posts/104e1f98/
 https://blog.muggledy.top/about/index.html
-https://blog.muggledy.top/shuoshuo/20260816_01/index.html
 https://blog.muggledy.top/shuoshuo/index.html
 https://blog.muggledy.top/shuoshuo/20260406_01/index.html
 https://blog.muggledy.top/index/index.html
@@ -14,10 +14,10 @@ https://blog.muggledy.top/posts/52cb0fa0/
 https://blog.muggledy.top/
 https://blog.muggledy.top/tags/YOLO/
 https://blog.muggledy.top/tags/OpenCV/
-https://blog.muggledy.top/tags/Hexo/
 https://blog.muggledy.top/tags/ASR/
 https://blog.muggledy.top/tags/LLM/
 https://blog.muggledy.top/tags/TTS/
+https://blog.muggledy.top/tags/Hexo/
 https://blog.muggledy.top/tags/ESP32/
 https://blog.muggledy.top/categories/%E7%BC%96%E7%A8%8B/
 https://blog.muggledy.top/categories/%E5%8D%9A%E5%AE%A2/
