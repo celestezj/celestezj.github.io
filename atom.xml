@@ -10,7 +10,7 @@
   <link href="https://blog.muggledy.top/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, muggledy</rights>
   <title>谁给我只猫</title>
-  <updated>2026-08-29T13:25:23.000Z</updated>
+  <updated>2026-09-05T08:34:41.000Z</updated>
   <entry>
     <author>
       <name>muggledy</name>
@@ -24,7 +24,7 @@
     <published>2026-08-29T13:25:23.000Z</published>
     <summary>记录用 ClaudeCode CLI + deepSeek-v4-flash 全程 vibe coding 搭建的纯本地实时语音对话系统：麦克风进、AI 语音回复出，ASR + LLM + TTS 全流程零云服务，支持实时打断与自定义唤醒词。</summary>
     <title>纯本地实时语音对话系统：ASR + LLM + TTS 全流程落地</title>
-    <updated>2026-08-29T13:25:23.000Z</updated>
+    <updated>2026-09-05T08:34:41.000Z</updated>
   </entry>
   <entry>
     <author>
