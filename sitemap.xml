@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.muggledy.top/posts/d8667786/</loc>
+    
+    <lastmod>2026-10-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.muggledy.top/shuoshuo/index.html</loc>
     
     <lastmod>2026-10-16</lastmod>
@@ -29,16 +38,16 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/posts/d8667786/</loc>
+    <loc>https://blog.muggledy.top/posts/104e1f98/</loc>
     
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/posts/104e1f98/</loc>
+    <loc>https://blog.muggledy.top/posts/52cb0fa0/</loc>
     
     <lastmod>2026-10-04</lastmod>
     
@@ -100,15 +109,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://blog.muggledy.top/posts/52cb0fa0/</loc>
-    
-    <lastmod>2026-04-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://blog.muggledy.top/</loc>
@@ -117,6 +117,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://blog.muggledy.top/tags/Hexo/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://blog.muggledy.top/tags/ASR/</loc>
@@ -140,13 +147,6 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/tags/Hexo/</loc>
-    <lastmod>2026-10-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.muggledy.top/tags/ESP32/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -156,14 +156,14 @@
 
   
   <url>
-    <loc>https://blog.muggledy.top/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://blog.muggledy.top/categories/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://blog.muggledy.top/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -37,7 +37,7 @@
     <published>2026-04-12T12:59:00.000Z</published>
     <summary>记录基于 ESP32 搭建智能小车的开发过程，实现 WebSocket 远程控制、舵机云台、HC-SR04 超声波避障等功能。</summary>
     <title>ESP32遥控小车</title>
-    <updated>2026-04-12T12:59:00.000Z</updated>
+    <updated>2026-10-04T06:20:38.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -50,6 +50,6 @@
     <published>2026-04-02T02:30:00.000Z</published>
     <summary>本文全面测试 Hexo 下各类 Markdown 语法与主题拓展标签用法，包含多级标题、文字样式、引用、代码块、图片、列表、表格、公式、折叠块、时间轴等丰富示例。</summary>
     <title>Markdown格式测试</title>
-    <updated>2026-10-12T01:18:24.000Z</updated>
+    <updated>2026-10-17T01:51:47.000Z</updated>
   </entry>
 </feed>
