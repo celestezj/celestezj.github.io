@@ -1,0 +1,1 @@
+function randomHeaderText(){var e,t;0!==$("#hiddenHeaderContentArray").length&&0!==$("#targetSpan").length&&0!==(t=$("#hiddenHeaderContentArray span")).length&&(e=Math.floor(Math.random()*t.length),t=t.eq(e).text(),$("#targetSpan").text(t))}$(document).ready(function(){randomHeaderText()}),window.randomHeaderText=randomHeaderText;
