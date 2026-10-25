@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.muggledy.top/shuoshuo/20261025_01/index.html</loc>
+    
+    <lastmod>2026-10-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.muggledy.top/shuoshuo/index.html</loc>
+    
+    <lastmod>2026-10-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.muggledy.top/about/index.html</loc>
     
     <lastmod>2026-10-24</lastmod>
@@ -11,9 +29,9 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/posts/52cb0fa0/</loc>
+    <loc>https://blog.muggledy.top/posts/d8667786/</loc>
     
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -30,24 +48,6 @@
   
   <url>
     <loc>https://blog.muggledy.top/posts/104e1f98/</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.muggledy.top/shuoshuo/index.html</loc>
-    
-    <lastmod>2026-10-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.muggledy.top/posts/d8667786/</loc>
     
     <lastmod>2026-10-17</lastmod>
     
@@ -109,6 +109,15 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://blog.muggledy.top/posts/52cb0fa0/</loc>
+    
+    <lastmod>2026-04-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://blog.muggledy.top/</loc>
@@ -140,14 +149,14 @@
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/tags/Hexo/</loc>
+    <loc>https://blog.muggledy.top/tags/ESP32/</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.muggledy.top/tags/ESP32/</loc>
+    <loc>https://blog.muggledy.top/tags/Hexo/</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
